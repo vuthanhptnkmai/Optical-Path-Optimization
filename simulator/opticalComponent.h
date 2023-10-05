@@ -1,37 +1,48 @@
-class OpticalComponent
-{
+#pragma once
+
+#include "../utils/vec3.h"
+
+// Forward declare Photon for the handleLight function
+template<typename T, typename U>
+class Photon;
+
+template<typename T>
+class OpticalComponent {
 protected:
-    // Common attributes like position, size, etc.
-    Position _position;
-    Size _size;
+    vec3<T> position;
+    vec3<T> normal;       
+    vec3<T> dimensions;
 
 public:
-    // Constructor
-    OpticalComponent(const Position &position, const Size &size) : _position(position), _size(size) {}
+    OpticalComponent(const vec3<T>& position, const vec3<T>& normal, const vec3<T>& dimensions);
 
-    // Getters
-    Position getPosition() const { return _position; }
-    Size getSize() const { return _size; }
+    // Getter functions
+    vec3<T> getPosition() const { return position; }
+    vec3<T> getNormal() const { return normal; }
+    vec3<T> getDimensions() const { return dimensions; }
 
-    // Setters
-    void setPosition(const Position &position) { _position = position; }
-    void setSize(const Size &size) { _size = size; }
+    // Setter functions
+    void setPosition(const vec3<T>& newPosition) { position = newPosition; }
+    void setNormal(const vec3<T>& newNormal) { normal = newNormal; }
+    void setDimensions(const vec3<T>& newDimensions) { dimensions = newDimensions; }
 
-    // Virtual function for handling light interaction, to be overridden by derived classes
-    virtual void handleLight(Photon *photon) = 0;
+    // Virtual function to handle light interaction
+    virtual void handleLight(Photon<T, U> *photon) = 0;
 };
 
-class RectangularComponent : public OpticalComponent
-{
-public:
-    // Constructor
-    RectangularComponent(const Position &position, const Size &size) : OpticalComponent(position, size) {}
+template<typename T>
+OpticalComponent<T>::OpticalComponent(const vec3<T>& position, const vec3<T>& normal, const vec3<T>& dimensions)
+    : position(position), normal(normal), dimensions(dimensions) {}
 
-    // Overridden function
-    void handleLight(Photon *photon) override
-    {
+template<typename T>
+class RectangularComponent : public OpticalComponent<T> {
+public:
+    RectangularComponent(const vec3<T>& position, const vec3<T>& normal, const vec3<T>& dimensions)
+        : OpticalComponent<T>(position, normal, dimensions) {}
+
+    void handleLight(Photon<T, U> *photon) override {
         // Handle light interaction specific to rectangular components
     }
 };
 
-// And similar for other types of components...
+// You can then add more components similar to RectangularComponent as needed.
