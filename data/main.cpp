@@ -1,21 +1,17 @@
 #include <iostream>
 #include <fstream>
-#include "photonParser.h"
+#include "rayParser.h"
 
-#include <iostream>
-#include <fstream>
-#include "photonParser.h"
-
-void visualizePhotons(const std::vector<Photon<double, float>>& photons) {
+void visualizeRays(const std::vector<Ray<double, float>>& rays) { // rename to something like ray diagramm
     // Compute the End Points and Prepare the Data
-    std::ofstream outputFile("photons.dat"); // Write data to a file
-    for (const auto& photon : photons) {
-        outputFile << photon.position(0) << " " << photon.position(1) << " " << photon.position(2) << " "
-                   << photon.direction(0) << " " << photon.direction(1) << " " << photon.direction(2) << "\n";
+    std::ofstream outputFile("rays.dat"); // Write data to a file
+    for (const auto& ray : rays) {
+        outputFile << ray.position(0) << " " << ray.position(1) << " " << ray.position(2) << " "
+                   << ray.direction(0) << " " << ray.direction(1) << " " << ray.direction(2) << "\n";
     }
     outputFile.close();
 
-    // Generate a Gnuplot script to visualize the photon paths
+    // Generate a Gnuplot script to visualize the ray paths
     std::ofstream plotFile("plot.gp");
     plotFile << "set terminal wxt size 1000,1000 enhanced font 'Verdana,10' persist\n";
     plotFile << "set view equal xyz\n";
@@ -38,7 +34,7 @@ void visualizePhotons(const std::vector<Photon<double, float>>& photons) {
     plotFile << "set xyplane 0\n";
     plotFile << "set style line 1 pointtype 7 pointsize 0.8\n";
 
-    plotFile << "splot 'photons.dat' using 1:2:3:4:5:6 with vectors head size 0,0 filled lc rgb 'red'\n";
+    plotFile << "splot 'rays.dat' using 1:2:3:4:5:6 with vectors head size 0,0 filled lc rgb 'red'\n";
     plotFile << "pause -1\n"; // Keep the window open
     plotFile.close();
 
@@ -48,20 +44,20 @@ void visualizePhotons(const std::vector<Photon<double, float>>& photons) {
 
 int main() {
     // Parse the XML file
-    std::vector<Photon<double, float>> photons = parsePhotonsXML<double, float>("photons.xml");
+    std::vector<Ray<double, float>> rays = parseRayXML<double, float>("rays.xml");
     
-    // Print the details of each photon
-    for (const auto& photon : photons) {
-        std::cout << "Photon Details:" << std::endl;
-        std::cout << "Position: (" << photon.position(0) << ", " << photon.position(1) << ", " << photon.position(2) << ")" << std::endl;
-        std::cout << "Direction: (" << photon.direction(0) << ", " << photon.direction(1) << ", " << photon.direction(2) << ")" << std::endl;
-        std::cout << "Wavelength: " << photon.wavelength << std::endl;
-        std::cout << "Intensity: " << photon.intensity << std::endl;
+    // Print the details of each ray
+    for (const auto& ray : rays) {
+        std::cout << "Ray Details:" << std::endl;
+        std::cout << "Position: (" << ray.position(0) << ", " << ray.position(1) << ", " << ray.position(2) << ")" << std::endl;
+        std::cout << "Direction: (" << ray.direction(0) << ", " << ray.direction(1) << ", " << ray.direction(2) << ")" << std::endl;
+        std::cout << "Wavelength: " << ray.wavelength << std::endl;
+        std::cout << "Intensity: " << ray.intensity << std::endl;
         std::cout << "----------------------" << std::endl;
     }
 
-    // Visualize the photons
-    visualizePhotons(photons);
+    // Visualize the rays
+    visualizeRays(rays);
     
     return 0;
 }
