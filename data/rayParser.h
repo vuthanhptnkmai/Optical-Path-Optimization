@@ -11,15 +11,10 @@ std::vector<Ray<T, U>> parseRayXML(const std::string& filename) {
     tinyxml2::XMLDocument doc;
     std::vector<Ray<T, U>> rays;
 
-    // if (doc.LoadFile(filename.c_str()) != tinyxml2::XML_SUCCESS) {
-    //     std::cerr << "Failed to load XML file: " << filename << std::endl;
-    //     return rays; 
-    // }
-
     if (doc.LoadFile(filename.c_str()) != tinyxml2::XML_SUCCESS) {
-    std::cerr << "Failed to load XML file: " << filename << ". Error: " << doc.ErrorStr() << std::endl;
-    return rays; 
-}
+        std::cerr << "Failed to load XML file: " << filename << std::endl;
+        return rays; 
+    }
 
 
     tinyxml2::XMLElement* root = doc.FirstChildElement("rays");
