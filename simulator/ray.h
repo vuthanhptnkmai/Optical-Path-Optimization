@@ -29,7 +29,7 @@ public:
 
 template<typename T, typename U>
 Ray<T, U>::Ray(const vec3<T>& position, const vec3<T>& direction, U wavelength, U intensity)
-    : position(position), direction(direction), wavelength(wavelength), intensity(intensity) {}
+    : position(position), direction(direction.normalized()), wavelength(wavelength), intensity(intensity) {}
 
 template<typename T, typename U>
 const vec3<T>& Ray<T, U>::getPosition() const {
