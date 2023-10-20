@@ -20,10 +20,7 @@ public:
 
 template<typename T, typename U>
 PlanarCircle<T, U>::PlanarCircle(const vec3<T>& position, const vec3<T>& normal, T diameter)
-    : radius(diameter / 2.0) {
-    this->position = position;
-    this->normal = normal.normalized();
-}
+    : PlanarSurface<T, U>(position, normal), radius(diameter / 2.0) {}
 
 template<typename T, typename U>
 bool PlanarCircle<T, U>::intersects(const Ray<T, U>& ray) const {
