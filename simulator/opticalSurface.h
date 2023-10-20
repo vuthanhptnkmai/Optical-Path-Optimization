@@ -1,7 +1,6 @@
 #pragma once
 
-// Note: this include may be not necessary in our code right now
-#include <stdexcept> // for std::runtime_error
+#include <iostream>
 #include <memory>
 
 #include "ray.h"
@@ -17,11 +16,11 @@ public:
     OpticalSurface(const vec3<T>& position, const vec3<T>& normal) : position(position), normal(normal) {}
     virtual ~OpticalSurface() = default;
 
-    virtual vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const = 0; 
-    virtual bool intersects(const Ray<T, U>& ray) const = 0;
-
     vec3<T> getPosition() const { return position; }
     vec3<T> getNormal() const { return normal; }
+
+    virtual vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const = 0; 
+    virtual bool intersects(const Ray<T, U>& ray) const = 0;
 };
 
 template<typename T, typename U>
@@ -50,5 +49,19 @@ public:
     SphericalSurface(const vec3<T>& position, const vec3<T>& normal, T radius)
         : OpticalSurface<T, U>(position, normal), radius(radius) {}
 
+    vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const override;
+    bool intersects(const Ray<T, U>& ray) const override;
     // additional methods for SphericalSurface can be added here...
 };
+
+template<typename T, typename U>
+vec3<T> SphericalSurface<T, U>::getIntersectionPoint(const Ray<T, U>& ray) const {
+    std::cout << "SphericalSurface::getIntersectionPoint not implemented yet." << std::endl;
+    return vec3<T>();  // just return a default vec3, to be changed later
+}
+
+template<typename T, typename U>
+bool SphericalSurface<T, U>::intersects(const Ray<T, U>& ray) const {
+    std::cout << "SphericalSurface::intersects not implemented yet." << std::endl;
+    return false;  // just return false for now, to be changed later
+}

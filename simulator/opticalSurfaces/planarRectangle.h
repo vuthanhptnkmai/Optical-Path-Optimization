@@ -21,8 +21,10 @@ public:
 
 template<typename T, typename U>
 PlanarRectangle<T, U>::PlanarRectangle(const vec3<T>& position, const vec3<T>& normal, T width, T height, const vec3<T>& widthDirection)
-    : PlanarSurface<T, U>(position, normal), width(width), height(height), widthDirection(widthDirection.normalized()), heightDirection(normal.cross(widthDirection).normalized()) {}
-
+    : PlanarSurface<T, U>(position, normal), width(width), height(height), 
+      widthDirection(widthDirection.normalized()), 
+      heightDirection(normal.cross(widthDirection).normalized()) {}
+        
 template<typename T, typename U>
 bool PlanarRectangle<T, U>::intersects(const Ray<T, U>& ray) const {
     vec3<T> intersectionPoint = this->getIntersectionPoint(ray);

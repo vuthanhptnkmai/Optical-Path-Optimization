@@ -10,17 +10,14 @@ private:
     T radius;
 
 public:
-    PlanarCircle(const vec3<T>& position, const vec3<T>& normal, T diameter);
+    PlanarCircle(const vec3<T>& position, const vec3<T>& normal, T diameter)
+        : PlanarSurface<T, U>(position, normal), radius(diameter / 2.0) {}
     T getRadius() const { return radius; }
 
     bool intersects(const Ray<T, U>& ray) const override;
 };
 
 // Definitions
-
-template<typename T, typename U>
-PlanarCircle<T, U>::PlanarCircle(const vec3<T>& position, const vec3<T>& normal, T diameter)
-    : PlanarSurface<T, U>(position, normal), radius(diameter / 2.0) {}
 
 template<typename T, typename U>
 bool PlanarCircle<T, U>::intersects(const Ray<T, U>& ray) const {
