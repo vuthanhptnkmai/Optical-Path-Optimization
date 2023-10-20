@@ -27,6 +27,7 @@ template<typename T, typename U>
 class PlanarSurface : public OpticalSurface<T, U> {
 public:
     PlanarSurface(const vec3<T>& position, const vec3<T>& normal) : OpticalSurface<T, U>(position, normal) {}
+    virtual ~PlanarSurface() = default;
 
     vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const override;
     virtual bool intersects(const Ray<T, U>& ray) const override = 0;
@@ -48,6 +49,7 @@ protected:
 public:
     SphericalSurface(const vec3<T>& position, const vec3<T>& normal, T radius)
         : OpticalSurface<T, U>(position, normal), radius(radius) {}
+    virtual ~SphericalSurface() = default;
 
     vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const override;
     bool intersects(const Ray<T, U>& ray) const override;
