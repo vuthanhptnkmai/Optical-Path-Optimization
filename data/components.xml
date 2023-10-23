@@ -1,30 +1,30 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
-<!-- Optical component details with their shape, position, Normal, and type-specific properties -->
+<!-- Optical component details with their surface, position, normal, and type-specific properties -->
 <OpticalComponents>
     <Component name="Mirror">
-        <Shape shape="Rectangle" width="10" height="10" />
+        <Surface type="Rectangle" width="10" height="10" />
         <Position x="3" y="4" z="5" />
         <Normal dx="0" dy="1" dz="0" />
     </Component>
     <Component name="Filter">
-        <Type type="BandPass" wavelengthRange="400-700nm"/>
-        <Shape shape="Circle" diameter="50" />
+        <FilterType type="BandPass" wavelengthRange="400-700nm"/>
+        <Surface type="Circle" diameter="50" />
         <Position x="3" y="4" z="7" />
         <Normal dx="0" dy="1" dz="0" />
     </Component>
     <Component name="Filter">
-        <Type type="LowPass" cutoffWavelength="700nm" />
-        <Shape shape="Circle" diameter="50" />
+        <FilterType type="LowPass" cutoffWavelength="700nm" />
+        <Surface type="Circle" diameter="50" />
         <Position x="3" y="4" z="7" />
         <Normal dx="0" dy="1" dz="0" />
     </Component>
     <Component name="Lens">
-        <Shape shape="Circle" diameter="4" />
+        <Surface type="Circle" diameter="4" />
         <Position x="3" y="4" z="10" />
         <Normal dx="0" dy="1" dz="0" />
     </Component>
     <Component name="Detector">
-        <Shape shape="Rectangle" width="10" height="10" />
+        <Surface type="Rectangle" width="10" height="10" />
         <Position x="3" y="4" z="12" />
         <Normal dx="0" dy="1" dz="0" />
         <Pixels width="512" height="512" />

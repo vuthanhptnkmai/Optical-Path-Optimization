@@ -1,9 +1,10 @@
 #pragma once
 
-#include "../ray.h"
-#include "../../utils/vec3.h"
-#include "../opticalSurface.h"
+#include <utility>
 
+#include "../ray.h"
+#include "../opticalSurface.h"
+#include "../../utils/vec3.h"
 
 template<typename T, typename U>
 class PlanarRectangle : public PlanarSurface<T, U> {
@@ -14,7 +15,8 @@ protected:
 public:
     PlanarRectangle(const vec3<T>& position, const vec3<T>& normal, T width, T height, const vec3<T>& widthDirection);
 
-    bool intersects(const Ray<T, U>& ray) const override;
+    std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const override;
+    void generatePoints() const override;
 };
 
 // Definitions
@@ -26,12 +28,19 @@ PlanarRectangle<T, U>::PlanarRectangle(const vec3<T>& position, const vec3<T>& n
       heightDirection(normal.cross(widthDirection).normalized()) {}
         
 template<typename T, typename U>
-bool PlanarRectangle<T, U>::intersects(const Ray<T, U>& ray) const {
+std::pair<bool, vec3<T>> PlanarRectangle<T, U>::intersects(const Ray<T, U>& ray) const {
     vec3<T> intersectionPoint = this->getIntersectionPoint(ray);
     vec3<T> D = intersectionPoint - this->position;
 
     T u = D.dot(widthDirection);
     T v = D.dot(heightDirection);
 
-    return (std::abs(u) <= width / 2.0) && (std::abs(v) <= height / 2.0);
+    bool doesIntersect = (std::abs(u) <= width / 2.0) && (std::abs(v) <= height / 2.0);
+
+    return {doesIntersect, intersectionPoint};
+}
+
+template<typename T, typename U>
+void PlanarRectangle<T, U>::generatePoints() const {
+    throw std::runtime_error("PlanarRectangle::generatePoints has not been implemented yet. TODO: Add implementation.");
 }

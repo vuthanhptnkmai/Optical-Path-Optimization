@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stdexcept>
 #include <memory> 
 
 #include "../../utils/vec3.h"
@@ -9,53 +10,62 @@
 
 template<typename T, typename U>
 class Lens : public OpticalComponent<T, U> {
-protected:
-    T focalLength; // focal length of the lens
-
 public:
-    Lens(std::unique_ptr<OpticalSurface<T, U>> surface, T focalLength)
-			: OpticalComponent<T, U>(std::move(surface)), focalLength(focalLength) {}
+    Lens(std::unique_ptr<OpticalSurface<T, U>> surface)
+			: OpticalComponent<T, U>(std::move(surface)) {}
+    virtual ~Lens() = default;
 
-    virtual void handleLight(Ray<T, U>& ray) = 0;
+    virtual void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) = 0;
 };
 
+// Note: consider to keep or to leave this ThinLens; or just Convex, Concave and ThickLenses; or just ThinLens
 template<typename T, typename U>
 class ThinLens : public Lens<T, U> {
+protected:
+    U focalLength; // focal length of the lens for thin lens approximation
+    void refract_approx(Ray<T, U>& ray, const vec3<T>& intersectionPoint);
+
 public:
-    ThinLens(std::unique_ptr<PlanarSurface<T, U>> surface, T focalLength)
-        : Lens<T, U>(std::move(surface), focalLength) {}
+    ThinLens(std::unique_ptr<PlanarSurface<T, U>> surface, U focalLength);
 
-    void handleLight(Ray<T, U>& ray) override = 0; // still pure virtual
-};
-
-template<typename T, typename U>
-class ConvexThinLens : public ThinLens<T, U> {
-public:
-    ConvexThinLens(std::unique_ptr<OpticalSurface<T, U>> surface, T focalLength)
-	    : ThinLens<T, U>(std::move(surface), std::abs(focalLength)) {}
-
-    void handleLight(Ray<T, U>& ray) override;
-};
-
-template<typename T, typename U>
-class ConcaveThinLens : public ThinLens<T, U> {
-public:
-    ConcaveThinLens(std::unique_ptr<OpticalSurface<T, U>> surface, T focalLength)
-	    : ThinLens<T, U>(std::move(surface), -std::abs(focalLength)) {}
-
-    void handleLight(Ray<T, U>& ray) override;
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override; // still pure virtual
 };
 
 // Definitions
 
 template<typename T, typename U>
-void ConvexThinLens<T, U>::handleLight(Ray<T, U>& ray) {
-    // Specific behavior for ConvexThinLens
+ThinLens<T, U>::ThinLens(std::unique_ptr<PlanarSurface<T, U>> surface, U focalLength)
+    : Lens<T, U>(std::move(surface)), focalLength(focalLength) {
+        if(dynamic_cast<PlanarSurface<T, U>*>(this->surface.get()) == nullptr) {
+            throw std::runtime_error("ThinLens expects a PlanarSurface type. Provided surface type is invalid.");
+        }
+    }
+
+template<typename T, typename U>
+void ThinLens<T, U>::refract_approx(Ray<T, U>& ray, const vec3<T>& intersectionPoint) {
+    vec3<T> O = ray.position;
+    vec3<T> D = ray.direction;
+    vec3<T> P = this->surface->getPosition();
+    vec3<T> N = this->surface->getNormal();
+
+    vec3<T> PR = P - O; // principal ray from the light source to the center of the lens
+    T objectDistance = PR.dot(N); // distance from the object to the lens
+    T imageDistance = 1 / ((1 / focalLength) - (1 / objectDistance)); // distance to the image using the thin lens approximation formula
+    
+    vec3<T> I = P + imageDistance * PR.normalized(); // calculate the image position
+
+    ray.position = intersectionPoint; // change the position of the ray to the intersection of the ray with the lens
+
+    if (imageDistance < 0) { // Virtual image scenario
+        ray.direction = -(intersectionPoint - I).normalized(); // reverse the direction towards the virtual image
+    } else {
+        ray.direction = -(I - intersectionPoint).normalized(); // change the direction of the ray to the normalized vector from that intersection point to the image
+    }
 }
 
 template<typename T, typename U>
-void ConcaveThinLens<T, U>::handleLight(Ray<T, U>& ray) {
-    // Specific behavior for ConcaveThinLens
+void ThinLens<T, U>::handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) {
+    refract_approx(ray, intersectionPoint);
 }
 
 // Extensions 
@@ -63,12 +73,13 @@ void ConcaveThinLens<T, U>::handleLight(Ray<T, U>& ray) {
 template<typename T, typename U>
 class ThickLens : public Lens<T, U> {
 public:
-    ThickLens(std::unique_ptr<OpticalSurface<T, U>> surface, T focalLength)
-	    : Lens<T, U>(std::move(surface), focalLength) {}
-    void handleLight(Ray<T, U>& ray) override;
+    ThickLens(std::unique_ptr<OpticalSurface<T, U>> surface)
+	    : Lens<T, U>(std::move(surface)) {}
+
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override;
 };
 
 template<typename T, typename U>
-void ThickLens<T, U>::handleLight(Ray<T, U>& ray) {
-    std::cout << "No specific implementation for ThickLens yet." << std::endl;
+void ThickLens<T, U>::handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) {
+    throw std::runtime_error("ThickLens::handleLight has not been implemented yet. TODO: Add implementation.");
 }

@@ -1,0 +1,96 @@
+\doxysection{Optical\+Component\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_optical_component}{}\label{class_optical_component}\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+
+
+{\ttfamily \#include $<$optical\+Component.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\item 
+\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component_a09b67e2cf1602cf5ada592af11c63b77}{get\+Position}} () const
+\item 
+\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component_a80c13209ce4c08605391eec34f1afe71}{get\+Normal}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_afe19072dc50cfd390da5710e5688ad97}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, typename U$>$\newline
+class Optical\+Component$<$ T, U $>$}
+
+
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00010}{10}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}\label{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!OpticalComponent@{OpticalComponent}}
+\index{OpticalComponent@{OpticalComponent}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{OpticalComponent()}{OpticalComponent()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\mbox{\hyperlink{class_optical_component}{\+::\+Optical\+Component}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00015}{15}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_optical_component_a80c13209ce4c08605391eec34f1afe71}\label{class_optical_component_a80c13209ce4c08605391eec34f1afe71} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!getNormal@{getNormal}}
+\index{getNormal@{getNormal}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::get\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00019}{19}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+
+\Hypertarget{class_optical_component_a09b67e2cf1602cf5ada592af11c63b77}\label{class_optical_component_a09b67e2cf1602cf5ada592af11c63b77} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00018}{18}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+
+\Hypertarget{class_optical_component_afe19072dc50cfd390da5710e5688ad97}\label{class_optical_component_afe19072dc50cfd390da5710e5688ad97} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!handleLight@{handleLight}}
+\index{handleLight@{handleLight}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+virtual void \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}\label{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!surface@{surface}}
+\index{surface@{surface}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$T, U$>$ $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::surface\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00012}{12}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+simulator/\mbox{\hyperlink{optical_component_8h}{optical\+Component.\+h}}\end{DoxyCompactItemize}

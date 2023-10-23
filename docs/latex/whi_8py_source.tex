@@ -1,0 +1,26 @@
+\doxysection{whi.\+py}
+\hypertarget{whi_8py_source}{}\label{whi_8py_source}\mbox{\hyperlink{whi_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00001}\mbox{\hyperlink{namespacewhi}{00001}}\ \textcolor{keyword}{import}\ os}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00003}\mbox{\hyperlink{namespacewhi_adf3e1ace272ade8c62a33223fcca4d35}{00003}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacewhi_adf3e1ace272ade8c62a33223fcca4d35}{list\_files\_and\_folders}}(folder,\ file,\ level=0,\ n=float(\textcolor{stringliteral}{'inf'})):}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00004}00004\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00005}00005\ \ \ \ \ \textcolor{keywordflow}{if}\ level\ ==\ n:}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00006}00006\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00007}00007\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00008}00008\ \ \ \ \ \textcolor{keywordflow}{for}\ item\ \textcolor{keywordflow}{in}\ os.listdir(folder):}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00009}00009\ \ \ \ \ \ \ \ \ item\_path\ =\ os.path.join(folder,\ item)}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00010}00010\ \ \ \ \ \ \ \ \ file.write(\textcolor{stringliteral}{"{}\ \ \ \ "{}}\ *\ level\ +\ \textcolor{stringliteral}{"{}|-\/-\/"{}}\ +\ item\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}})}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00011}00011\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ os.path.isdir(item\_path):}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacewhi_adf3e1ace272ade8c62a33223fcca4d35}{list\_files\_and\_folders}}(item\_path,\ file,\ level\ +\ 1)}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00015}00015\ \textcolor{keywordflow}{if}\ \_\_name\_\_\ ==\ \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00016}00016\ \ \ \ \ \textcolor{comment}{\#\ folder\ =\ r"{}D:\(\backslash\)an\ der\ RWTH\ Aachen\(\backslash\)4.\ Semester\(\backslash\)Softwareentwicklungspraktikum\(\backslash\)code\(\backslash\)v2.3"{}\ \#\ }}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00017}\mbox{\hyperlink{namespacewhi_a8df39c35f95fb7232a6f481b2e657fb2}{00017}}\ \ \ \ \ folder\ =\ os.getcwd()}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00018}\mbox{\hyperlink{namespacewhi_a4370e4da1bba1fb5191b3d815bf46b01}{00018}}\ \ \ \ \ output\_file\ =\ \textcolor{stringliteral}{r'atava\_tree\_folders.txt'}\ \textcolor{comment}{\#\ define\ a\ raw\ string}}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00020}00020\ \ \ \ \ \textcolor{keyword}{with}\ open(output\_file,\ \textcolor{stringliteral}{'w'})\ \textcolor{keyword}{as}\ file:}
+\DoxyCodeLine{\Hypertarget{whi_8py_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespacewhi_adf3e1ace272ade8c62a33223fcca4d35}{list\_files\_and\_folders}}(folder,\ file)}
+
+\end{DoxyCode}
