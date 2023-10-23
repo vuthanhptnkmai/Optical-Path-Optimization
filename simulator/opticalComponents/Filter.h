@@ -14,18 +14,43 @@ private:
     U wavelengthRange;
 
 public:
-    Filter(const vec3<T>& position, const vec3<T>& normal, std::unique_ptr<Shape<T>> shape, const std::string& filterType, U wavelengthRange);
+    // Filter() = default; // Default constructor
 
-    void handleLight(Ray<T, U>& ray) override;
+    // Placeholder function for handling light, to be implemented later.
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override = 0;
 };
 
-// Definitions
+template<typename T, typename U>
+class BandPassFilter : public Filter<T, U> {
+public:
+
+    // Placeholder function for handling light, to be implemented later.
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
+        ray.position = ray.position;
+        ray.direction = ray.direction 
+        // TODO: Implement this function later.
+    }
+};
 
 template<typename T, typename U>
-Filter<T, U>::Filter(const vec3<T>& position, const vec3<T>& normal, std::unique_ptr<Shape<T>> shape, const std::string& filterType, U wavelengthRange)
-    : OpticalComponent<T, U>(position, normal, std::move(shape)), filterType(filterType), wavelengthRange(wavelengthRange) {}
+class LowPassFilter : public Filter<T, U> {
+
+    // Placeholder function for handling light, to be implemented later.
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
+        ray.position = ray.position;
+        ray.direction = ray.direction 
+        // TODO: Implement this function later.
+    }
+};
 
 template<typename T, typename U>
-void Filter<T, U>::handleLight(Ray<T, U>& ray) {
-    // Specific behavior for Filter
-}
+class HighPassFilter : public Filter<T, U> {
+
+    // Placeholder function for handling light, to be implemented later.
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
+        ray.position = ray.position;
+        ray.direction = ray.direction 
+        // TODO: Implement this function later.
+    }
+};
+

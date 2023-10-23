@@ -19,7 +19,7 @@ public:
     T getRadius() const { return radius; }
 
     std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const override;
-    void generatePoints() const;
+    void generatePoints(const std::string& filename) const;
 };
 
 // Definitions
@@ -35,7 +35,7 @@ std::pair<bool, vec3<T>> PlanarCircle<T, U>::intersects(const Ray<T, U>& ray) co
 }
 
 template<typename T, typename U>
-void PlanarCircle<T, U>::generatePoints() const {
+void PlanarCircle<T, U>::generatePoints(const std::string& filename) const {
     vec3<T> center = this->position;
     vec3<T> normal = this->normal;
 
@@ -48,9 +48,9 @@ void PlanarCircle<T, U>::generatePoints() const {
     T theta = std::acos(cosTheta);
 
     // Open the file for writing
-    std::ofstream outFile("components.dat");
+    std::ofstream outFile(filename);
     if (!outFile) {
-        std::cerr << "Failed to open components.dat for writing." << std::endl;
+        std::cerr << "Failed to open component.dat for writing." << std::endl;
         return;
     }
 
@@ -67,7 +67,7 @@ void PlanarCircle<T, U>::generatePoints() const {
         // Directly write the computed point to the file
         outFile << finalPoint(0) << " " << finalPoint(1) << " " << finalPoint(2) << std::endl;
     }
-
+    outFile << "\n\n" << std::endl;
     // Close the file after writing
     outFile.close();
 }

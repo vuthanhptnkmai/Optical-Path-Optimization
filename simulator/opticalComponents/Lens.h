@@ -8,6 +8,8 @@
 #include "../opticalSurface.h"
 #include "../ray.h"
 
+#include <iostream>
+
 template<typename T, typename U>
 class Lens : public OpticalComponent<T, U> {
 public:
@@ -46,7 +48,7 @@ void ThinLens<T, U>::refract_approx(Ray<T, U>& ray, const vec3<T>& intersectionP
     vec3<T> O = ray.position;
     vec3<T> D = ray.direction;
     vec3<T> P = this->surface->getPosition();
-    vec3<T> N = this->surface->getNormal();
+    vec3<T> N = -this->surface->getNormal();
 
     vec3<T> PR = P - O; // principal ray from the light source to the center of the lens
     T objectDistance = PR.dot(N); // distance from the object to the lens
@@ -57,9 +59,9 @@ void ThinLens<T, U>::refract_approx(Ray<T, U>& ray, const vec3<T>& intersectionP
     ray.position = intersectionPoint; // change the position of the ray to the intersection of the ray with the lens
 
     if (imageDistance < 0) { // Virtual image scenario
-        ray.direction = -(intersectionPoint - I).normalized(); // reverse the direction towards the virtual image
+        ray.direction = (intersectionPoint - I).normalized(); // reverse the direction towards the virtual image
     } else {
-        ray.direction = -(I - intersectionPoint).normalized(); // change the direction of the ray to the normalized vector from that intersection point to the image
+        ray.direction = (I - intersectionPoint).normalized(); // change the direction of the ray to the normalized vector from that intersection point to the image
     }
 }
 

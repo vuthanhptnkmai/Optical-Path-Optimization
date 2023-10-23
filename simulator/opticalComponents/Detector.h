@@ -13,18 +13,13 @@ private:
     int pixelWidth, pixelHeight;
 
 public:
-    Detector(const vec3<T>& position, const vec3<T>& normal, std::unique_ptr<Shape<T>> shape, int pixelWidth, int pixelHeight);
+public:
+    // Detector() = default; // Default constructor
 
-    void handleLight(Ray<T, U>& ray) override;
+    // Placeholder function for handling light, to be implemented later.
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
+        ray.position = ray.position;
+        ray.direction = ray.direction 
+        // TODO: Implement this function later.
+    }
 };
-
-// Definitions
-
-template<typename T, typename U>
-Detector<T, U>::Detector(const vec3<T>& position, const vec3<T>& normal, std::unique_ptr<Shape<T>> shape, int pixelWidth, int pixelHeight)
-    : OpticalComponent<T, U>(position, normal, std::move(shape)), pixelWidth(pixelWidth), pixelHeight(pixelHeight) {}
-
-template<typename T, typename U>
-void Detector<T, U>::handleLight(Ray<T, U>& ray) {
-    // Specific behavior for Detector
-}
