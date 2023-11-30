@@ -13,8 +13,7 @@ set style line 2 pointtype 7 pointsize 1.0 linecolor rgb "#000080"
 set style line 3 linewidth 3.5 linecolor rgb "#FF4500"
 set style line 4 linewidth 3.5 linecolor rgb "#000000"
 
-splot "component1.dat" with lines ls 3 notitle, \
-      "component2.dat" with lines ls 4 notitle, \
+splot "components.dat" with lines ls 3 notitle, \
       "rays.dat" with lines ls 1 notitle
 
 pause -1

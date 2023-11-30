@@ -20,7 +20,8 @@ public:
     T getRadius() const { return radius; }
 
     std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const override;
-    void generatePoints(const std::string& filename) const;
+    // void generatePoints(const std::string& filename) const;
+    void generatePoints(std::ofstream& outFile) const;
 };
 
 // Definitions
@@ -36,21 +37,18 @@ std::pair<bool, vec3<T>> PlanarCircle<T, U>::intersects(const Ray<T, U>& ray) co
 }
 
 template<typename T, typename U>
-void PlanarCircle<T, U>::generatePoints(const std::string& filename) const {
+void PlanarCircle<T, U>::generatePoints(std::ofstream& outFile) const {
+    if (!outFile) {
+        throw std::runtime_error("Output stream is not open.");
+    }
+
     vec3<T> center = this->position;
     vec3<T> normal = this->normal;
 
-    int numPoints = static_cast<int>(radius * 2 * M_PI * 5);
+    int numPoints = static_cast<int>(radius * 2 * M_PI * 9);
 
     vec3<T> defaultNormal(0, 1, 0);
     vec3<T> rotationAxis = defaultNormal.cross(normal).normalized();
-
-    // Open the file for writing
-    std::ofstream outFile(filename);
-    if (!outFile) {
-        std::cerr << "Failed to open " << filename << " for writing." << std::endl;
-        return;
-    }
 
     T cosTheta = defaultNormal.dot(normal);
     T theta = std::acos(cosTheta);
@@ -63,10 +61,8 @@ void PlanarCircle<T, U>::generatePoints(const std::string& filename) const {
                             + rotationAxis.cross(point) * std::sin(theta)
                             + rotationAxis * rotationAxis.dot(point) * (1 - cosTheta);
         vec3<T> finalPoint = rotatedPoint + center;
-        outFile << finalPoint(0) << " " << finalPoint(1) << " " << finalPoint(2) << std::endl;
+        outFile << finalPoint(0) << " " << finalPoint(1) << " " << finalPoint(2) <<std::endl;
     }
 
     outFile << "\n\n" << std::endl;
-    // Close the file after writing
-    outFile.close();
 }

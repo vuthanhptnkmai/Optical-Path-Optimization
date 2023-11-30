@@ -22,7 +22,8 @@ public:
 
     virtual vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const = 0; 
     virtual std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const = 0;
-    virtual void generatePoints(const std::string& filename) const = 0;
+    // virtual void generatePoints(const std::string& filename) const = 0;
+    virtual void generatePoints(std::ofstream& outFile) const = 0;
 };
 
 template<typename T, typename U>
@@ -33,7 +34,8 @@ public:
 
     vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const override;
     virtual std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const = 0;
-    virtual void generatePoints(const std::string& filename) const = 0;
+    // virtual void generatePoints(const std::string& filename) const = 0;
+    virtual void generatePoints(std::ofstream& outFile) const = 0;
 };
 
 template<typename T, typename U>
@@ -56,7 +58,8 @@ public:
 
     vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const override;
     std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const override;
-    virtual void generatePoints() const override;
+    //virtual void generatePoints() const override;
+    void generatePoints(std::ofstream& outFile) const override;
 };
 
 template<typename T, typename U>
@@ -72,6 +75,6 @@ std::pair<bool, vec3<T>> SphericalSurface<T, U>::intersects(const Ray<T, U>& ray
 }
 
 template<typename T, typename U>
-void SphericalSurface<T, U>::generatePoints() const {
+void SphericalSurface<T, U>::generatePoints(std::ofstream& outFile) const {
     throw std::runtime_error("SphericalSurface::generatePoints has not been implemented yet. TODO: Add implementation.");
 }

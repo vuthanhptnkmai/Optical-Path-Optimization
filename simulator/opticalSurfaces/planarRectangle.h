@@ -21,7 +21,8 @@ public:
     const vec3<T>& getWidthDirection() const { return widthDirection; }
 
     std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const override;
-    void generatePoints(const std::string& filename) const override;
+    //void generatePoints(const std::string& filename) const override;
+    void generatePoints(std::ofstream& outFile) const override;
 };
 
 // Definitions
@@ -46,12 +47,9 @@ std::pair<bool, vec3<T>> PlanarRectangle<T, U>::intersects(const Ray<T, U>& ray)
 }
 
 template<typename T, typename U>
-void PlanarRectangle<T, U>::generatePoints(const std::string& filename) const {
-    // Attempt to open the file for writing and handle any errors
-    std::ofstream outFile(filename);
+void PlanarRectangle<T, U>::generatePoints(std::ofstream& outFile) const {
     if (!outFile) {
-        std::cerr << "Failed to open " << filename << " for writing." << std::endl;
-        return;
+        throw std::runtime_error("Output stream is not open.");
     }
 
     // Pre-calculate half width and height vectors
@@ -72,7 +70,5 @@ void PlanarRectangle<T, U>::generatePoints(const std::string& filename) const {
     }
     // Close the rectangle by connecting the last point to the first
     outFile << corners[0](0) << " " << corners[0](1) << " " << corners[0](2) << std::endl;
-
-    // Close the file after writing
-    outFile.close();
+    outFile << "\n\n" << std::endl;
 }
