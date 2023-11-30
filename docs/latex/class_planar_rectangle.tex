@@ -1,0 +1,177 @@
+\doxysection{Planar\+Rectangle\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_planar_rectangle}{}\label{class_planar_rectangle}\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+
+
+{\ttfamily \#include $<$planar\+Rectangle.\+h$>$}
+
+Inheritance diagram for Planar\+Rectangle\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_planar_rectangle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_planar_rectangle_aeaa7719adedd337aa0748d98fa455d49}{Planar\+Rectangle}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}, \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_rectangle_a9935d1ebfa842deb26f410b8f257a55d}{width}}, \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_rectangle_a151174ef9ff046adcd2fb5383b8cf402}{height}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_planar_rectangle_a605e69e86c9433904e55839734dc79e1}{width\+Direction}})
+\item 
+std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_rectangle_a1f4718f362943b68cc9c340d59776ab3}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const override
+\item 
+void \mbox{\hyperlink{class_planar_rectangle_a519d4c16d7161a3b9412204c65bed128}{generate\+Points}} (const std\+::string \&filename) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_planar_surface}{Planar\+Surface$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_planar_surface_a45c305870169292b3eef7badd2570283}{Planar\+Surface}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}})
+\item 
+virtual \mbox{\hyperlink{class_planar_surface_a739abfe15b4465a4625249799db524a2}{\texorpdfstring{$\sim$}{\string~}\+Planar\+Surface}} ()=default
+\item 
+vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_planar_surface_a123ed05ed59710fcd97d28bcf454d688}{get\+Intersection\+Point}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const override
+\item 
+virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
+\item 
+virtual void \mbox{\hyperlink{class_planar_surface_a2acb095bf59c88a2e813611208265c6d}{generate\+Points}} (const std\+::string \&filename) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optical_surface_a11ba19c3e9a4e807b3e8867d963771f1}{Optical\+Surface}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}})
+\item 
+virtual \mbox{\hyperlink{class_optical_surface_a47632c4d33e480af9a152b765c786150}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Surface}} ()=default
+\item 
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_surface_ad8a7a6ff67ac779a003316317c29f03e}{get\+Position}} () const
+\item 
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_surface_ae64f02dbe7d7b89ee3b550ea4e34bf95}{get\+Normal}} () const
+\item 
+virtual vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_optical_surface_a47f05eb6935451dd452f521dcdbbd313}{get\+Intersection\+Point}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
+\item 
+virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5fa9}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
+\item 
+virtual void \mbox{\hyperlink{class_optical_surface_a6b45092d0ae1a4a9928401eb5de37298}{generate\+Points}} (const std\+::string \&filename) const =0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_rectangle_a9935d1ebfa842deb26f410b8f257a55d}{width}}
+\item 
+\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_rectangle_a151174ef9ff046adcd2fb5383b8cf402}{height}}
+\item 
+vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_planar_rectangle_a605e69e86c9433904e55839734dc79e1}{width\+Direction}}
+\item 
+vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_planar_rectangle_a38be1049077a6c5189654d96888f522f}{height\+Direction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}
+\item 
+vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+class Planar\+Rectangle$<$ T, U $>$}
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00010}{10}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_planar_rectangle_aeaa7719adedd337aa0748d98fa455d49}\label{class_planar_rectangle_aeaa7719adedd337aa0748d98fa455d49} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!PlanarRectangle@{PlanarRectangle}}
+\index{PlanarRectangle@{PlanarRectangle}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{PlanarRectangle()}{PlanarRectangle()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+\mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_planar_rectangle}{\+::\+Planar\+Rectangle}} (\begin{DoxyParamCaption}\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{position,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{normal,  }\item[{\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}}]{width,  }\item[{\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}}]{height,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{width\+Direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00025}{25}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_planar_rectangle_a519d4c16d7161a3b9412204c65bed128}\label{class_planar_rectangle_a519d4c16d7161a3b9412204c65bed128} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!generatePoints@{generatePoints}}
+\index{generatePoints@{generatePoints}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+void \mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_planar_surface_a2acb095bf59c88a2e813611208265c6d}{Planar\+Surface$<$ T, U $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00044}{44}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+\Hypertarget{class_planar_rectangle_a1f4718f362943b68cc9c340d59776ab3}\label{class_planar_rectangle_a1f4718f362943b68cc9c340d59776ab3} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!intersects@{intersects}}
+\index{intersects@{intersects}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{intersects()}{intersects()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}{Planar\+Surface$<$ T, U $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00031}{31}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_planar_rectangle_a151174ef9ff046adcd2fb5383b8cf402}\label{class_planar_rectangle_a151174ef9ff046adcd2fb5383b8cf402} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!height@{height}}
+\index{height@{height}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::height\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00012}{12}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+\Hypertarget{class_planar_rectangle_a38be1049077a6c5189654d96888f522f}\label{class_planar_rectangle_a38be1049077a6c5189654d96888f522f} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!heightDirection@{heightDirection}}
+\index{heightDirection@{heightDirection}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{heightDirection}{heightDirection}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+vec3$<$\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}$>$ \mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::height\+Direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00013}{13}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+\Hypertarget{class_planar_rectangle_a9935d1ebfa842deb26f410b8f257a55d}\label{class_planar_rectangle_a9935d1ebfa842deb26f410b8f257a55d} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!width@{width}}
+\index{width@{width}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::width\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00012}{12}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+\Hypertarget{class_planar_rectangle_a605e69e86c9433904e55839734dc79e1}\label{class_planar_rectangle_a605e69e86c9433904e55839734dc79e1} 
+\index{PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}!widthDirection@{widthDirection}}
+\index{widthDirection@{widthDirection}!PlanarRectangle$<$ T, U $>$@{PlanarRectangle$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{widthDirection}{widthDirection}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+vec3$<$\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}$>$ \mbox{\hyperlink{class_planar_rectangle}{Planar\+Rectangle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::width\+Direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{planar_rectangle_8h_source_l00013}{13}} of file \mbox{\hyperlink{planar_rectangle_8h_source}{planar\+Rectangle.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+simulator/optical\+Surfaces/\mbox{\hyperlink{planar_rectangle_8h}{planar\+Rectangle.\+h}}\end{DoxyCompactItemize}

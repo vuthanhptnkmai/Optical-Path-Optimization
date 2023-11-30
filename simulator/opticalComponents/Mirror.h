@@ -36,8 +36,6 @@ void Mirror<T, U>::reflect(Ray<T, U>& incidentRay, const vec3<T>& normal, const 
     vec3<T> reflectedDirection = incidentRay.getDirection() - 2 * incidentRay.getDirection().dot(normal) * normal;
     
     incidentRay.position = intersectionPoint;
-    // reflectedDirection.normalize();  // ensure the direction is a unit vector
-    // incidentRay.direction = reflectedDirection;
     incidentRay.direction = reflectedDirection.normalized();
 }
 

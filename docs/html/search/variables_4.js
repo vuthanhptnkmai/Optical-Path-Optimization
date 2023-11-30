@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['radius_0',['radius',['../class_spherical_surface.html#ac3496dd82e92a7bd69b1f2298a4a750d',1,'SphericalSurface']]]
+  ['normal_0',['normal',['../class_optical_surface.html#a8f05cb1afd8798183cc764f84d49f622',1,'OpticalSurface']]]
 ];

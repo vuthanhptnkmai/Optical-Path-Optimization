@@ -16,10 +16,9 @@ public:
         : surface(std::move(surface)) {}
     virtual ~OpticalComponent() = default;
 
-    vec3<T> getPosition() const { return surface->getPosition(); }
-    vec3<T> getNormal() const { return surface->getNormal(); }
-    OpticalSurface<T, U>* getSurface() const { return surface.get(); }
-
+    const vec3<T>& getPosition() const { return surface->getPosition(); }
+    const vec3<T>& getNormal() const { return surface->getNormal(); }
+    const OpticalSurface<T, U>* getSurfacePtr() const { return surface.get(); }
 
     virtual void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) = 0;
 };

@@ -11,7 +11,7 @@ private:
 
 public:
     // these attributes are public for direct and efficient access
-    // ensure to maintain the direction as a normalized vector when modifying it
+    // maintain the direction as a normalized vector when modifying it
     vec3<T> position;
     vec3<T> direction;
 
@@ -24,7 +24,7 @@ public:
     U getIntensity() const { return intensity; }
 
     void setPosition(const vec3<T>& newPosition) { position = newPosition; }
-    void setDirection(const vec3<T>& newDirection) { direction = newDirection; }
+    void setDirection(const vec3<T>& newDirection) { direction = newDirection.normalized(); }
     void setWavelength(U newWavelength) { wavelength = newWavelength; }
     void setIntensity(U newIntensity) { intensity = newIntensity; }
 };

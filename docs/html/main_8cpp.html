@@ -79,92 +79,68 @@ $(function() {
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;cmath&gt;</code><br />
+<div class="textblock"><code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="optical_component_8h_source.html">opticalComponent.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="optical_surface_8h_source.html">opticalSurface.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="planar_circle_8h_source.html">opticalSurfaces/PlanarCircle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mirror_8h_source.html">opticalComponents/Mirror.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lens_8h_source.html">opticalComponents/lens.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="read_rays_from_file_8h_source.html">utils/readRaysFromFile.h</a>&quot;</code><br />
 <code>#include &quot;../thirdParty/eigen-3.4.0/Eigen/Dense&quot;</code><br />
-<code>#include &quot;opticalSurfaces/planarCircle.h&quot;</code><br />
+<code>#include &quot;../utils/vec3.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="ray_8h_source.html">ray.h</a>&quot;</code><br />
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a76efc7781886f103708e0859d04647ad"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a76efc7781886f103708e0859d04647ad"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a> = Eigen::Matrix&lt; T, 3, 1 &gt;</td></tr>
-<tr class="separator:a76efc7781886f103708e0859d04647ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b2d038ea9c8d2651eecffe0e28b7ebb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> = double</td></tr>
+<tr class="separator:a6b2d038ea9c8d2651eecffe0e28b7ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6593bc6eff52fb072817ee0fa2217255"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> = float</td></tr>
+<tr class="separator:a6593bc6eff52fb072817ee0fa2217255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8127e84138ca8d2b0f85fecf9637b037"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
-<tr class="memitem:a8127e84138ca8d2b0f85fecf9637b037"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a>&lt; T &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8127e84138ca8d2b0f85fecf9637b037">generateCirclePoints</a> (const <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a>&lt; T &gt; &amp;center, const <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a>&lt; T &gt; &amp;normal, T radius, int numPoints=180)</td></tr>
-<tr class="separator:a8127e84138ca8d2b0f85fecf9637b037"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="a76efc7781886f103708e0859d04647ad" name="a76efc7781886f103708e0859d04647ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76efc7781886f103708e0859d04647ad">&#9670;&#160;</a></span>vec3</h2>
+<a id="a6b2d038ea9c8d2651eecffe0e28b7ebb" name="a6b2d038ea9c8d2651eecffe0e28b7ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b2d038ea9c8d2651eecffe0e28b7ebb">&#9670;&#160;</a></span>T</h2>
 
 <div class="memitem">
 <div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a> =  Eigen::Matrix&lt;T, 3, 1&gt;</td>
+          <td class="memname">using <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> =  double</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00008">8</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6593bc6eff52fb072817ee0fa2217255" name="a6593bc6eff52fb072817ee0fa2217255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6593bc6eff52fb072817ee0fa2217255">&#9670;&#160;</a></span>U</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> =  float</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8127e84138ca8d2b0f85fecf9637b037" name="a8127e84138ca8d2b0f85fecf9637b037"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8127e84138ca8d2b0f85fecf9637b037">&#9670;&#160;</a></span>generateCirclePoints()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt; <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a>&lt; T &gt; &gt; generateCirclePoints </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>center</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="main_8cpp.html#a76efc7781886f103708e0859d04647ad">vec3</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>normal</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">T&#160;</td>
-          <td class="paramname"><em>radius</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>numPoints</em> = <code>180</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00011">11</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-
-</div>
-</div>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
@@ -180,7 +156,7 @@ template&lt;typename T &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00043">43</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,50 @@
+\doxysection{read\+Components\+From\+File.\+h}
+\hypertarget{read_components_from_file_8h_source}{}\label{read_components_from_file_8h_source}\index{simulator/utils/readComponentsFromFile.h@{simulator/utils/readComponentsFromFile.h}}
+\mbox{\hyperlink{read_components_from_file_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}../opticalComponent.h"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../opticalSurface.h"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}../opticalSurfaces/PlanarCircle.h"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}../opticalComponents/mirror.h"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}../opticalComponents/lens.h"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}../../thirdParty/eigen-\/3.4.0/Eigen/Dense"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}../../utils/vec3.h"{}}}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}../ray.h"{}}\ \ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00017}00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00018}\mbox{\hyperlink{read_components_from_file_8h_aafd1e224e8aaca294c77a0bfeb7a854c}{00018}}\ std::unique\_ptr<std::vector<std::unique\_ptr<OpticalComponent<T,\ U>>>>\ \mbox{\hyperlink{read_components_from_file_8h_aafd1e224e8aaca294c77a0bfeb7a854c}{readComponentsFromFile}}()\ \{}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{auto}\ components\ =\ std::make\_unique<std::vector<std::unique\_ptr<OpticalComponent<T,\ U>>>>();}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00021}00021\ \ \ \ \ vec3<T>\ position1(1.0,\ 1.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00022}00022\ \ \ \ \ vec3<T>\ normal1(0.0,\ 0.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ diameter1\ =\ 2.0;}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{auto}\ circle1\ =\ std::make\_unique<PlanarCircle<T,\ U>>(position1,\ normal1,\ diameter1);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{auto}\ mirror\ =\ std::make\_unique<PlanarMirror<T,\ U>>(circle1);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00027}00027\ \ \ \ \ vec3<T>\ position2(1.0,\ 1.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00028}00028\ \ \ \ \ vec3<T>\ normal2(0.0,\ 0.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ diameter2\ =\ 2.0;}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{auto}\ circle2\ =\ std::make\_unique<PlanarCircle<T,\ U>>(position2,\ normal2,\ diameter2);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{auto}\ convex\_lens\ =\ std::make\_unique<ThinLens<T,\ U>>(circle2,\ -\/0.5);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00033}00033\ \ \ \ \ vec3<T>\ position3(1.0,\ 1.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00034}00034\ \ \ \ \ vec3<T>\ normal3(0.0,\ 0.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ diameter3\ =\ 2.0;}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00036}00036\ \ \ \ \ \textcolor{keyword}{auto}\ circle3\ =\ std::make\_unique<PlanarCircle<T,\ U>>(position3,\ normal3,\ diameter3);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{auto}\ concave\_lens\ =\ std::make\_unique<ThinLens<T,\ U>>(circle3,\ -\/0.5);}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00039}00039\ \ \ \ \ components-\/>push\_back(std::move(mirror));}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00040}00040\ \ \ \ \ components-\/>push\_back(std::move(convex\_lens));}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00041}00041\ \ \ \ \ components-\/>push\_back(std::move(concave\_lens));}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ components;}
+\DoxyCodeLine{\Hypertarget{read_components_from_file_8h_source_l00044}00044\ \}}
+
+\end{DoxyCode}

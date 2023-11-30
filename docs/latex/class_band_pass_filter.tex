@@ -1,0 +1,74 @@
+\doxysection{Band\+Pass\+Filter\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_band_pass_filter}{}\label{class_band_pass_filter}\index{BandPassFilter$<$ T, U $>$@{BandPassFilter$<$ T, U $>$}}
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+Inheritance diagram for Band\+Pass\+Filter\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_band_pass_filter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_band_pass_filter_a47894d215c4590eee332089a7f96602d}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_filter_a8feabb7ea043dd471fd2f87486e6f171}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\item 
+virtual \mbox{\hyperlink{class_optical_component_a6c259b37610efcccd45a30f58903230e}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Component}} ()=default
+\item 
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
+\item 
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
+\item 
+const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}{get\+Surface\+Ptr}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+class Band\+Pass\+Filter$<$ T, U $>$}
+
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00024}{24}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_band_pass_filter_a47894d215c4590eee332089a7f96602d}\label{class_band_pass_filter_a47894d215c4590eee332089a7f96602d} 
+\index{BandPassFilter$<$ T, U $>$@{BandPassFilter$<$ T, U $>$}!handleLight@{handleLight}}
+\index{handleLight@{handleLight}!BandPassFilter$<$ T, U $>$@{BandPassFilter$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+void \mbox{\hyperlink{class_band_pass_filter}{Band\+Pass\+Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_filter_a8feabb7ea043dd471fd2f87486e6f171}{Filter$<$ T, U $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00028}{28}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+simulator/optical\+Components/\mbox{\hyperlink{filter_8h}{filter.\+h}}\end{DoxyCompactItemize}

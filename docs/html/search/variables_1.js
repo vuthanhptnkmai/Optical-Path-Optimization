@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['intensity_0',['intensity',['../class_ray.html#a7b9adeaeea8b4f02e66738e845278c98',1,'Ray']]]
+  ['filtertype_0',['filterType',['../class_filter.html#a52b7760d224c311ab2a4c6015c59f835',1,'Filter']]],
+  ['focallength_1',['focalLength',['../class_thin_lens.html#a93c5204c52151e08d948db31bc75cf6e',1,'ThinLens']]]
 ];

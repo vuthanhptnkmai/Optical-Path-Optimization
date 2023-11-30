@@ -14,11 +14,11 @@ protected:
     vec3<T> normal;     // normal or principal axis of the optical surface
 
 public:
-    OpticalSurface(const vec3<T>& position, const vec3<T>& normal) : position(position), normal(normal) {}
+    OpticalSurface(const vec3<T>& position, const vec3<T>& normal) : position(position), normal(normal.normalized()) {}
     virtual ~OpticalSurface() = default;
 
-    vec3<T> getPosition() const { return position; }
-    vec3<T> getNormal() const { return normal; }
+    const vec3<T>& getPosition() const { return position; }
+    const vec3<T>& getNormal() const { return normal; }
 
     virtual vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const = 0; 
     virtual std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const = 0;

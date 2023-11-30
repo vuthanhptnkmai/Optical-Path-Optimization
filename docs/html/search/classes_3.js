@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sphericalsurface_0',['SphericalSurface',['../class_spherical_surface.html',1,'']]]
+  ['filter_0',['Filter',['../class_filter.html',1,'']]]
 ];

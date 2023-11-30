@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['planarsurface_0',['PlanarSurface',['../class_planar_surface.html',1,'PlanarSurface&lt; T, U &gt;'],['../class_planar_surface.html#a45c305870169292b3eef7badd2570283',1,'PlanarSurface::PlanarSurface()']]],
-  ['position_1',['position',['../class_optical_surface.html#a6985c911e7deef13c9b45f353124ddf9',1,'OpticalSurface::position'],['../class_ray.html#a89b8e166bcaf884e8ccd185a6e5252bb',1,'Ray::position']]]
+  ['lens_0',['Lens',['../class_lens.html',1,'Lens&lt; T, U &gt;'],['../class_lens.html#a7d69c40b20827bb50828861f21afd755',1,'Lens::Lens()']]],
+  ['lens_2eh_1',['lens.h',['../lens_8h.html',1,'']]],
+  ['lowpassfilter_2',['LowPassFilter',['../class_low_pass_filter.html',1,'']]]
 ];

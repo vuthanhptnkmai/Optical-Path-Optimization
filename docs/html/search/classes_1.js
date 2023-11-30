@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['planarsurface_0',['PlanarSurface',['../class_planar_surface.html',1,'']]]
+  ['concavemirror_0',['ConcaveMirror',['../class_concave_mirror.html',1,'']]],
+  ['convexmirror_1',['ConvexMirror',['../class_convex_mirror.html',1,'']]]
 ];

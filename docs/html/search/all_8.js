@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['radius_0',['radius',['../class_spherical_surface.html#ac3496dd82e92a7bd69b1f2298a4a750d',1,'SphericalSurface']]],
-  ['ray_1',['Ray',['../class_ray.html',1,'Ray&lt; T, U &gt;'],['../class_ray.html#a06035984df2644793ba7eba9a8e3d6f9',1,'Ray::Ray()']]],
-  ['ray_2eh_2',['ray.h',['../ray_8h.html',1,'']]],
-  ['raytracing_2eh_3',['rayTracing.h',['../ray_tracing_8h.html',1,'']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mirror_2',['Mirror',['../class_mirror.html',1,'Mirror&lt; T, U &gt;'],['../class_mirror.html#af02feab3af2457cb66719a2ba2776a46',1,'Mirror::Mirror()']]],
+  ['mirror_2eh_3',['mirror.h',['../mirror_8h.html',1,'']]]
 ];

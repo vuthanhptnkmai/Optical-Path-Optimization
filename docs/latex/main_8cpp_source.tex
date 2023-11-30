@@ -2,65 +2,80 @@
 \hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\index{simulator/main.cpp@{simulator/main.cpp}}
 \mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <cmath>}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <fstream>}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}../thirdParty/eigen-\/3.4.0/Eigen/Dense"{}}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}opticalSurfaces/planarCircle.h"{}}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{00008}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}\ =\ Eigen::Matrix<T,\ 3,\ 1>;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}\mbox{\hyperlink{main_8cpp_a8127e84138ca8d2b0f85fecf9637b037}{00011}}\ std::vector<vec3<T>>\ \mbox{\hyperlink{main_8cpp_a8127e84138ca8d2b0f85fecf9637b037}{generateCirclePoints}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\&\ center,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\&\ normal,\ T\ radius,\ \textcolor{keywordtype}{int}\ numPoints\ =\ 180)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ \ \ \ \ std::vector<vec3<T>>\ points;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{optical_component_8h}{opticalComponent.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{optical_surface_8h}{opticalSurface.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{planar_circle_8h}{opticalSurfaces/PlanarCircle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mirror_8h}{opticalComponents/Mirror.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{lens_8h}{opticalComponents/lens.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{read_rays_from_file_8h}{utils/readRaysFromFile.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ Default\ circle\ normal\ (for\ circle\ in\ xz-\/plane)}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\ defaultNormal(0,\ 1,\ 0);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Calculate\ rotation\ axis\ and\ angle}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}00018\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\ rotationAxis\ =\ defaultNormal.cross(normal).normalized();}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019\ \ \ \ \ T\ cosTheta\ =\ defaultNormal.dot(normal);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020\ \ \ \ \ T\ theta\ =\ std::acos(cosTheta);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ numPoints;\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ T\ t\ =\ i\ *\ 2\ *\ M\_PI\ /\ numPoints;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}../thirdParty/eigen-\/3.4.0/Eigen/Dense"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}../utils/vec3.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ray_8h}{ray.h}}"{}}\ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{00018}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ =\ double;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{00019}}\ \textcolor{keyword}{using\ }\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ =\ float;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00021}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ \ \ \ \ std::vector<std::string>\ logs;}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Generate\ point\ on\ circle\ in\ xz-\/plane}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\ point(radius\ *\ std::cos(t),\ 0,\ radius\ *\ std::sin(t));}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Rotate\ the\ point\ using\ Rodrigues'\ rotation\ formula}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\ rotatedPoint\ =\ point\ *\ cosTheta}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ rotationAxis.cross(point)\ *\ std::sin(theta)}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ rotationAxis\ *\ rotationAxis.dot(point)\ *\ (1\ -\/\ cosTheta);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Translate\ the\ rotated\ point}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<T>}}\ finalPoint\ =\ rotatedPoint\ +\ center;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ points.push\_back(finalPoint);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{return}\ points;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \textcolor{comment}{//\ Usage\ example:}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00043}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<double>}}\ center(1.0,\ 2.0,\ 3.0);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3<double>}}\ normal(0.5,\ 1.0,\ 0.0);}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{double}\ diameter\ =\ 2.0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{auto}\ rays\ =\ \mbox{\hyperlink{read_rays_from_file_8h_a060f4329e753b6e885a16f22f7c26473}{readRaysFromFile}}(\textcolor{stringliteral}{"{}utils/ray\_input.dat"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ vec3<T>\ position(1.0,\ 1.0,\ 1.0);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ vec3<T>\ normal(0.0,\ 0.0,\ 1.0);\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ diameter\ =\ 2.0;\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ \ \ \ \ std::unique\_ptr<OpticalSurface<T,\ U>>\ circle\ =\ std::make\_unique<PlanarCircle<T,\ U>>(position,\ normal,\ diameter);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00031}00031\ \ \ \ \ std::unique\_ptr<OpticalComponent<T,\ U>>\ mirror\ =\ std::make\_unique<PlanarMirror<T,\ U>>(std::move(circle));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00032}00032\ \ \ \ \ circle-\/>generatePoints(\textcolor{stringliteral}{"{}component1.dat"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00033}00033\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00034}00034\ \ \ \ \ vec3<T>\ position1(0.0,\ 1.0,\ 0.0);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00035}00035\ \ \ \ \ vec3<T>\ normal1(0.0,\ 1.0,\ 0.0);\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ diameter1\ =\ 1.0;\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}00037\ \ \ \ \ std::unique\_ptr<PlanarSurface<T,\ U>>\ circle1\ =\ std::make\_unique<PlanarCircle<T,\ U>>(position1,\ normal1,\ diameter1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ std::unique\_ptr<OpticalComponent<T,\ U>>\ lens\ =\ std::make\_unique<ThinLens<T,\ U>>(std::move(circle1),\ 0.5);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ circle1-\/>generatePoints(\textcolor{stringliteral}{"{}component2.dat"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ std::ofstream\ outFile(\textcolor{stringliteral}{"{}rays.dat"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (!outFile)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Failed\ to\ open\ components.dat\ for\ writing."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ PlanarCircle<double,\ int>\ circle(center,\ normal,\ diameter);\ \ \textcolor{comment}{//\ Assuming\ int\ is\ the\ type\ for\ U}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{auto}\ points\ =\ \mbox{\hyperlink{main_8cpp_a8127e84138ca8d2b0f85fecf9637b037}{generateCirclePoints}}(center,\ normal,\ circle.getRadius());}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{comment}{//\ Optionally,\ write\ the\ points\ to\ a\ file\ for\ plotting}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ std::ofstream\ file(\textcolor{stringliteral}{"{}circle\_points.dat"{}});}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ point\ :\ points)\ \{}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ file\ <<\ point(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ point(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ point(2)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ file.close();}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ ray\ :\ *rays)\ \{\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ outFile\ <<\ ray.position(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.position(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.position(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [doesIntersect,\ intersectionPoint]\ =\ mirror-\/>getSurface()-\/>intersects(ray);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ outFile\ <<\ intersectionPoint(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ intersectionPoint(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ intersectionPoint(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doesIntersect)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ mirror-\/>handleLight(ray,\ intersectionPoint);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ outFile\ <<\ ray.direction(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.direction(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.direction(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ outFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}}\ <<\ std::endl;\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [doesIntersect1,\ intersectionPoint1]\ =\ lens-\/>getSurface()-\/>intersects(ray);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ outFile\ <<\ intersectionPoint1(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ intersectionPoint1(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ intersectionPoint1(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doesIntersect1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ lens-\/>handleLight(ray,\ intersectionPoint1);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ outFile\ <<\ ray.direction(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.direction(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.direction(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ outFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}}\ <<\ std::endl;\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00072}00072\ \ \ \ \ outFile.close();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00075}00075\ \}}
 
 \end{DoxyCode}

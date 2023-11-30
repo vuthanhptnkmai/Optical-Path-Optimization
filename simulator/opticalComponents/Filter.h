@@ -10,47 +10,29 @@
 template<typename T, typename U>
 class Filter : public OpticalComponent<T, U> {
 private:
-    std::string filterType;
-    U wavelengthRange;
+    U minWavelength, maxWavelength; // Range for the filter
 
 public:
-    // Filter() = default; // Default constructor
+    Filter(std::unique_ptr<PlanarSurface<T, U>> surface, U minWavelength, U maxWavelength);
 
-    // Placeholder function for handling light, to be implemented later.
-    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override = 0;
+    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override; 
 };
+
+// Definitions
 
 template<typename T, typename U>
-class BandPassFilter : public Filter<T, U> {
-public:
-
-    // Placeholder function for handling light, to be implemented later.
-    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
-        ray.position = ray.position;
-        ray.direction = ray.direction 
-        // TODO: Implement this function later.
+Filter<T, U>::Filter(std::unique_ptr<PlanarSurface<T, U>> surface, U minWavelength, U maxWavelength)
+    : OpticalComponent<T, U>(std::move(surface)), minWavelength(minWavelength), maxWavelength(maxWavelength) {
+        if(dynamic_cast<PlanarSurface<T, U>*>(this->surface.get()) == nullptr) {
+            throw std::runtime_error("Filter expects a PlanarSurface type. Provided surface type is invalid.");
+        }
     }
-};
 
 template<typename T, typename U>
-class LowPassFilter : public Filter<T, U> {
-
-    // Placeholder function for handling light, to be implemented later.
-    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
-        ray.position = ray.position;
-        ray.direction = ray.direction 
-        // TODO: Implement this function later.
+void Filter<T, U>::handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) {
+    if (ray.getWavelength() < minWavelength || ray.getWavelength() > maxWavelength) {
+        ray.setIntensity(0); // only pass rays within the specified wavelength range
+    } else { 
+        ray.setPosition(intersectionPoint);
     }
-};
-
-template<typename T, typename U>
-class HighPassFilter : public Filter<T, U> {
-
-    // Placeholder function for handling light, to be implemented later.
-    void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override {
-        ray.position = ray.position;
-        ray.direction = ray.direction 
-        // TODO: Implement this function later.
-    }
-};
-
+}

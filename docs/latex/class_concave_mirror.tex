@@ -1,0 +1,100 @@
+\doxysection{Concave\+Mirror\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_concave_mirror}{}\label{class_concave_mirror}\index{ConcaveMirror$<$ T, U $>$@{ConcaveMirror$<$ T, U $>$}}
+
+
+{\ttfamily \#include $<$mirror.\+h$>$}
+
+Inheritance diagram for Concave\+Mirror\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_concave_mirror}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_concave_mirror_a2afccdd7bd7686369e92f8f9745aa0ef}{Concave\+Mirror}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\item 
+void \mbox{\hyperlink{class_concave_mirror_a4abf0d14a5ef29773600030d6fc7c2c8}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mirror}{Mirror$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mirror_af02feab3af2457cb66719a2ba2776a46}{Mirror}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\item 
+virtual \mbox{\hyperlink{class_mirror_a9cdd442b31331a6688125fa628196b8a}{\texorpdfstring{$\sim$}{\string~}\+Mirror}} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\item 
+virtual \mbox{\hyperlink{class_optical_component_a6c259b37610efcccd45a30f58903230e}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Component}} ()=default
+\item 
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
+\item 
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
+\item 
+const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}{get\+Surface\+Ptr}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_mirror}{Mirror$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{reflect}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&incident\+Ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&normal, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+class Concave\+Mirror$<$ T, U $>$}
+
+
+Definition at line \mbox{\hyperlink{mirror_8h_source_l00069}{69}} of file \mbox{\hyperlink{mirror_8h_source}{mirror.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_concave_mirror_a2afccdd7bd7686369e92f8f9745aa0ef}\label{class_concave_mirror_a2afccdd7bd7686369e92f8f9745aa0ef} 
+\index{ConcaveMirror$<$ T, U $>$@{ConcaveMirror$<$ T, U $>$}!ConcaveMirror@{ConcaveMirror}}
+\index{ConcaveMirror@{ConcaveMirror}!ConcaveMirror$<$ T, U $>$@{ConcaveMirror$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{ConcaveMirror()}{ConcaveMirror()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+\mbox{\hyperlink{class_concave_mirror}{Concave\+Mirror}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_concave_mirror}{\+::\+Concave\+Mirror}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{mirror_8h_source_l00090}{90}} of file \mbox{\hyperlink{mirror_8h_source}{mirror.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_concave_mirror_a4abf0d14a5ef29773600030d6fc7c2c8}\label{class_concave_mirror_a4abf0d14a5ef29773600030d6fc7c2c8} 
+\index{ConcaveMirror$<$ T, U $>$@{ConcaveMirror$<$ T, U $>$}!handleLight@{handleLight}}
+\index{handleLight@{handleLight}!ConcaveMirror$<$ T, U $>$@{ConcaveMirror$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+void \mbox{\hyperlink{class_concave_mirror}{Concave\+Mirror}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{Mirror$<$ T, U $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{mirror_8h_source_l00098}{98}} of file \mbox{\hyperlink{mirror_8h_source}{mirror.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+simulator/optical\+Components/\mbox{\hyperlink{mirror_8h}{mirror.\+h}}\end{DoxyCompactItemize}

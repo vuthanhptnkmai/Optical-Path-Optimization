@@ -4,26 +4,36 @@
 
 {\ttfamily \#include $<$optical\+Component.\+h$>$}
 
+Inheritance diagram for Optical\+Component\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.339181cm]{class_optical_component}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
 \item 
-\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component_a09b67e2cf1602cf5ada592af11c63b77}{get\+Position}} () const
+virtual \mbox{\hyperlink{class_optical_component_a6c259b37610efcccd45a30f58903230e}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Component}} ()=default
 \item 
-\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component_a80c13209ce4c08605391eec34f1afe71}{get\+Normal}} () const
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
 \item 
-virtual void \mbox{\hyperlink{class_optical_component_afe19072dc50cfd390da5710e5688ad97}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray)=0
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
+\item 
+const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}{get\+Surface\+Ptr}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename T, typename U$>$\newline
+\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
 class Optical\+Component$<$ T, U $>$}
 
 
@@ -36,44 +46,66 @@ Definition at line \mbox{\hyperlink{optical_component_8h_source_l00010}{10}} of 
 \index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!OpticalComponent@{OpticalComponent}}
 \index{OpticalComponent@{OpticalComponent}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{OpticalComponent()}{OpticalComponent()}}
-{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
-\mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\mbox{\hyperlink{class_optical_component}{\+::\+Optical\+Component}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+\mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_optical_component}{\+::\+Optical\+Component}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Definition at line \mbox{\hyperlink{optical_component_8h_source_l00015}{15}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
 
+\Hypertarget{class_optical_component_a6c259b37610efcccd45a30f58903230e}\label{class_optical_component_a6c259b37610efcccd45a30f58903230e} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!````~OpticalComponent@{\texorpdfstring{$\sim$}{\string~}OpticalComponent}}
+\index{````~OpticalComponent@{\texorpdfstring{$\sim$}{\string~}OpticalComponent}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}OpticalComponent()}{\string~OpticalComponent()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+virtual \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_optical_component}{Optical\+Component}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_optical_component_a80c13209ce4c08605391eec34f1afe71}\label{class_optical_component_a80c13209ce4c08605391eec34f1afe71} 
+\Hypertarget{class_optical_component_a127f9cae300b02b257506466a9515230}\label{class_optical_component_a127f9cae300b02b257506466a9515230} 
 \index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!getNormal@{getNormal}}
 \index{getNormal@{getNormal}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getNormal()}{getNormal()}}
-{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
-\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::get\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Normal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00020}{20}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+
+\Hypertarget{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}\label{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Definition at line \mbox{\hyperlink{optical_component_8h_source_l00019}{19}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
 
-\Hypertarget{class_optical_component_a09b67e2cf1602cf5ada592af11c63b77}\label{class_optical_component_a09b67e2cf1602cf5ada592af11c63b77} 
-\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!getPosition@{getPosition}}
-\index{getPosition@{getPosition}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
-{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
-\mbox{\hyperlink{main_8cpp_a76efc7781886f103708e0859d04647ad}{vec3}}$<$ T $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}\label{class_optical_component_a23e2b7bdb71a6f1e100642753b102350} 
+\index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!getSurfacePtr@{getSurfacePtr}}
+\index{getSurfacePtr@{getSurfacePtr}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{getSurfacePtr()}{getSurfacePtr()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Surface\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{optical_component_8h_source_l00018}{18}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
+Definition at line \mbox{\hyperlink{optical_component_8h_source_l00021}{21}} of file \mbox{\hyperlink{optical_component_8h_source}{optical\+Component.\+h}}.
 
-\Hypertarget{class_optical_component_afe19072dc50cfd390da5710e5688ad97}\label{class_optical_component_afe19072dc50cfd390da5710e5688ad97} 
+\Hypertarget{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}\label{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab} 
 \index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!handleLight@{handleLight}}
 \index{handleLight@{handleLight}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
-{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
-virtual void \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+virtual void \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{Detector$<$ T, U $>$}}, \mbox{\hyperlink{class_band_pass_filter_a47894d215c4590eee332089a7f96602d}{Band\+Pass\+Filter$<$ T, U $>$}}, \mbox{\hyperlink{class_low_pass_filter_a34c2978e77ff150a4e0745a27e46e63d}{Low\+Pass\+Filter$<$ T, U $>$}}, \mbox{\hyperlink{class_high_pass_filter_ab819e43344a0cf5a69058b86d324eea2}{High\+Pass\+Filter$<$ T, U $>$}}, \mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{Thin\+Lens$<$ T, U $>$}}, \mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{Thick\+Lens$<$ T, U $>$}}, \mbox{\hyperlink{class_planar_mirror_a05684354087c586612029585191dd4f9}{Planar\+Mirror$<$ T, U $>$}}, \mbox{\hyperlink{class_convex_mirror_a4391d390508c0d3310faa8479fb17570}{Convex\+Mirror$<$ T, U $>$}}, \mbox{\hyperlink{class_concave_mirror_a4abf0d14a5ef29773600030d6fc7c2c8}{Concave\+Mirror$<$ T, U $>$}}, \mbox{\hyperlink{class_filter_a8feabb7ea043dd471fd2f87486e6f171}{Filter$<$ T, U $>$}}, \mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{Mirror$<$ T, U $>$}}, and \mbox{\hyperlink{class_lens_afb9618c9c1482f60ee95b30dc3982268}{Lens$<$ T, U $>$}}.
 
 
 
@@ -82,8 +114,8 @@ virtual void \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T
 \index{OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}!surface@{surface}}
 \index{surface@{surface}!OpticalComponent$<$ T, U $>$@{OpticalComponent$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{surface}{surface}}
-{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
-std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$T, U$>$ $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$\+::surface\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$ $>$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::surface\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

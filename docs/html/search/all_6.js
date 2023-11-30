@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['opticalcomponent_0',['OpticalComponent',['../class_optical_component.html',1,'OpticalComponent&lt; T, U &gt;'],['../class_optical_component.html#ac19e994d82b0c0ceb4879d1f0dfd9d25',1,'OpticalComponent::OpticalComponent()']]],
-  ['opticalcomponent_2eh_1',['opticalComponent.h',['../optical_component_8h.html',1,'']]],
-  ['opticalsurface_2',['OpticalSurface',['../class_optical_surface.html',1,'OpticalSurface&lt; T, U &gt;'],['../class_optical_surface.html#a11ba19c3e9a4e807b3e8867d963771f1',1,'OpticalSurface::OpticalSurface()']]],
-  ['opticalsurface_2eh_3',['opticalSurface.h',['../optical_surface_8h.html',1,'']]]
+  ['intensity_0',['intensity',['../class_ray.html#a7b9adeaeea8b4f02e66738e845278c98',1,'Ray']]],
+  ['intersects_1',['intersects',['../class_optical_surface.html#a6dcacac007d5361ad4b56166a69d5fa9',1,'OpticalSurface::intersects()'],['../class_planar_surface.html#a93e079dffd16b664b968fdc8ccc3dbfd',1,'PlanarSurface::intersects()'],['../class_spherical_surface.html#a4bdd68c4c0315a0f13e4d99773fbce9d',1,'SphericalSurface::intersects()'],['../class_planar_circle.html#aee4cc9ac2158fc253e358cacf1eda3f3',1,'PlanarCircle::intersects()'],['../class_planar_rectangle.html#a1f4718f362943b68cc9c340d59776ab3',1,'PlanarRectangle::intersects()']]]
 ];

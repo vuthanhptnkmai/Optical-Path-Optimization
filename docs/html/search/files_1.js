@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['opticalcomponent_2eh_0',['opticalComponent.h',['../optical_component_8h.html',1,'']]],
-  ['opticalsurface_2eh_1',['opticalSurface.h',['../optical_surface_8h.html',1,'']]]
+  ['filter_2eh_0',['filter.h',['../filter_8h.html',1,'']]]
 ];
