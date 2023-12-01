@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include <stdexcept>
 #include <memory> 
 
@@ -49,9 +50,9 @@ void ThinLens<T, U>::refract_approx(Ray<T, U>& ray, const vec3<T>& intersectionP
     vec3<T> P = this->surface->getPosition();
     vec3<T> N = -this->surface->getNormal();
 
-    vec3<T> PR = P - O; // principal ray from the light source to the center of the lens
-    T objectDistance = PR.dot(N); // distance from the object to the lens
-    T imageDistance = 1 / ((1 / focalLength) - (1 / objectDistance)); // distance to the image using the thin lens approximation formula
+    vec3<T> PR = P - O; // principal ray from the light source to the center of the lens        
+    T objectDistance = abs(PR.dot(N)); // distance from the object to the lens
+    T imageDistance = 1.0 / ((1.0 / focalLength) - (1.0 / objectDistance)); // distance to the image using the thin lens approximation formula
     
     vec3<T> I = P + imageDistance * PR.normalized(); // calculate the image position
 

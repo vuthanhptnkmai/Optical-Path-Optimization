@@ -7,13 +7,15 @@
 Inheritance diagram for Filter\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_filter}
+\includegraphics[height=2.000000cm]{class_filter}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_filter_a8feabb7ea043dd471fd2f87486e6f171}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override=0
+\mbox{\hyperlink{class_filter_ac69e111335fca72b3854c5f1c62de368}{Filter}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter_a66adcdbdcfd2bafd3f02538e5a552f52}{min\+Wavelength}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter_a5d428ed5785564d61854eb3eb59e8204}{max\+Wavelength}})
+\item 
+void \mbox{\hyperlink{class_filter_a278b8d2b549259b21a192fe949d5dd4f}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
@@ -33,9 +35,9 @@ virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec363
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \mbox{\hyperlink{class_filter_a52b7760d224c311ab2a4c6015c59f835}{filter\+Type}}
+\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter_a66adcdbdcfd2bafd3f02538e5a552f52}{min\+Wavelength}}
 \item 
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter_acad1e4033ab3fefb3b536c2e46a7ce22}{wavelength\+Range}}
+\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter_a5d428ed5785564d61854eb3eb59e8204}{max\+Wavelength}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
@@ -54,13 +56,27 @@ Definition at line \mbox{\hyperlink{filter_8h_source_l00011}{11}} of file \mbox{
 
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_filter_ac69e111335fca72b3854c5f1c62de368}\label{class_filter_ac69e111335fca72b3854c5f1c62de368} 
+\index{Filter$<$ T, U $>$@{Filter$<$ T, U $>$}!Filter@{Filter}}
+\index{Filter@{Filter}!Filter$<$ T, U $>$@{Filter$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{Filter()}{Filter()}}
+{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
+\mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_filter}{\+::\+Filter}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface,  }\item[{\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}}]{min\+Wavelength,  }\item[{\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}}]{max\+Wavelength }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{filter_8h_source_l00024}{24}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_filter_a8feabb7ea043dd471fd2f87486e6f171}\label{class_filter_a8feabb7ea043dd471fd2f87486e6f171} 
+\Hypertarget{class_filter_a278b8d2b549259b21a192fe949d5dd4f}\label{class_filter_a278b8d2b549259b21a192fe949d5dd4f} 
 \index{Filter$<$ T, U $>$@{Filter$<$ T, U $>$}!handleLight@{handleLight}}
 \index{handleLight@{handleLight}!Filter$<$ T, U $>$@{Filter$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+void \mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -68,32 +84,32 @@ Implements \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637e
 
 
 
-Implemented in \mbox{\hyperlink{class_band_pass_filter_a47894d215c4590eee332089a7f96602d}{Band\+Pass\+Filter$<$ T, U $>$}}, \mbox{\hyperlink{class_low_pass_filter_a34c2978e77ff150a4e0745a27e46e63d}{Low\+Pass\+Filter$<$ T, U $>$}}, and \mbox{\hyperlink{class_high_pass_filter_ab819e43344a0cf5a69058b86d324eea2}{High\+Pass\+Filter$<$ T, U $>$}}.
+Definition at line \mbox{\hyperlink{filter_8h_source_l00032}{32}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
 
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_filter_a52b7760d224c311ab2a4c6015c59f835}\label{class_filter_a52b7760d224c311ab2a4c6015c59f835} 
-\index{Filter$<$ T, U $>$@{Filter$<$ T, U $>$}!filterType@{filterType}}
-\index{filterType@{filterType}!Filter$<$ T, U $>$@{Filter$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{filterType}{filterType}}
+\Hypertarget{class_filter_a5d428ed5785564d61854eb3eb59e8204}\label{class_filter_a5d428ed5785564d61854eb3eb59e8204} 
+\index{Filter$<$ T, U $>$@{Filter$<$ T, U $>$}!maxWavelength@{maxWavelength}}
+\index{maxWavelength@{maxWavelength}!Filter$<$ T, U $>$@{Filter$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{maxWavelength}{maxWavelength}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-std\+::string \mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::filter\+Type\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::max\+Wavelength\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
 Definition at line \mbox{\hyperlink{filter_8h_source_l00013}{13}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
 
-\Hypertarget{class_filter_acad1e4033ab3fefb3b536c2e46a7ce22}\label{class_filter_acad1e4033ab3fefb3b536c2e46a7ce22} 
-\index{Filter$<$ T, U $>$@{Filter$<$ T, U $>$}!wavelengthRange@{wavelengthRange}}
-\index{wavelengthRange@{wavelengthRange}!Filter$<$ T, U $>$@{Filter$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{wavelengthRange}{wavelengthRange}}
+\Hypertarget{class_filter_a66adcdbdcfd2bafd3f02538e5a552f52}\label{class_filter_a66adcdbdcfd2bafd3f02538e5a552f52} 
+\index{Filter$<$ T, U $>$@{Filter$<$ T, U $>$}!minWavelength@{minWavelength}}
+\index{minWavelength@{minWavelength}!Filter$<$ T, U $>$@{Filter$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{minWavelength}{minWavelength}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::wavelength\+Range\hspace{0.3cm}{\ttfamily [private]}}
+\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_filter}{Filter}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::min\+Wavelength\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{filter_8h_source_l00014}{14}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
+Definition at line \mbox{\hyperlink{filter_8h_source_l00013}{13}} of file \mbox{\hyperlink{filter_8h_source}{filter.\+h}}.
 
 
 

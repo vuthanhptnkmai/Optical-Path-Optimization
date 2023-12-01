@@ -4,15 +4,25 @@
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
 {\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \"{}ray.\+h\"{}}\newline
+{\ttfamily \#include \"{}../utils/vec3.\+h\"{}}\newline
 {\ttfamily \#include \"{}optical\+Component.\+h\"{}}\newline
-{\ttfamily \#include \"{}optical\+Surface.\+h\"{}}\newline
 {\ttfamily \#include \"{}optical\+Surfaces/\+Planar\+Circle.\+h\"{}}\newline
 {\ttfamily \#include \"{}optical\+Components/\+Mirror.\+h\"{}}\newline
-{\ttfamily \#include \"{}optical\+Components/lens.\+h\"{}}\newline
+{\ttfamily \#include \"{}optical\+Components/\+Lens.\+h\"{}}\newline
+{\ttfamily \#include \"{}optical\+Components/\+Filter.\+h\"{}}\newline
+{\ttfamily \#include \"{}optical\+Surfaces/\+Planar\+Rectangle.\+h\"{}}\newline
+{\ttfamily \#include \"{}optical\+Components/\+Detector.\+h\"{}}\newline
 {\ttfamily \#include \"{}utils/read\+Rays\+From\+File.\+h\"{}}\newline
+{\ttfamily \#include \"{}../third\+Party/eigen-\/3.\+4.\+0/\+Eigen/\+Geometry\"{}}\newline
 {\ttfamily \#include \"{}../third\+Party/eigen-\/3.\+4.\+0/\+Eigen/\+Dense\"{}}\newline
-{\ttfamily \#include \"{}../utils/vec3.\+h\"{}}\newline
-{\ttfamily \#include \"{}ray.\+h\"{}}\newline
+{\ttfamily \#include \"{}../third\+Party/stb\+\_\+image\+\_\+write/stb\+\_\+image\+\_\+write.\+h\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_aefe397a94e8feddc652f92ef40ce9597}{STB\+\_\+\+IMAGE\+\_\+\+WRITE\+\_\+\+IMPLEMENTATION}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
@@ -23,8 +33,23 @@ using \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} = float
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{main_8cpp_a2c295cf883639550ca7e33528d9e5664}{save\+Image\+As\+PNG}} (const std\+::string \&filename, const Eigen\+::\+Matrix\+Xf \&pixel\+Grid)
+\item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_aefe397a94e8feddc652f92ef40ce9597}\label{main_8cpp_aefe397a94e8feddc652f92ef40ce9597} 
+\index{main.cpp@{main.cpp}!STB\_IMAGE\_WRITE\_IMPLEMENTATION@{STB\_IMAGE\_WRITE\_IMPLEMENTATION}}
+\index{STB\_IMAGE\_WRITE\_IMPLEMENTATION@{STB\_IMAGE\_WRITE\_IMPLEMENTATION}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{STB\_IMAGE\_WRITE\_IMPLEMENTATION}{STB\_IMAGE\_WRITE\_IMPLEMENTATION}}
+{\footnotesize\ttfamily \#define STB\+\_\+\+IMAGE\+\_\+\+WRITE\+\_\+\+IMPLEMENTATION}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
 
 
 \doxysubsection{Typedef Documentation}
@@ -36,7 +61,7 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 \Hypertarget{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}\label{main_8cpp_a6593bc6eff52fb072817ee0fa2217255} 
 \index{main.cpp@{main.cpp}!U@{U}}
@@ -46,7 +71,7 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00018}{18}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 
 
 
@@ -59,5 +84,15 @@ Definition at line \mbox{\hyperlink{main_8cpp_source_l00019}{19}} of file \mbox{
 
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8cpp_a2c295cf883639550ca7e33528d9e5664}\label{main_8cpp_a2c295cf883639550ca7e33528d9e5664} 
+\index{main.cpp@{main.cpp}!saveImageAsPNG@{saveImageAsPNG}}
+\index{saveImageAsPNG@{saveImageAsPNG}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{saveImageAsPNG()}{saveImageAsPNG()}}
+{\footnotesize\ttfamily void save\+Image\+As\+PNG (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const Eigen\+::\+Matrix\+Xf \&}]{pixel\+Grid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 

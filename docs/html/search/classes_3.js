@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filter_0',['Filter',['../class_filter.html',1,'']]]
+  ['lens_0',['Lens',['../class_lens.html',1,'']]]
 ];

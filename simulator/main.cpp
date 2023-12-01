@@ -52,20 +52,20 @@
             // Create a PlanarMirror
             vec3<T> mirrorPosition(0.0, 0.0, 0.0);
             vec3<T> mirrorNormal(0, 1.0, 1.0);
-            T mirrorDiameter = 0.5;
+            T mirrorDiameter = 3.0;
             auto mirrorSurface = std::make_unique<PlanarCircle<T, U>>(mirrorPosition, mirrorNormal, mirrorDiameter);
             auto mirror = std::make_unique<PlanarMirror<T, U>>(std::move(mirrorSurface));
 
             // Create a ThinLens
-            vec3<T> lensPosition(0.0, 0.0, 1.0);
+            vec3<T> lensPosition(0.0, 0.0, 3.0);
             vec3<T> lensNormal(0.0, 0.0, 1.0);
-            T lensDiameter = 1.5;
-            U lensFocalLength = 1.0;
+            T lensDiameter = 4.0;
+            U lensFocalLength = 2.0;
             auto lensSurface = std::make_unique<PlanarCircle<T, U>>(lensPosition, lensNormal, lensDiameter);
             auto lens = std::make_unique<ThinLens<T, U>>(std::move(lensSurface), lensFocalLength);
-
+            
             // Create a Filter
-            vec3<T> filterPosition(0.0, 0.0, 2.0);
+            vec3<T> filterPosition(0.0, 0.0, 5.0);
             vec3<T> filterNormal(0.0, 0.0, 1.0);
             T filterDiameter = 2.0;
             U minWavelength = 450.0, maxWavelength = 700.0;
@@ -73,10 +73,10 @@
             auto filter = std::make_unique<Filter<T, U>>(std::move(filterSurface), minWavelength, maxWavelength);
 
             // Create a Detector
-            vec3<T> detectorPosition(0.0, 0.0, 3.0);
+            vec3<T> detectorPosition(0.0, 0.0, 6.0); 
             vec3<T> detectorNormal(0.0, 0.0, 1.0);
             vec3<T> detectorHeightDirection(0.0, 1.0, 0.0);
-            T detectorWidth = 1.0, detectorHeight = 1.0;
+            T detectorWidth = 1.5, detectorHeight = 1.5;
             int pixelWidth = 512, pixelHeight = 512;
             auto detectorSurface = std::make_unique<PlanarRectangle<T, U>>(detectorPosition, detectorNormal, detectorWidth, detectorHeight, detectorHeightDirection);
             auto detector = std::make_unique<Detector<T, U>>(std::move(detectorSurface), pixelWidth, pixelHeight);
@@ -114,6 +114,8 @@
                 raysFile << ray.position(0) << " " << ray.position(1) << " " << ray.position(2) << std::endl;
 
                 for (auto& component : components) {
+                    
+                    //raysFile << ray.position(0) << " " << ray.position(1) << " " << ray.position(2) << std::endl;
 
                     auto [doesIntersect, intersectionPoint] = component->getSurfacePtr()->intersects(ray);
                     raysFile << intersectionPoint(0) << " " << intersectionPoint(1) << " " << intersectionPoint(2) << std::endl;

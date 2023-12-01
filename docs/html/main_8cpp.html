@@ -74,6 +74,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">main.cpp File Reference</div></div>
@@ -83,18 +84,28 @@ $(function() {
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;stdexcept&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="ray_8h_source.html">ray.h</a>&quot;</code><br />
+<code>#include &quot;../utils/vec3.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="optical_component_8h_source.html">opticalComponent.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="optical_surface_8h_source.html">opticalSurface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="planar_circle_8h_source.html">opticalSurfaces/PlanarCircle.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mirror_8h_source.html">opticalComponents/Mirror.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="lens_8h_source.html">opticalComponents/lens.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lens_8h_source.html">opticalComponents/Lens.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="filter_8h_source.html">opticalComponents/Filter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="planar_rectangle_8h_source.html">opticalSurfaces/PlanarRectangle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="detector_8h_source.html">opticalComponents/Detector.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="read_rays_from_file_8h_source.html">utils/readRaysFromFile.h</a>&quot;</code><br />
+<code>#include &quot;../thirdParty/eigen-3.4.0/Eigen/Geometry&quot;</code><br />
 <code>#include &quot;../thirdParty/eigen-3.4.0/Eigen/Dense&quot;</code><br />
-<code>#include &quot;../utils/vec3.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="ray_8h_source.html">ray.h</a>&quot;</code><br />
+<code>#include &quot;../thirdParty/stb_image_write/stb_image_write.h&quot;</code><br />
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aefe397a94e8feddc652f92ef40ce9597"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aefe397a94e8feddc652f92ef40ce9597">STB_IMAGE_WRITE_IMPLEMENTATION</a></td></tr>
+<tr class="separator:aefe397a94e8feddc652f92ef40ce9597"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a6b2d038ea9c8d2651eecffe0e28b7ebb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> = double</td></tr>
@@ -104,9 +115,28 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2c295cf883639550ca7e33528d9e5664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a2c295cf883639550ca7e33528d9e5664">saveImageAsPNG</a> (const std::string &amp;filename, const Eigen::MatrixXf &amp;pixelGrid)</td></tr>
+<tr class="separator:a2c295cf883639550ca7e33528d9e5664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aefe397a94e8feddc652f92ef40ce9597" name="aefe397a94e8feddc652f92ef40ce9597"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe397a94e8feddc652f92ef40ce9597">&#9670;&#160;</a></span>STB_IMAGE_WRITE_IMPLEMENTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STB_IMAGE_WRITE_IMPLEMENTATION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00027">27</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a6b2d038ea9c8d2651eecffe0e28b7ebb" name="a6b2d038ea9c8d2651eecffe0e28b7ebb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b2d038ea9c8d2651eecffe0e28b7ebb">&#9670;&#160;</a></span>T</h2>
@@ -120,7 +150,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00030">30</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -136,7 +166,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00031">31</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -156,7 +186,37 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00047">47</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c295cf883639550ca7e33528d9e5664" name="a2c295cf883639550ca7e33528d9e5664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c295cf883639550ca7e33528d9e5664">&#9670;&#160;</a></span>saveImageAsPNG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void saveImageAsPNG </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXf &amp;&#160;</td>
+          <td class="paramname"><em>pixelGrid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00034">34</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

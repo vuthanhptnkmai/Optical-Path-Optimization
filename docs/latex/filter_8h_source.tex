@@ -14,49 +14,31 @@
 \DoxyCodeLine{\Hypertarget{filter_8h_source_l00010}00010\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
 \DoxyCodeLine{\Hypertarget{filter_8h_source_l00011}\mbox{\hyperlink{class_filter}{00011}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_filter}{Filter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<T,\ U>\ \{}
 \DoxyCodeLine{\Hypertarget{filter_8h_source_l00012}00012\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00013}\mbox{\hyperlink{class_filter_a52b7760d224c311ab2a4c6015c59f835}{00013}}\ \ \ \ \ std::string\ \mbox{\hyperlink{class_filter_a52b7760d224c311ab2a4c6015c59f835}{filterType}};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00014}\mbox{\hyperlink{class_filter_acad1e4033ab3fefb3b536c2e46a7ce22}{00014}}\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_filter_acad1e4033ab3fefb3b536c2e46a7ce22}{wavelengthRange}};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00015}00015\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ Filter()\ =\ default;\ //\ Default\ constructor}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00019}00019\ \ \ \ \ \textcolor{comment}{//\ Placeholder\ function\ for\ handling\ light,\ to\ be\ implemented\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00020}\mbox{\hyperlink{class_filter_a8feabb7ea043dd471fd2f87486e6f171}{00020}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_a8feabb7ea043dd471fd2f87486e6f171}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override}\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00021}00021\ \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00013}\mbox{\hyperlink{class_filter_a5d428ed5785564d61854eb3eb59e8204}{00013}}\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_filter_a66adcdbdcfd2bafd3f02538e5a552f52}{minWavelength}},\ \mbox{\hyperlink{class_filter_a5d428ed5785564d61854eb3eb59e8204}{maxWavelength}};\ \textcolor{comment}{//\ Range\ for\ the\ filter}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00015}00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{class_filter}{Filter}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_filter_a66adcdbdcfd2bafd3f02538e5a552f52}{minWavelength}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_filter_a5d428ed5785564d61854eb3eb59e8204}{maxWavelength}});}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00018}00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_a278b8d2b549259b21a192fe949d5dd4f}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00019}00019\ \};}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00021}00021\ \textcolor{comment}{//\ Definitions}}
 \DoxyCodeLine{\Hypertarget{filter_8h_source_l00022}00022\ }
 \DoxyCodeLine{\Hypertarget{filter_8h_source_l00023}00023\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00024}\mbox{\hyperlink{class_band_pass_filter}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_band_pass_filter}{BandPassFilter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_filter}{Filter}}<T,\ U>\ \{}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00025}00025\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Placeholder\ function\ for\ handling\ light,\ to\ be\ implemented\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00028}\mbox{\hyperlink{class_band_pass_filter_a47894d215c4590eee332089a7f96602d}{00028}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_band_pass_filter_a47894d215c4590eee332089a7f96602d}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Implement\ this\ function\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00032}00032\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00033}00033\ \};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00034}00034\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00035}00035\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00036}\mbox{\hyperlink{class_low_pass_filter}{00036}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_low_pass_filter}{LowPassFilter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_filter}{Filter}}<T,\ U>\ \{}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ Placeholder\ function\ for\ handling\ light,\ to\ be\ implemented\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00039}\mbox{\hyperlink{class_low_pass_filter_a34c2978e77ff150a4e0745a27e46e63d}{00039}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_low_pass_filter_a34c2978e77ff150a4e0745a27e46e63d}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Implement\ this\ function\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00043}00043\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00044}00044\ \};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00046}00046\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00047}\mbox{\hyperlink{class_high_pass_filter}{00047}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_high_pass_filter}{HighPassFilter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_filter}{Filter}}<T,\ U>\ \{}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00049}00049\ \ \ \ \ \textcolor{comment}{//\ Placeholder\ function\ for\ handling\ light,\ to\ be\ implemented\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00050}\mbox{\hyperlink{class_high_pass_filter_ab819e43344a0cf5a69058b86d324eea2}{00050}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_high_pass_filter_ab819e43344a0cf5a69058b86d324eea2}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\textcolor{keyword}{\ override\ }\{}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00051}00051\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ }
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO:\ Implement\ this\ function\ later.}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00054}00054\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00055}00055\ \};}
-\DoxyCodeLine{\Hypertarget{filter_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00024}\mbox{\hyperlink{class_filter_ac69e111335fca72b3854c5f1c62de368}{00024}}\ \mbox{\hyperlink{class_filter_ac69e111335fca72b3854c5f1c62de368}{Filter<T,\ U>::Filter}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ surface,\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ minWavelength,\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ maxWavelength)}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00025}00025\ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(surface)),\ minWavelength(minWavelength),\ maxWavelength(maxWavelength)\ \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Filter\ expects\ a\ PlanarSurface\ type.\ Provided\ surface\ type\ is\ invalid."{}});}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00031}00031\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00032}\mbox{\hyperlink{class_filter_a278b8d2b549259b21a192fe949d5dd4f}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_filter_a278b8d2b549259b21a192fe949d5dd4f}{Filter<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (ray.\mbox{\hyperlink{class_ray_aed5a699adc9cf95fea6148b5afbb06ff}{getWavelength}}()\ <\ minWavelength\ ||\ ray.\mbox{\hyperlink{class_ray_aed5a699adc9cf95fea6148b5afbb06ff}{getWavelength}}()\ >\ maxWavelength)\ \{}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_a4128344193001a8eb675d65c1e63ec78}{setIntensity}}(0);\ \textcolor{comment}{//\ only\ pass\ rays\ within\ the\ specified\ wavelength\ range}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00035}00035\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ }
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00036}00036\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_aa47f6945b4cace3b5f44ebf5f7a129b6}{setPosition}}(intersectionPoint);}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{filter_8h_source_l00038}00038\ \}}
 
 \end{DoxyCode}

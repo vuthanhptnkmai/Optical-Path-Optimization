@@ -18,76 +18,75 @@
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00014}\mbox{\hyperlink{class_lens}{00014}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lens}{Lens}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<T,\ U>\ \{}
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00015}00015\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00016}\mbox{\hyperlink{class_lens_a7d69c40b20827bb50828861f21afd755}{00016}}\ \ \ \ \ \mbox{\hyperlink{class_lens_a7d69c40b20827bb50828861f21afd755}{Lens}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}))\ \{\}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}))\ \{\}}
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00018}\mbox{\hyperlink{class_lens_afbfde6699bd267655a2e87fd01b09d51}{00018}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_lens_afbfde6699bd267655a2e87fd01b09d51}{\string~Lens}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00019}00019\ }
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00020}\mbox{\hyperlink{class_lens_afb9618c9c1482f60ee95b30dc3982268}{00020}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lens_afb9618c9c1482f60ee95b30dc3982268}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00021}00021\ \};}
 \DoxyCodeLine{\Hypertarget{lens_8h_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00023}00023\ \textcolor{comment}{//\ Note:\ consider\ to\ keep\ or\ to\ leave\ this\ ThinLens;\ or\ just\ Convex,\ Concave\ and\ ThickLenses;\ or\ just\ ThinLens}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00024}00024\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00025}\mbox{\hyperlink{class_thin_lens}{00025}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thin_lens}{ThinLens}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_lens}{Lens}}<T,\ U>\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00026}00026\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00027}\mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{00027}}\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{focalLength}};\ \textcolor{comment}{//\ focal\ length\ of\ the\ lens\ for\ thin\ lens\ approximation}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{refract\_approx}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint);}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00029}00029\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00030}00030\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_thin_lens}{ThinLens}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{focalLength}});}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};\ \textcolor{comment}{//\ still\ pure\ virtual}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00034}00034\ \};}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00036}00036\ \textcolor{comment}{//\ Definitions}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00037}00037\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00038}00038\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00039}\mbox{\hyperlink{class_thin_lens_a51620de573d5cba0e81542ecd23178fd}{00039}}\ \mbox{\hyperlink{class_thin_lens_a51620de573d5cba0e81542ecd23178fd}{ThinLens<T,\ U>::ThinLens}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ surface,\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ focalLength)}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00040}00040\ \ \ \ \ :\ \mbox{\hyperlink{class_lens}{Lens}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(surface)),\ focalLength(focalLength)\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ThinLens\ expects\ a\ PlanarSurface\ type.\ Provided\ surface\ type\ is\ invalid."{}});}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00044}00044\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00045}00045\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00046}00046\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00047}\mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{00047}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{ThinLens<T,\ U>::refract\_approx}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00048}00048\ \ \ \ \ vec3<T>\ O\ =\ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}};}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00049}00049\ \ \ \ \ vec3<T>\ D\ =\ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}};}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00050}00050\ \ \ \ \ vec3<T>\ P\ =\ this-\/>surface-\/>getPosition();}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00051}00051\ \ \ \ \ vec3<T>\ N\ =\ -\/this-\/>surface-\/>getNormal();}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00053}00053\ \ \ \ \ vec3<T>\ PR\ =\ P\ -\/\ O;\ \textcolor{comment}{//\ principal\ ray\ from\ the\ light\ source\ to\ the\ center\ of\ the\ lens}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ objectDistance\ =\ PR.dot(N);\ \textcolor{comment}{//\ distance\ from\ the\ object\ to\ the\ lens}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00055}00055\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ imageDistance\ =\ 1\ /\ ((1\ /\ focalLength)\ -\/\ (1\ /\ objectDistance));\ \textcolor{comment}{//\ distance\ to\ the\ image\ using\ the\ thin\ lens\ approximation\ formula}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00056}00056\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00057}00057\ \ \ \ \ vec3<T>\ I\ =\ P\ +\ imageDistance\ *\ PR.normalized();\ \textcolor{comment}{//\ calculate\ the\ image\ position}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00059}00059\ \ \ \ \ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ intersectionPoint;\ \textcolor{comment}{//\ change\ the\ position\ of\ the\ ray\ to\ the\ intersection\ of\ the\ ray\ with\ the\ lens}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (imageDistance\ <\ 0)\ \{\ \textcolor{comment}{//\ Virtual\ image\ scenario}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ (intersectionPoint\ -\/\ I).normalized();\ \textcolor{comment}{//\ reverse\ the\ direction\ towards\ the\ virtual\ image}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00063}00063\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ (I\ -\/\ intersectionPoint).normalized();\ \textcolor{comment}{//\ change\ the\ direction\ of\ the\ ray\ to\ the\ normalized\ vector\ from\ that\ intersection\ point\ to\ the\ image}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00065}00065\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00066}00066\ \}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00067}00067\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00068}00068\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00069}\mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{ThinLens<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00070}00070\ \ \ \ \ refract\_approx(ray,\ intersectionPoint);}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00071}00071\ \}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00073}00073\ \textcolor{comment}{//\ Extensions\ }}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00075}00075\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00076}\mbox{\hyperlink{class_thick_lens}{00076}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thick_lens}{ThickLens}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_lens}{Lens}}<T,\ U>\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00077}00077\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00078}\mbox{\hyperlink{class_thick_lens_ad0f787e685e9919ebbb5ab7eb2ef245e}{00078}}\ \ \ \ \ \mbox{\hyperlink{class_thick_lens_ad0f787e685e9919ebbb5ab7eb2ef245e}{ThickLens}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_lens}{Lens}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}))\ \{\}}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00080}00080\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00081}00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00082}00082\ \};}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00083}00083\ }
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00084}00084\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00085}\mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{ThickLens<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ThickLens::handleLight\ has\ not\ been\ implemented\ yet.\ TODO:\ Add\ implementation."{}});}
-\DoxyCodeLine{\Hypertarget{lens_8h_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00023}00023\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00024}\mbox{\hyperlink{class_thin_lens}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thin_lens}{ThinLens}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_lens}{Lens}}<T,\ U>\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00026}\mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{00026}}\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{focalLength}};\ \textcolor{comment}{//\ focal\ length\ of\ the\ lens\ for\ thin\ lens\ approximation}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{refract\_approx}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint);}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00029}00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_thin_lens}{ThinLens}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ \mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{focalLength}});}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00033}00033\ \};}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00035}00035\ \textcolor{comment}{//\ Definitions}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00037}00037\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00038}\mbox{\hyperlink{class_thin_lens_a51620de573d5cba0e81542ecd23178fd}{00038}}\ \mbox{\hyperlink{class_thin_lens_a51620de573d5cba0e81542ecd23178fd}{ThinLens<T,\ U>::ThinLens}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ surface,\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}\ focalLength)}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00039}00039\ \ \ \ \ :\ \mbox{\hyperlink{class_lens}{Lens}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(surface)),\ focalLength(focalLength)\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ThinLens\ expects\ a\ PlanarSurface\ type.\ Provided\ surface\ type\ is\ invalid."{}});}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00045}00045\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00046}\mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{ThinLens<T,\ U>::refract\_approx}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00047}00047\ \ \ \ \ vec3<T>\ O\ =\ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}};}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00048}00048\ \ \ \ \ vec3<T>\ D\ =\ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}};}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00049}00049\ \ \ \ \ vec3<T>\ P\ =\ this-\/>surface-\/>getPosition();}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00050}00050\ \ \ \ \ vec3<T>\ N\ =\ -\/this-\/>surface-\/>getNormal();}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00052}00052\ \ \ \ \ vec3<T>\ PR\ =\ P\ -\/\ O;\ \textcolor{comment}{//\ principal\ ray\ from\ the\ light\ source\ to\ the\ center\ of\ the\ lens}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ objectDistance\ =\ PR.dot(N);\ \textcolor{comment}{//\ distance\ from\ the\ object\ to\ the\ lens}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ imageDistance\ =\ 1\ /\ ((1\ /\ focalLength)\ -\/\ (1\ /\ objectDistance));\ \textcolor{comment}{//\ distance\ to\ the\ image\ using\ the\ thin\ lens\ approximation\ formula}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00055}00055\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00056}00056\ \ \ \ \ vec3<T>\ I\ =\ P\ +\ imageDistance\ *\ PR.normalized();\ \textcolor{comment}{//\ calculate\ the\ image\ position}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00058}00058\ \ \ \ \ ray.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ intersectionPoint;\ \textcolor{comment}{//\ change\ the\ position\ of\ the\ ray\ to\ the\ intersection\ of\ the\ ray\ with\ the\ lens}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}\ (imageDistance\ <\ 0)\ \{\ \textcolor{comment}{//\ Virtual\ image\ scenario}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ (intersectionPoint\ -\/\ I).normalized();\ \textcolor{comment}{//\ reverse\ the\ direction\ towards\ the\ virtual\ image}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00062}00062\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ ray.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ (I\ -\/\ intersectionPoint).normalized();\ \textcolor{comment}{//\ change\ the\ direction\ of\ the\ ray\ to\ the\ normalized\ vector\ from\ that\ intersection\ point\ to\ the\ image}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00065}00065\ \}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00067}00067\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00068}\mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thin_lens_a94e3749292f43783d92448a8ce53f330}{ThinLens<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00069}00069\ \ \ \ \ refract\_approx(ray,\ intersectionPoint);}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00072}00072\ \textcolor{comment}{//\ Extensions\ }}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00074}00074\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00075}\mbox{\hyperlink{class_thick_lens}{00075}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_thick_lens}{ThickLens}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_lens}{Lens}}<T,\ U>\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00076}00076\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00077}\mbox{\hyperlink{class_thick_lens_ad0f787e685e9919ebbb5ab7eb2ef245e}{00077}}\ \ \ \ \ \mbox{\hyperlink{class_thick_lens_ad0f787e685e9919ebbb5ab7eb2ef245e}{ThickLens}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_lens}{Lens}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}))\ \{\}}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00081}00081\ \};}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00083}00083\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00084}\mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{00084}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_thick_lens_a4031ee5a35819ce27f1b9520bef8ccac}{ThickLens<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ThickLens::handleLight\ has\ not\ been\ implemented\ yet.\ TODO:\ Add\ implementation."{}});}
+\DoxyCodeLine{\Hypertarget{lens_8h_source_l00086}00086\ \}}
 
 \end{DoxyCode}

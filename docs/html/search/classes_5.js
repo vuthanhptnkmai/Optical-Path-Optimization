@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lens_0',['Lens',['../class_lens.html',1,'']]],
-  ['lowpassfilter_1',['LowPassFilter',['../class_low_pass_filter.html',1,'']]]
+  ['opticalcomponent_0',['OpticalComponent',['../class_optical_component.html',1,'']]],
+  ['opticalsurface_1',['OpticalSurface',['../class_optical_surface.html',1,'']]]
 ];

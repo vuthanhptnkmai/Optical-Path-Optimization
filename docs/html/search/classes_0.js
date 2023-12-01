@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['bandpassfilter_0',['BandPassFilter',['../class_band_pass_filter.html',1,'']]]
+  ['concavemirror_0',['ConcaveMirror',['../class_concave_mirror.html',1,'']]],
+  ['convexmirror_1',['ConvexMirror',['../class_convex_mirror.html',1,'']]]
 ];

@@ -105,8 +105,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a47f05eb6935451dd452f521dcdbbd313"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dcacac007d5361ad4b56166a69d5fa9"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; bool, vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a6dcacac007d5361ad4b56166a69d5fa9">intersects</a> (const <a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray) const =0</td></tr>
 <tr class="separator:a6dcacac007d5361ad4b56166a69d5fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b45092d0ae1a4a9928401eb5de37298"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a6b45092d0ae1a4a9928401eb5de37298">generatePoints</a> (const std::string &amp;filename) const =0</td></tr>
-<tr class="separator:a6b45092d0ae1a4a9928401eb5de37298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad367ce67064e4d83566dff86e5ceff6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#aad367ce67064e4d83566dff86e5ceff6">generatePoints</a> (std::ofstream &amp;outFile) const =0</td></tr>
+<tr class="separator:aad367ce67064e4d83566dff86e5ceff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -188,8 +188,8 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6b45092d0ae1a4a9928401eb5de37298" name="a6b45092d0ae1a4a9928401eb5de37298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b45092d0ae1a4a9928401eb5de37298">&#9670;&#160;</a></span>generatePoints()</h2>
+<a id="aad367ce67064e4d83566dff86e5ceff6" name="aad367ce67064e4d83566dff86e5ceff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad367ce67064e4d83566dff86e5ceff6">&#9670;&#160;</a></span>generatePoints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,8 +202,8 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
         <tr>
           <td class="memname">virtual void <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::generatePoints </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>outFile</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -214,7 +214,7 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="class_planar_circle.html#add6b6e89f5af033e4b0397337d62973b">PlanarCircle&lt; T, U &gt;</a>, <a class="el" href="class_planar_surface.html#a2acb095bf59c88a2e813611208265c6d">PlanarSurface&lt; T, U &gt;</a>, and <a class="el" href="class_planar_rectangle.html#a519d4c16d7161a3b9412204c65bed128">PlanarRectangle&lt; T, U &gt;</a>.</p>
+<p>Implemented in <a class="el" href="class_planar_circle.html#a2978f48dda03c866457e6effa0449281">PlanarCircle&lt; T, U &gt;</a>, <a class="el" href="class_planar_surface.html#aa5bd3803fd87cef5bc41767ff99c417b">PlanarSurface&lt; T, U &gt;</a>, <a class="el" href="class_spherical_surface.html#a283df73dafda182ed6fb03a0045eddb4">SphericalSurface&lt; T, U &gt;</a>, and <a class="el" href="class_planar_rectangle.html#a9f84f6274f1b849e475e0feba8978543">PlanarRectangle&lt; T, U &gt;</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['thicklens_0',['ThickLens',['../class_thick_lens.html#ad0f787e685e9919ebbb5ab7eb2ef245e',1,'ThickLens']]],
-  ['thinlens_1',['ThinLens',['../class_thin_lens.html#a51620de573d5cba0e81542ecd23178fd',1,'ThinLens']]]
+  ['planarcircle_0',['PlanarCircle',['../class_planar_circle.html#a0254ab240b33a65b28067392f047e1b0',1,'PlanarCircle']]],
+  ['planarmirror_1',['PlanarMirror',['../class_planar_mirror.html#a0cf2e43bc972042724b8ff2c76d7cdac',1,'PlanarMirror']]],
+  ['planarrectangle_2',['PlanarRectangle',['../class_planar_rectangle.html#aeaa7719adedd337aa0748d98fa455d49',1,'PlanarRectangle']]],
+  ['planarsurface_3',['PlanarSurface',['../class_planar_surface.html#a45c305870169292b3eef7badd2570283',1,'PlanarSurface']]]
 ];

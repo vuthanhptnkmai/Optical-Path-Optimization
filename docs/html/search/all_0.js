@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bandpassfilter_0',['BandPassFilter',['../class_band_pass_filter.html',1,'']]]
+  ['adjustsurfacetofitpixelgrid_0',['adjustSurfaceToFitPixelGrid',['../class_detector.html#a23ad30b0c1d626beb6cd89df51fdfbfe',1,'Detector']]]
 ];

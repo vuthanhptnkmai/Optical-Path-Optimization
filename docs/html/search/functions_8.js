@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['ray_0',['Ray',['../class_ray.html#a06035984df2644793ba7eba9a8e3d6f9',1,'Ray']]],
-  ['readcomponentsfromfile_1',['readComponentsFromFile',['../read_components_from_file_8h.html#aafd1e224e8aaca294c77a0bfeb7a854c',1,'readComponentsFromFile.h']]],
-  ['readraysfromfile_2',['readRaysFromFile',['../read_rays_from_file_8h.html#a060f4329e753b6e885a16f22f7c26473',1,'readRaysFromFile.h']]],
-  ['reflect_3',['reflect',['../class_mirror.html#a5425cc9ab5766fef1957c15d8670b318',1,'Mirror']]],
-  ['refract_5fapprox_4',['refract_approx',['../class_thin_lens.html#a9a56b7017ef8e19a60ad3bb838dbddb9',1,'ThinLens']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['maptopixelgrid_1',['mapToPixelGrid',['../class_detector.html#a917cb605056aedafe72e29842d6eb836',1,'Detector']]],
+  ['mirror_2',['Mirror',['../class_mirror.html#af02feab3af2457cb66719a2ba2776a46',1,'Mirror']]]
 ];

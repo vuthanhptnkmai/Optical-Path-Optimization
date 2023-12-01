@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['setdirection_0',['setDirection',['../class_ray.html#a9da83491d3e1c9795d71c34b441e522b',1,'Ray']]],
-  ['setintensity_1',['setIntensity',['../class_ray.html#a4128344193001a8eb675d65c1e63ec78',1,'Ray']]],
-  ['setposition_2',['setPosition',['../class_ray.html#aa47f6945b4cace3b5f44ebf5f7a129b6',1,'Ray']]],
-  ['setwavelength_3',['setWavelength',['../class_ray.html#a73e5114f2d31d477e4e211d86b5ab6b9',1,'Ray']]],
-  ['sphericalsurface_4',['SphericalSurface',['../class_spherical_surface.html#a33d3f009c7375a4ab929b51203cc200d',1,'SphericalSurface']]]
+  ['opticalcomponent_0',['OpticalComponent',['../class_optical_component.html#ac19e994d82b0c0ceb4879d1f0dfd9d25',1,'OpticalComponent']]],
+  ['opticalsurface_1',['OpticalSurface',['../class_optical_surface.html#a11ba19c3e9a4e807b3e8867d963771f1',1,'OpticalSurface']]],
+  ['outputimage_2',['outputImage',['../class_detector.html#afecfe03c04b8ab251dc61e0bbd624f7d',1,'Detector']]]
 ];

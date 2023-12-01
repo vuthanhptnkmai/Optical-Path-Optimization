@@ -21,7 +21,7 @@ vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \m
 \item 
 std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_spherical_surface_a4bdd68c4c0315a0f13e4d99773fbce9d}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const override
 \item 
-virtual void \mbox{\hyperlink{class_spherical_surface_a47c651ba754b16d35e1ecb6672b2fc63}{generate\+Points}} () const override
+void \mbox{\hyperlink{class_spherical_surface_a283df73dafda182ed6fb03a0045eddb4}{generate\+Points}} (std\+::ofstream \&out\+File) const override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
@@ -38,7 +38,7 @@ virtual vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}
 \item 
 virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5fa9}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
 \item 
-virtual void \mbox{\hyperlink{class_optical_surface_a6b45092d0ae1a4a9928401eb5de37298}{generate\+Points}} (const std\+::string \&filename) const =0
+virtual void \mbox{\hyperlink{class_optical_surface_aad367ce67064e4d83566dff86e5ceff6}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -59,7 +59,7 @@ vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \m
 class Spherical\+Surface$<$ T, U $>$}
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00048}{48}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00050}{50}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 
 
@@ -73,7 +73,7 @@ Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00048}{48}} of fi
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00053}{53}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00055}{55}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 \Hypertarget{class_spherical_surface_a3912029f4c6eac7a5343697a2637cbf1}\label{class_spherical_surface_a3912029f4c6eac7a5343697a2637cbf1} 
 \index{SphericalSurface$<$ T, U $>$@{SphericalSurface$<$ T, U $>$}!````~SphericalSurface@{\texorpdfstring{$\sim$}{\string~}SphericalSurface}}
@@ -85,16 +85,20 @@ virtual \mbox{\hyperlink{class_spherical_surface}{Spherical\+Surface}}$<$ \mbox{
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_spherical_surface_a47c651ba754b16d35e1ecb6672b2fc63}\label{class_spherical_surface_a47c651ba754b16d35e1ecb6672b2fc63} 
+\Hypertarget{class_spherical_surface_a283df73dafda182ed6fb03a0045eddb4}\label{class_spherical_surface_a283df73dafda182ed6fb03a0045eddb4} 
 \index{SphericalSurface$<$ T, U $>$@{SphericalSurface$<$ T, U $>$}!generatePoints@{generatePoints}}
 \index{generatePoints@{generatePoints}!SphericalSurface$<$ T, U $>$@{SphericalSurface$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_spherical_surface}{Spherical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+void \mbox{\hyperlink{class_spherical_surface}{Spherical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00075}{75}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Implements \mbox{\hyperlink{class_optical_surface_aad367ce67064e4d83566dff86e5ceff6}{Optical\+Surface$<$ T, U $>$}}.
+
+
+
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00078}{78}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 \Hypertarget{class_spherical_surface_a6467d681ee00791a253b37264de96d56}\label{class_spherical_surface_a6467d681ee00791a253b37264de96d56} 
 \index{SphericalSurface$<$ T, U $>$@{SphericalSurface$<$ T, U $>$}!getIntersectionPoint@{getIntersectionPoint}}
@@ -109,7 +113,7 @@ Implements \mbox{\hyperlink{class_optical_surface_a47f05eb6935451dd452f521dcdbbd
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00063}{63}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00066}{66}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 \Hypertarget{class_spherical_surface_a4bdd68c4c0315a0f13e4d99773fbce9d}\label{class_spherical_surface_a4bdd68c4c0315a0f13e4d99773fbce9d} 
 \index{SphericalSurface$<$ T, U $>$@{SphericalSurface$<$ T, U $>$}!intersects@{intersects}}
@@ -124,7 +128,7 @@ Implements \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00069}{69}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00072}{72}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 
 
@@ -138,7 +142,7 @@ Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00069}{69}} of fi
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00050}{50}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00052}{52}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 
 

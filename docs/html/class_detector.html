@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_detector-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Detector&lt; T, U &gt; Class Template Reference</div></div>
@@ -90,8 +91,18 @@ Inheritance diagram for Detector&lt; T, U &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a1d3ff43da3f2b271ed62334e00bb0a05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#a1d3ff43da3f2b271ed62334e00bb0a05">Detector</a> (std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>, int <a class="el" href="class_detector.html#ab80d696979a475afbbe693f78b3c69b8">pixelWidth</a>=512, int <a class="el" href="class_detector.html#a4c12ba156e53fea5700dc7342f523cb6">pixelHeight</a>=512)</td></tr>
+<tr class="separator:a1d3ff43da3f2b271ed62334e00bb0a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89de1425ce90c4734d6f77995427f94"><td class="memItemLeft" align="right" valign="top">const Eigen::Matrix&lt; <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>, Eigen::Dynamic, Eigen::Dynamic &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#af89de1425ce90c4734d6f77995427f94">getPixelGrid</a> () const</td></tr>
+<tr class="separator:af89de1425ce90c4734d6f77995427f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab076fba209600c53e77d3ebeb2b132ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#ab076fba209600c53e77d3ebeb2b132ca">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint) override</td></tr>
 <tr class="separator:ab076fba209600c53e77d3ebeb2b132ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d1020d0b14a0fc8cbcde28b857d4d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#a22d1020d0b14a0fc8cbcde28b857d4d4">Detector</a> (std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>, int <a class="el" href="class_detector.html#ab80d696979a475afbbe693f78b3c69b8">pixelWidth</a>, int <a class="el" href="class_detector.html#a4c12ba156e53fea5700dc7342f523cb6">pixelHeight</a>)</td></tr>
+<tr class="separator:a22d1020d0b14a0fc8cbcde28b857d4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab076fba209600c53e77d3ebeb2b132ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#ab076fba209600c53e77d3ebeb2b132ca">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint) override</td></tr>
+<tr class="separator:ab076fba209600c53e77d3ebeb2b132ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afecfe03c04b8ab251dc61e0bbd624f7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#afecfe03c04b8ab251dc61e0bbd624f7d">outputImage</a> (const std::string &amp;filename)</td></tr>
+<tr class="separator:afecfe03c04b8ab251dc61e0bbd624f7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_optical_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_optical_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_optical_component.html">OpticalComponent&lt; T, U &gt;</a></td></tr>
 <tr class="memitem:ac19e994d82b0c0ceb4879d1f0dfd9d25 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#ac19e994d82b0c0ceb4879d1f0dfd9d25">OpticalComponent</a> (std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>)</td></tr>
 <tr class="separator:ac19e994d82b0c0ceb4879d1f0dfd9d25 inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -106,12 +117,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89ebe3f433a227415c84ec3637eb59ab inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a89ebe3f433a227415c84ec3637eb59ab">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint)=0</td></tr>
 <tr class="separator:a89ebe3f433a227415c84ec3637eb59ab inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a917cb605056aedafe72e29842d6eb836"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#a917cb605056aedafe72e29842d6eb836">mapToPixelGrid</a> (const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint) const</td></tr>
+<tr class="separator:a917cb605056aedafe72e29842d6eb836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ad30b0c1d626beb6cd89df51fdfbfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#a23ad30b0c1d626beb6cd89df51fdfbfe">adjustSurfaceToFitPixelGrid</a> ()</td></tr>
+<tr class="separator:a23ad30b0c1d626beb6cd89df51fdfbfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab80d696979a475afbbe693f78b3c69b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#ab80d696979a475afbbe693f78b3c69b8">pixelWidth</a></td></tr>
 <tr class="separator:ab80d696979a475afbbe693f78b3c69b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c12ba156e53fea5700dc7342f523cb6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#a4c12ba156e53fea5700dc7342f523cb6">pixelHeight</a></td></tr>
 <tr class="separator:a4c12ba156e53fea5700dc7342f523cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b25bb022a373329da4ad84d6b277f7"><td class="memItemLeft" align="right" valign="top">Eigen::Matrix&lt; <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>, Eigen::Dynamic, Eigen::Dynamic &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#a06b25bb022a373329da4ad84d6b277f7">pixelGrid</a></td></tr>
+<tr class="separator:a06b25bb022a373329da4ad84d6b277f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61f3dc1f9de84fcf7ca07cde6264b25"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_detector.html#ae61f3dc1f9de84fcf7ca07cde6264b25">pixelData</a></td></tr>
+<tr class="separator:ae61f3dc1f9de84fcf7ca07cde6264b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -122,10 +144,148 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>&gt;<br />
 class Detector&lt; T, U &gt;</div>
-<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00011">11</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00020">20</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a1d3ff43da3f2b271ed62334e00bb0a05" name="a1d3ff43da3f2b271ed62334e00bb0a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d3ff43da3f2b271ed62334e00bb0a05">&#9670;&#160;</a></span>Detector() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;<a class="el" href="class_detector.html">::Detector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelWidth</em> = <code>512</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelHeight</em> = <code>512</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00029">29</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+
+</div>
+</div>
+<a id="a22d1020d0b14a0fc8cbcde28b857d4d4" name="a22d1020d0b14a0fc8cbcde28b857d4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d1020d0b14a0fc8cbcde28b857d4d4">&#9670;&#160;</a></span>Detector() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;<a class="el" href="class_detector.html">::Detector</a> </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt;&#160;</td>
+          <td class="paramname"><em>surface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pixelHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a23ad30b0c1d626beb6cd89df51fdfbfe" name="a23ad30b0c1d626beb6cd89df51fdfbfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ad30b0c1d626beb6cd89df51fdfbfe">&#9670;&#160;</a></span>adjustSurfaceToFitPixelGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::adjustSurfaceToFitPixelGrid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00045">45</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+
+</div>
+</div>
+<a id="af89de1425ce90c4734d6f77995427f94" name="af89de1425ce90c4734d6f77995427f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89de1425ce90c4734d6f77995427f94">&#9670;&#160;</a></span>getPixelGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const Eigen::Matrix&lt; <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>, Eigen::Dynamic, Eigen::Dynamic &gt; &amp; <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::getPixelGrid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00037">37</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+
+</div>
+</div>
 <a id="ab076fba209600c53e77d3ebeb2b132ca" name="ab076fba209600c53e77d3ebeb2b132ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab076fba209600c53e77d3ebeb2b132ca">&#9670;&#160;</a></span>handleLight()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab076fba209600c53e77d3ebeb2b132ca">&#9670;&#160;</a></span>handleLight() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,18 +315,170 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="class_optical_component.html#a89ebe3f433a227415c84ec3637eb59ab">OpticalComponent&lt; T, U &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00020">20</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00115">115</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+
+</div>
+</div>
+<a id="ab076fba209600c53e77d3ebeb2b132ca" name="ab076fba209600c53e77d3ebeb2b132ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab076fba209600c53e77d3ebeb2b132ca">&#9670;&#160;</a></span>handleLight() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::handleLight </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>ray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>intersectionPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="class_optical_component.html#a89ebe3f433a227415c84ec3637eb59ab">OpticalComponent&lt; T, U &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a917cb605056aedafe72e29842d6eb836" name="a917cb605056aedafe72e29842d6eb836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a917cb605056aedafe72e29842d6eb836">&#9670;&#160;</a></span>mapToPixelGrid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::pair&lt; int, int &gt; <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::mapToPixelGrid </td>
+          <td>(</td>
+          <td class="paramtype">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>intersectionPoint</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00081">81</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+
+</div>
+</div>
+<a id="afecfe03c04b8ab251dc61e0bbd624f7d" name="afecfe03c04b8ab251dc61e0bbd624f7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afecfe03c04b8ab251dc61e0bbd624f7d">&#9670;&#160;</a></span>outputImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::outputImage </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector__to__delete_8h_source.html#l00030">30</a> of file <a class="el" href="detector__to__delete_8h_source.html">detector_to_delete.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae61f3dc1f9de84fcf7ca07cde6264b25" name="ae61f3dc1f9de84fcf7ca07cde6264b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61f3dc1f9de84fcf7ca07cde6264b25">&#9670;&#160;</a></span>pixelData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;<a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>&gt; &gt; <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::pixelData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector__to__delete_8h_source.html#l00023">23</a> of file <a class="el" href="detector__to__delete_8h_source.html">detector_to_delete.h</a>.</p>
+
+</div>
+</div>
+<a id="a06b25bb022a373329da4ad84d6b277f7" name="a06b25bb022a373329da4ad84d6b277f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b25bb022a373329da4ad84d6b277f7">&#9670;&#160;</a></span>pixelGrid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::Matrix&lt;<a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>, Eigen::Dynamic, Eigen::Dynamic&gt; <a class="el" href="class_detector.html">Detector</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::pixelGrid</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00023">23</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+
+</div>
+</div>
 <a id="a4c12ba156e53fea5700dc7342f523cb6" name="a4c12ba156e53fea5700dc7342f523cb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c12ba156e53fea5700dc7342f523cb6">&#9670;&#160;</a></span>pixelHeight</h2>
 
@@ -189,7 +501,7 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00013">13</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00022">22</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
 
 </div>
 </div>
@@ -215,12 +527,13 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00013">13</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="detector_8h_source.html#l00022">22</a> of file <a class="el" href="detector_8h_source.html">detector.h</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>simulator/opticalComponents/<a class="el" href="detector_8h_source.html">detector.h</a></li>
+<li>simulator/opticalComponents/<a class="el" href="detector__to__delete_8h_source.html">detector_to_delete.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

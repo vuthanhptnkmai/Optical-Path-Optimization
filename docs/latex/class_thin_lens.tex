@@ -41,16 +41,17 @@ const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyper
 \item 
 virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
+\doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}{refract\+\_\+approx}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Attributes}
+\doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_thin_lens_a93c5204c52151e08d948db31bc75cf6e}{focal\+Length}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -63,7 +64,7 @@ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surfa
 class Thin\+Lens$<$ T, U $>$}
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00025}{25}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00024}{24}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 
 
@@ -77,7 +78,7 @@ Definition at line \mbox{\hyperlink{lens_8h_source_l00025}{25}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00039}{39}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00038}{38}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 
 
@@ -95,18 +96,18 @@ Implements \mbox{\hyperlink{class_lens_afb9618c9c1482f60ee95b30dc3982268}{Lens$<
 
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00069}{69}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00068}{68}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 \Hypertarget{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9}\label{class_thin_lens_a9a56b7017ef8e19a60ad3bb838dbddb9} 
 \index{ThinLens$<$ T, U $>$@{ThinLens$<$ T, U $>$}!refract\_approx@{refract\_approx}}
 \index{refract\_approx@{refract\_approx}!ThinLens$<$ T, U $>$@{ThinLens$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{refract\_approx()}{refract\_approx()}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_thin_lens}{Thin\+Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::refract\+\_\+approx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+void \mbox{\hyperlink{class_thin_lens}{Thin\+Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::refract\+\_\+approx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00047}{47}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00046}{46}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 
 
@@ -116,11 +117,11 @@ Definition at line \mbox{\hyperlink{lens_8h_source_l00047}{47}} of file \mbox{\h
 \index{focalLength@{focalLength}!ThinLens$<$ T, U $>$@{ThinLens$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{focalLength}{focalLength}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_thin_lens}{Thin\+Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::focal\+Length\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_thin_lens}{Thin\+Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::focal\+Length\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00027}{27}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00026}{26}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 
 

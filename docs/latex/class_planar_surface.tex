@@ -21,7 +21,7 @@ vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \m
 \item 
 virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
 \item 
-virtual void \mbox{\hyperlink{class_planar_surface_a2acb095bf59c88a2e813611208265c6d}{generate\+Points}} (const std\+::string \&filename) const =0
+virtual void \mbox{\hyperlink{class_planar_surface_aa5bd3803fd87cef5bc41767ff99c417b}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
@@ -38,7 +38,7 @@ virtual vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}
 \item 
 virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5fa9}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
 \item 
-virtual void \mbox{\hyperlink{class_optical_surface_a6b45092d0ae1a4a9928401eb5de37298}{generate\+Points}} (const std\+::string \&filename) const =0
+virtual void \mbox{\hyperlink{class_optical_surface_aad367ce67064e4d83566dff86e5ceff6}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
@@ -55,7 +55,7 @@ vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \m
 class Planar\+Surface$<$ T, U $>$}
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00029}{29}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00030}{30}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 
 
@@ -69,7 +69,7 @@ Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00029}{29}} of fi
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00031}{31}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00032}{32}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 \Hypertarget{class_planar_surface_a739abfe15b4465a4625249799db524a2}\label{class_planar_surface_a739abfe15b4465a4625249799db524a2} 
 \index{PlanarSurface$<$ T, U $>$@{PlanarSurface$<$ T, U $>$}!````~PlanarSurface@{\texorpdfstring{$\sim$}{\string~}PlanarSurface}}
@@ -81,20 +81,20 @@ virtual \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyper
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_planar_surface_a2acb095bf59c88a2e813611208265c6d}\label{class_planar_surface_a2acb095bf59c88a2e813611208265c6d} 
+\Hypertarget{class_planar_surface_aa5bd3803fd87cef5bc41767ff99c417b}\label{class_planar_surface_aa5bd3803fd87cef5bc41767ff99c417b} 
 \index{PlanarSurface$<$ T, U $>$@{PlanarSurface$<$ T, U $>$}!generatePoints@{generatePoints}}
 \index{generatePoints@{generatePoints}!PlanarSurface$<$ T, U $>$@{PlanarSurface$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-virtual void \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+virtual void \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_optical_surface_a6b45092d0ae1a4a9928401eb5de37298}{Optical\+Surface$<$ T, U $>$}}.
+Implements \mbox{\hyperlink{class_optical_surface_aad367ce67064e4d83566dff86e5ceff6}{Optical\+Surface$<$ T, U $>$}}.
 
 
 
-Implemented in \mbox{\hyperlink{class_planar_circle_add6b6e89f5af033e4b0397337d62973b}{Planar\+Circle$<$ T, U $>$}}, and \mbox{\hyperlink{class_planar_rectangle_a519d4c16d7161a3b9412204c65bed128}{Planar\+Rectangle$<$ T, U $>$}}.
+Implemented in \mbox{\hyperlink{class_planar_circle_a2978f48dda03c866457e6effa0449281}{Planar\+Circle$<$ T, U $>$}}, and \mbox{\hyperlink{class_planar_rectangle_a9f84f6274f1b849e475e0feba8978543}{Planar\+Rectangle$<$ T, U $>$}}.
 
 \Hypertarget{class_planar_surface_a123ed05ed59710fcd97d28bcf454d688}\label{class_planar_surface_a123ed05ed59710fcd97d28bcf454d688} 
 \index{PlanarSurface$<$ T, U $>$@{PlanarSurface$<$ T, U $>$}!getIntersectionPoint@{getIntersectionPoint}}
@@ -109,7 +109,7 @@ Implements \mbox{\hyperlink{class_optical_surface_a47f05eb6935451dd452f521dcdbbd
 
 
 
-Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00040}{40}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
+Definition at line \mbox{\hyperlink{optical_surface_8h_source_l00042}{42}} of file \mbox{\hyperlink{optical_surface_8h_source}{optical\+Surface.\+h}}.
 
 \Hypertarget{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}\label{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd} 
 \index{PlanarSurface$<$ T, U $>$@{PlanarSurface$<$ T, U $>$}!intersects@{intersects}}

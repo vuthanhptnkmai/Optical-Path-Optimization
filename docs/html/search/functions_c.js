@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['_7elens_0',['~Lens',['../class_lens.html#afbfde6699bd267655a2e87fd01b09d51',1,'Lens']]],
-  ['_7emirror_1',['~Mirror',['../class_mirror.html#a9cdd442b31331a6688125fa628196b8a',1,'Mirror']]],
-  ['_7eopticalcomponent_2',['~OpticalComponent',['../class_optical_component.html#a6c259b37610efcccd45a30f58903230e',1,'OpticalComponent']]],
-  ['_7eopticalsurface_3',['~OpticalSurface',['../class_optical_surface.html#a47632c4d33e480af9a152b765c786150',1,'OpticalSurface']]],
-  ['_7eplanarsurface_4',['~PlanarSurface',['../class_planar_surface.html#a739abfe15b4465a4625249799db524a2',1,'PlanarSurface']]],
-  ['_7esphericalsurface_5',['~SphericalSurface',['../class_spherical_surface.html#a3912029f4c6eac7a5343697a2637cbf1',1,'SphericalSurface']]]
+  ['saveimageaspng_0',['saveImageAsPNG',['../main_8cpp.html#a2c295cf883639550ca7e33528d9e5664',1,'main.cpp']]],
+  ['setdirection_1',['setDirection',['../class_ray.html#a9da83491d3e1c9795d71c34b441e522b',1,'Ray']]],
+  ['setintensity_2',['setIntensity',['../class_ray.html#a4128344193001a8eb675d65c1e63ec78',1,'Ray']]],
+  ['setposition_3',['setPosition',['../class_ray.html#aa47f6945b4cace3b5f44ebf5f7a129b6',1,'Ray']]],
+  ['setwavelength_4',['setWavelength',['../class_ray.html#a73e5114f2d31d477e4e211d86b5ab6b9',1,'Ray']]],
+  ['sphericalsurface_5',['SphericalSurface',['../class_spherical_surface.html#a33d3f009c7375a4ab929b51203cc200d',1,'SphericalSurface']]]
 ];

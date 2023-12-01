@@ -19,7 +19,7 @@ Inheritance diagram for Planar\+Circle\texorpdfstring{$<$}{<} T, U \texorpdfstri
 \item 
 std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const override
 \item 
-void \mbox{\hyperlink{class_planar_circle_add6b6e89f5af033e4b0397337d62973b}{generate\+Points}} (const std\+::string \&filename) const
+void \mbox{\hyperlink{class_planar_circle_a2978f48dda03c866457e6effa0449281}{generate\+Points}} (std\+::ofstream \&out\+File) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_planar_surface}{Planar\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
@@ -32,7 +32,7 @@ vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \m
 \item 
 virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
 \item 
-virtual void \mbox{\hyperlink{class_planar_surface_a2acb095bf59c88a2e813611208265c6d}{generate\+Points}} (const std\+::string \&filename) const =0
+virtual void \mbox{\hyperlink{class_planar_surface_aa5bd3803fd87cef5bc41767ff99c417b}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
@@ -49,7 +49,7 @@ virtual vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}
 \item 
 virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5fa9}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
 \item 
-virtual void \mbox{\hyperlink{class_optical_surface_a6b45092d0ae1a4a9928401eb5de37298}{generate\+Points}} (const std\+::string \&filename) const =0
+virtual void \mbox{\hyperlink{class_optical_surface_aad367ce67064e4d83566dff86e5ceff6}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -90,20 +90,20 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00017}{17}} of file
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_planar_circle_add6b6e89f5af033e4b0397337d62973b}\label{class_planar_circle_add6b6e89f5af033e4b0397337d62973b} 
+\Hypertarget{class_planar_circle_a2978f48dda03c866457e6effa0449281}\label{class_planar_circle_a2978f48dda03c866457e6effa0449281} 
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!generatePoints@{generatePoints}}
 \index{generatePoints@{generatePoints}!PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
 {\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+void \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_planar_surface_a2acb095bf59c88a2e813611208265c6d}{Planar\+Surface$<$ T, U $>$}}.
+Implements \mbox{\hyperlink{class_planar_surface_aa5bd3803fd87cef5bc41767ff99c417b}{Planar\+Surface$<$ T, U $>$}}.
 
 
 
-Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00038}{38}} of file \mbox{\hyperlink{planar_circle_8h_source}{planar\+Circle.\+h}}.
+Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00040}{40}} of file \mbox{\hyperlink{planar_circle_8h_source}{planar\+Circle.\+h}}.
 
 \Hypertarget{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}\label{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e} 
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!getRadius@{getRadius}}
@@ -114,7 +114,7 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00038}{38}} of file
 
 
 
-Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00019}{19}} of file \mbox{\hyperlink{planar_circle_8h_source}{planar\+Circle.\+h}}.
+Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00020}{20}} of file \mbox{\hyperlink{planar_circle_8h_source}{planar\+Circle.\+h}}.
 
 \Hypertarget{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}\label{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3} 
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!intersects@{intersects}}
@@ -129,7 +129,7 @@ Implements \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3db
 
 
 
-Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00028}{28}} of file \mbox{\hyperlink{planar_circle_8h_source}{planar\+Circle.\+h}}.
+Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00030}{30}} of file \mbox{\hyperlink{planar_circle_8h_source}{planar\+Circle.\+h}}.
 
 
 
