@@ -52,18 +52,26 @@
             // Create a PlanarMirror
             vec3<T> mirrorPosition(0.0, 0.0, 0.0);
             vec3<T> mirrorNormal(0, 1.0, 1.0);
-            T mirrorDiameter = 3.0;
+            T mirrorDiameter = 4.0;
             auto mirrorSurface = std::make_unique<PlanarCircle<T, U>>(mirrorPosition, mirrorNormal, mirrorDiameter);
             auto mirror = std::make_unique<PlanarMirror<T, U>>(std::move(mirrorSurface));
 
             // Create a ThinLens
             vec3<T> lensPosition(0.0, 0.0, 3.0);
             vec3<T> lensNormal(0.0, 0.0, 1.0);
-            T lensDiameter = 4.0;
+            T lensDiameter = 5.0;
             U lensFocalLength = 2.0;
             auto lensSurface = std::make_unique<PlanarCircle<T, U>>(lensPosition, lensNormal, lensDiameter);
             auto lens = std::make_unique<ThinLens<T, U>>(std::move(lensSurface), lensFocalLength);
             
+            // Create a ThinLens
+            vec3<T> lens2Position(0.0, 0.0, 5.0);
+            vec3<T> lens2Normal(0.0, 0.0, 1.0);
+            T lens2Diameter = 5.0;
+            U lens2FocalLength = 3.0;
+            auto lens2Surface = std::make_unique<PlanarCircle<T, U>>(lens2Position, lens2Normal, lens2Diameter);
+            auto lens2 = std::make_unique<ThinLens<T, U>>(std::move(lens2Surface), lens2FocalLength);
+
             // Create a Filter
             vec3<T> filterPosition(0.0, 0.0, 5.0);
             vec3<T> filterNormal(0.0, 0.0, 1.0);
@@ -73,7 +81,7 @@
             auto filter = std::make_unique<Filter<T, U>>(std::move(filterSurface), minWavelength, maxWavelength);
 
             // Create a Detector
-            vec3<T> detectorPosition(0.0, 0.0, 6.0); 
+            vec3<T> detectorPosition(0.0, 0.0, 5.96); 
             vec3<T> detectorNormal(0.0, 0.0, 1.0);
             vec3<T> detectorHeightDirection(0.0, 1.0, 0.0);
             T detectorWidth = 1.5, detectorHeight = 1.5;
@@ -85,6 +93,7 @@
             std::vector<std::unique_ptr<OpticalComponent<T, U>>> components;
             components.push_back(std::move(mirror));
             components.push_back(std::move(lens));
+            // components.push_back(std::move(lens2));
             components.push_back(std::move(filter));
             components.push_back(std::move(detector));
 
@@ -153,35 +162,3 @@
 
         return 0;
     }
-
-
-    //         for (auto& ray : *rays) { 
-    //             outFile << ray.position(0) << " " << ray.position(1) << " " << ray.position(2) << std::endl;
-
-    //             auto [doesIntersect, intersectionPoint] = mirror->getSurfacePtr()->intersects(ray);
-    //             outFile << intersectionPoint(0) << " " << intersectionPoint(1) << " " << intersectionPoint(2) << std::endl;
-                
-    //             if (doesIntersect) {
-    //                 mirror->handleLight(ray, intersectionPoint);
-    //                 outFile << ray.position(0) + ray.direction(0) << " " << ray.position(1) + ray.direction(1) << " " << ray.position(2) + ray.direction(2) << "\n\n" << std::endl;
-    //             } else {
-    //                 outFile << "\n\n" << std::endl; 
-    //                 continue; 
-    //             }
-    //         }
-
-    //         // Save detector's pixel grid as a PNG image
-    //         std::string filename = "detector_output.png";
-    //         auto detectorPtr = dynamic_cast<Detector<T, U>*>(components.back().get());
-    //         if (detectorPtr) {
-    //             saveImageAsPNG(filename, detectorPtr->getPixelGrid());
-    //             std::cout << "Detector output saved as: " << filename << std::endl;
-    //         }
-
-    //     } catch (const std::exception& e) {
-    //         std::cerr << "Error: " << e.what() << std::endl;
-    //         return 1;
-    //     }
-
-    //     return 0;
-    // }
