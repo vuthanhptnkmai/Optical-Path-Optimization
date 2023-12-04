@@ -8,7 +8,7 @@
     </Component>
     <Component name="Lens">
         <Surface type="Circle" diameter="5.0" />
-        <Position x="0.0" y="0.0" z="3.0" />
+        <Position x="0.0" y="0.0" z="2.9" />
         <Normal dx="0.0" dy="0.0" dz="1.0" />
         <FocalLength value="2.0" />
     </Component>

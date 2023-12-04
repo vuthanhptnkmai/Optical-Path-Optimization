@@ -1,6 +1,7 @@
 #pragma once
 
 #include <utility>
+#include <math.h>
 
 #include "../ray.h"
 #include "../opticalSurface.h"

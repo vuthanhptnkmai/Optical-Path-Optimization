@@ -14,3 +14,6 @@
 #include "opticalComponents/Detector.h"
 
 #include "rayTracing.h"
+
+#include "optimizer/sharpness.h"
+#include "optimizer/autoFocus.h"
