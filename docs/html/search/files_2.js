@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lens_2eh_0',['lens.h',['../lens_8h.html',1,'']]]
+  ['filter_2eh_0',['filter.h',['../filter_8h.html',1,'']]]
 ];

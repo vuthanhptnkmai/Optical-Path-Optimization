@@ -93,30 +93,32 @@ Inheritance diagram for OpticalSurface&lt; T, U &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a11ba19c3e9a4e807b3e8867d963771f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a11ba19c3e9a4e807b3e8867d963771f1">OpticalSurface</a> (const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;<a class="el" href="class_optical_surface.html#a6985c911e7deef13c9b45f353124ddf9">position</a>, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;<a class="el" href="class_optical_surface.html#a8f05cb1afd8798183cc764f84d49f622">normal</a>)</td></tr>
+<tr class="memitem:a11ba19c3e9a4e807b3e8867d963771f1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a11ba19c3e9a4e807b3e8867d963771f1">OpticalSurface</a> (const vec3&lt; T &gt; &amp;<a class="el" href="class_optical_surface.html#a6985c911e7deef13c9b45f353124ddf9">position</a>, const vec3&lt; T &gt; &amp;<a class="el" href="class_optical_surface.html#a8f05cb1afd8798183cc764f84d49f622">normal</a>)</td></tr>
 <tr class="separator:a11ba19c3e9a4e807b3e8867d963771f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47632c4d33e480af9a152b765c786150"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a47632c4d33e480af9a152b765c786150">~OpticalSurface</a> ()=default</td></tr>
 <tr class="separator:a47632c4d33e480af9a152b765c786150"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8a7a6ff67ac779a003316317c29f03e"><td class="memItemLeft" align="right" valign="top">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#ad8a7a6ff67ac779a003316317c29f03e">getPosition</a> () const</td></tr>
-<tr class="separator:ad8a7a6ff67ac779a003316317c29f03e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae64f02dbe7d7b89ee3b550ea4e34bf95"><td class="memItemLeft" align="right" valign="top">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#ae64f02dbe7d7b89ee3b550ea4e34bf95">getNormal</a> () const</td></tr>
+<tr class="memitem:a486a4148687962c22001de40387718cc"><td class="memItemLeft" align="right" valign="top">vec3&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a486a4148687962c22001de40387718cc">getPosition</a> ()</td></tr>
+<tr class="separator:a486a4148687962c22001de40387718cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae64f02dbe7d7b89ee3b550ea4e34bf95"><td class="memItemLeft" align="right" valign="top">const vec3&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#ae64f02dbe7d7b89ee3b550ea4e34bf95">getNormal</a> () const</td></tr>
 <tr class="separator:ae64f02dbe7d7b89ee3b550ea4e34bf95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47f05eb6935451dd452f521dcdbbd313"><td class="memItemLeft" align="right" valign="top">virtual vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a47f05eb6935451dd452f521dcdbbd313">getIntersectionPoint</a> (const <a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray) const =0</td></tr>
+<tr class="memitem:a5ee34a6f38a97e79d507b278eb23bb7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a5ee34a6f38a97e79d507b278eb23bb7e">setPosition</a> (const vec3&lt; T &gt; &amp;newPosition)</td></tr>
+<tr class="separator:a5ee34a6f38a97e79d507b278eb23bb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f05eb6935451dd452f521dcdbbd313"><td class="memItemLeft" align="right" valign="top">virtual vec3&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a47f05eb6935451dd452f521dcdbbd313">getIntersectionPoint</a> (const <a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;ray) const =0</td></tr>
 <tr class="separator:a47f05eb6935451dd452f521dcdbbd313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dcacac007d5361ad4b56166a69d5fa9"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; bool, vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a6dcacac007d5361ad4b56166a69d5fa9">intersects</a> (const <a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray) const =0</td></tr>
+<tr class="memitem:a6dcacac007d5361ad4b56166a69d5fa9"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; bool, vec3&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a6dcacac007d5361ad4b56166a69d5fa9">intersects</a> (const <a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;ray) const =0</td></tr>
 <tr class="separator:a6dcacac007d5361ad4b56166a69d5fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad367ce67064e4d83566dff86e5ceff6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#aad367ce67064e4d83566dff86e5ceff6">generatePoints</a> (std::ofstream &amp;outFile) const =0</td></tr>
 <tr class="separator:aad367ce67064e4d83566dff86e5ceff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a6985c911e7deef13c9b45f353124ddf9"><td class="memItemLeft" align="right" valign="top">vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a6985c911e7deef13c9b45f353124ddf9">position</a></td></tr>
+<tr class="memitem:a6985c911e7deef13c9b45f353124ddf9"><td class="memItemLeft" align="right" valign="top">vec3&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a6985c911e7deef13c9b45f353124ddf9">position</a></td></tr>
 <tr class="separator:a6985c911e7deef13c9b45f353124ddf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f05cb1afd8798183cc764f84d49f622"><td class="memItemLeft" align="right" valign="top">vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a8f05cb1afd8798183cc764f84d49f622">normal</a></td></tr>
+<tr class="memitem:a8f05cb1afd8798183cc764f84d49f622"><td class="memItemLeft" align="right" valign="top">vec3&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_surface.html#a8f05cb1afd8798183cc764f84d49f622">normal</a></td></tr>
 <tr class="separator:a8f05cb1afd8798183cc764f84d49f622"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename U&gt;<br />
 class OpticalSurface&lt; T, U &gt;</div>
 <p class="definition">Definition at line <a class="el" href="optical_surface_8h_source.html#l00011">11</a> of file <a class="el" href="optical_surface_8h_source.html">opticalSurface.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -126,21 +128,21 @@ class OpticalSurface&lt; T, U &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;<a class="el" href="class_optical_surface.html">::OpticalSurface</a> </td>
+          <td class="memname"><a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;<a class="el" href="class_optical_surface.html">::OpticalSurface</a> </td>
           <td>(</td>
-          <td class="paramtype">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const vec3&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>position</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const vec3&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>normal</em>&#160;</td>
         </tr>
         <tr>
@@ -166,13 +168,13 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::~<a class="el" href="class_optical_surface.html">OpticalSurface</a> </td>
+          <td class="memname">virtual <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::~<a class="el" href="class_optical_surface.html">OpticalSurface</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -194,13 +196,13 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::generatePoints </td>
+          <td class="memname">virtual void <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::generatePoints </td>
           <td>(</td>
           <td class="paramtype">std::ofstream &amp;&#160;</td>
           <td class="paramname"><em>outFile</em></td><td>)</td>
@@ -224,15 +226,15 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::getIntersectionPoint </td>
+          <td class="memname">virtual vec3&lt; T &gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::getIntersectionPoint </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;&#160;</td>
           <td class="paramname"><em>ray</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -254,16 +256,45 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::getNormal </td>
+          <td class="memname">const vec3&lt; T &gt; &amp; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::getNormal </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="optical_surface_8h_source.html#l00022">22</a> of file <a class="el" href="optical_surface_8h_source.html">opticalSurface.h</a>.</p>
+
+</div>
+</div>
+<a id="a486a4148687962c22001de40387718cc" name="a486a4148687962c22001de40387718cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a486a4148687962c22001de40387718cc">&#9670;&#160;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vec3&lt; T &gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -277,50 +308,21 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 
 </div>
 </div>
-<a id="ad8a7a6ff67ac779a003316317c29f03e" name="ad8a7a6ff67ac779a003316317c29f03e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8a7a6ff67ac779a003316317c29f03e">&#9670;&#160;</a></span>getPosition()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::getPosition </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="optical_surface_8h_source.html#l00020">20</a> of file <a class="el" href="optical_surface_8h_source.html">opticalSurface.h</a>.</p>
-
-</div>
-</div>
 <a id="a6dcacac007d5361ad4b56166a69d5fa9" name="a6dcacac007d5361ad4b56166a69d5fa9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6dcacac007d5361ad4b56166a69d5fa9">&#9670;&#160;</a></span>intersects()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::pair&lt; bool, vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::intersects </td>
+          <td class="memname">virtual std::pair&lt; bool, vec3&lt; T &gt; &gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::intersects </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;&#160;</td>
           <td class="paramname"><em>ray</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -336,6 +338,36 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 
 </div>
 </div>
+<a id="a5ee34a6f38a97e79d507b278eb23bb7e" name="a5ee34a6f38a97e79d507b278eb23bb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee34a6f38a97e79d507b278eb23bb7e">&#9670;&#160;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const vec3&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"><em>newPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="optical_surface_8h_source.html#l00023">23</a> of file <a class="el" href="optical_surface_8h_source.html">opticalSurface.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a8f05cb1afd8798183cc764f84d49f622" name="a8f05cb1afd8798183cc764f84d49f622"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f05cb1afd8798183cc764f84d49f622">&#9670;&#160;</a></span>normal</h2>
@@ -343,13 +375,13 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vec3&lt;<a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::normal</td>
+          <td class="memname">vec3&lt;T&gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::normal</td>
         </tr>
       </table>
   </td>
@@ -369,13 +401,13 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vec3&lt;<a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>&gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::position</td>
+          <td class="memname">vec3&lt;T&gt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt;::position</td>
         </tr>
       </table>
   </td>

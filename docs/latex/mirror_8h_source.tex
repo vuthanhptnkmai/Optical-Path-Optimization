@@ -19,7 +19,7 @@
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00017}\mbox{\hyperlink{class_mirror_af02feab3af2457cb66719a2ba2776a46}{00017}}\ \ \ \ \ \mbox{\hyperlink{class_mirror_af02feab3af2457cb66719a2ba2776a46}{Mirror}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}))\ \{\}}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<T,\ U>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}),\ \mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{OpticalComponentType}}::\mbox{\hyperlink{class_mirror}{Mirror}})\ \{\}}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00019}\mbox{\hyperlink{class_mirror_a9cdd442b31331a6688125fa628196b8a}{00019}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_mirror_a9cdd442b31331a6688125fa628196b8a}{\string~Mirror}}()\ =\ \textcolor{keywordflow}{default};}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00020}00020\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00021}\mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{00021}}\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override}\ =\ 0;}
@@ -36,20 +36,20 @@
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00032}00032\ \textcolor{comment}{//\ Definitions}}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00033}00033\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00034}00034\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00035}\mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{Mirror<T,\ U>::reflect}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ incidentRay,\ \textcolor{keyword}{const}\ vec3<T>\&\ normal,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00036}00036\ \ \ \ \ vec3<T>\ reflectedDirection\ =\ incidentRay.\mbox{\hyperlink{class_ray_aa9e21aa377e4dc0f862881cfe48cbba1}{getDirection}}()\ -\/\ 2\ *\ incidentRay.\mbox{\hyperlink{class_ray_aa9e21aa377e4dc0f862881cfe48cbba1}{getDirection}}().dot(normal)\ *\ normal;}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00037}00037\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00038}00038\ \ \ \ \ incidentRay.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ intersectionPoint;}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00039}00039\ \ \ \ \ incidentRay.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ reflectedDirection.normalized();}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00035}\mbox{\hyperlink{class_planar_mirror_a0cf2e43bc972042724b8ff2c76d7cdac}{00035}}\ \mbox{\hyperlink{class_planar_mirror_a0cf2e43bc972042724b8ff2c76d7cdac}{PlanarMirror<T,\ U>::PlanarMirror}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ surface)}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00036}00036\ \ \ \ \ :\ \mbox{\hyperlink{class_mirror}{Mirror}}<T,\ U>(std::move(surface))\ \{}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}PlanarMirror\ expected\ a\ PlanarSurface.\ Provided\ surface\ type\ is\ invalid."{}});}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00039}00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00040}00040\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00041}00041\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00042}00042\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00043}\mbox{\hyperlink{class_planar_mirror_a0cf2e43bc972042724b8ff2c76d7cdac}{00043}}\ \mbox{\hyperlink{class_planar_mirror_a0cf2e43bc972042724b8ff2c76d7cdac}{PlanarMirror<T,\ U>::PlanarMirror}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ surface)}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00044}00044\ \ \ \ \ :\ \mbox{\hyperlink{class_mirror}{Mirror}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(surface))\ \{}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}PlanarMirror\ expected\ a\ PlanarSurface.\ Provided\ surface\ type\ is\ invalid."{}});}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00043}\mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{Mirror<T,\ U>::reflect}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ incidentRay,\ \textcolor{keyword}{const}\ vec3<T>\&\ normal,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00044}00044\ \ \ \ \ vec3<T>\ reflectedDirection\ =\ incidentRay.\mbox{\hyperlink{class_ray_aa9e21aa377e4dc0f862881cfe48cbba1}{getDirection}}()\ -\/\ 2\ *\ incidentRay.\mbox{\hyperlink{class_ray_aa9e21aa377e4dc0f862881cfe48cbba1}{getDirection}}().dot(normal)\ *\ normal;}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00046}00046\ \ \ \ \ incidentRay.\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}\ =\ intersectionPoint;}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00047}00047\ \ \ \ \ incidentRay.\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}\ =\ reflectedDirection.normalized();}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00048}00048\ \}}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00049}00049\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00050}00050\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00051}\mbox{\hyperlink{class_planar_mirror_a05684354087c586612029585191dd4f9}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_planar_mirror_a05684354087c586612029585191dd4f9}{PlanarMirror<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
@@ -77,7 +77,7 @@
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00073}00073\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00074}00074\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00075}\mbox{\hyperlink{class_convex_mirror_a5bc6a99aed4842be6e190af71e8b308b}{00075}}\ \mbox{\hyperlink{class_convex_mirror_a5bc6a99aed4842be6e190af71e8b308b}{ConvexMirror<T,\ U>::ConvexMirror}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ surface)}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00076}00076\ \ \ \ \ :\ \mbox{\hyperlink{class_mirror}{Mirror}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(surface))\ \{}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00076}00076\ \ \ \ \ :\ \mbox{\hyperlink{class_mirror}{Mirror}}<T,\ U>(std::move(surface))\ \{}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00077}00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_spherical_surface}{SphericalSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ConvexMirror\ expects\ a\ SphericalSurface\ type.\ Provided\ surface\ type\ is\ invalid."{}});}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
@@ -90,7 +90,7 @@
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00086}00086\ }
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00087}00087\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00088}\mbox{\hyperlink{class_concave_mirror_a2afccdd7bd7686369e92f8f9745aa0ef}{00088}}\ \mbox{\hyperlink{class_concave_mirror_a2afccdd7bd7686369e92f8f9745aa0ef}{ConcaveMirror<T,\ U>::ConcaveMirror}}(std::unique\_ptr<\mbox{\hyperlink{class_optical_surface}{OpticalSurface<T,\ U>}}>\ surface)}
-\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00089}00089\ \ \ \ \ :\ \mbox{\hyperlink{class_mirror}{Mirror}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(surface))\ \{}
+\DoxyCodeLine{\Hypertarget{mirror_8h_source_l00089}00089\ \ \ \ \ :\ \mbox{\hyperlink{class_mirror}{Mirror}}<T,\ U>(std::move(surface))\ \{}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_spherical_surface}{SphericalSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}ConcaveMirror\ expects\ a\ SphericalSurface\ type.\ Provided\ surface\ type\ is\ invalid."{}});}
 \DoxyCodeLine{\Hypertarget{mirror_8h_source_l00092}00092\ \ \ \ \ \ \ \ \ \}}

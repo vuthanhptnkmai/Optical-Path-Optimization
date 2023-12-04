@@ -31,98 +31,86 @@
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00027}00027\ }
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00028}00028\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00029}\mbox{\hyperlink{class_detector_a1d3ff43da3f2b271ed62334e00bb0a05}{00029}}\ \ \ \ \ \mbox{\hyperlink{class_detector_a1d3ff43da3f2b271ed62334e00bb0a05}{Detector}}(std::unique\_ptr<\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}>\ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}\ =\ 512,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}}\ =\ 512)}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})),\ \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}(\mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}),\ \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}}(\mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}}),}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixelGrid}}(Eigen::MatrixXf::Zero(\mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}},\ \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}))\ \{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00030}00030\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_optical_component}{OpticalComponent}}<T,\ U>(std::move(\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}),\ \mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{OpticalComponentType}}::\mbox{\hyperlink{class_detector}{Detector}}),\ \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}(\mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}),\ \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}}(\mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}}),}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixelGrid}}(Eigen::Matrix<U,\ Eigen::Dynamic,\ Eigen::Dynamic>::Zero(\mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}},\ \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}}))\ \{}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_surface}{PlanarSurface<T,\ U>}}*\textcolor{keyword}{>}(this-\/>\mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}.get())\ ==\ \textcolor{keyword}{nullptr})\ \{}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Detector\ expects\ a\ PlanarSurface\ type.\ Provided\ surface\ type\ is\ invalid."{}});}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00035}00035\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00037}\mbox{\hyperlink{class_detector_af89de1425ce90c4734d6f77995427f94}{00037}}\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Matrix<U,\ Eigen::Dynamic,\ Eigen::Dynamic>\&\ \mbox{\hyperlink{class_detector_af89de1425ce90c4734d6f77995427f94}{getPixelGrid}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixelGrid}};\ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00040}00040\ \};}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00041}00041\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00042}00042\ \textcolor{comment}{//\ Definitions}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00043}00043\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00044}00044\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00045}\mbox{\hyperlink{class_detector_a23ad30b0c1d626beb6cd89df51fdfbfe}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_a23ad30b0c1d626beb6cd89df51fdfbfe}{Detector<T,\ U>::adjustSurfaceToFitPixelGrid}}()\ \{}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00046}00046\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00047}00047\ \ \ \ \ \textcolor{keyword}{auto}\ planarRect\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_rectangle}{PlanarRectangle<T,\ U>}}*\textcolor{keyword}{>}(this-\/>surface.get());}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (!planarRect)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Surface\ is\ not\ a\ PlanarRectangle."{}});}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00049}00049\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00050}00050\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ width\ =\ planarRect-\/>getWidth();}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ height\ =\ planarRect-\/>getHeight();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_detector_a23ad30b0c1d626beb6cd89df51fdfbfe}{adjustSurfaceToFitPixelGrid}}();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00038}\mbox{\hyperlink{class_detector_af89de1425ce90c4734d6f77995427f94}{00038}}\ \ \ \ \ \textcolor{keyword}{const}\ Eigen::Matrix<U,\ Eigen::Dynamic,\ Eigen::Dynamic>\&\ \mbox{\hyperlink{class_detector_af89de1425ce90c4734d6f77995427f94}{getPixelGrid}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixelGrid}};\ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ void\ resetPixelGrid()\ \{\ pixelGrid\ =\ Eigen::Matrix<U,\ Eigen::Dynamic,\ Eigen::Dynamic>::Zero(pixelHeight,\ pixelWidth);\ \}}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00042}\mbox{\hyperlink{class_detector_a60cb16ad0a2c3b48b04aac61123757c8}{00042}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_a60cb16ad0a2c3b48b04aac61123757c8}{resetPixelGrid}}()\ \{\ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixelGrid}}.setZero(\mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixelHeight}},\ \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixelWidth}});\ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00043}00043\ \};}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00045}00045\ \textcolor{comment}{//\ Definitions}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00047}00047\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00048}\mbox{\hyperlink{class_detector_a23ad30b0c1d626beb6cd89df51fdfbfe}{00048}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_a23ad30b0c1d626beb6cd89df51fdfbfe}{Detector<T,\ U>::adjustSurfaceToFitPixelGrid}}()\ \{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00049}00049\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{auto}\ planarRect\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_rectangle}{PlanarRectangle<T,\ U>}}*\textcolor{keyword}{>}(this-\/>surface.get());}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (!planarRect)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Surface\ is\ not\ a\ PlanarRectangle."{}});}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ pixelWidth\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\textcolor{keyword}{>}(this-\/>pixelWidth);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ pixelHeight\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\textcolor{keyword}{>}(this-\/>pixelHeight);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00053}00053\ \ \ \ \ T\ width\ =\ planarRect-\/>getWidth();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00054}00054\ \ \ \ \ T\ height\ =\ planarRect-\/>getHeight();}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Calculate\ aspect\ ratios}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ surfaceAspectRatio\ =\ width\ /\ height;}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ pixelGridAspectRatio\ =\ pixelWidth\ /\ pixelHeight;}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00059}00059\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00060}00060\ \ \ \ \ \textcolor{comment}{//\ //\ Adjust\ surface\ dimensions}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00061}00061\ \ \ \ \ \textcolor{comment}{//\ if\ (pixelGridAspectRatio\ >\ surfaceAspectRatio)\ \{}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ width\ =\ height\ *\ pixelGridAspectRatio;\ //\ Adjust\ width}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ \}\ else\ if\ (pixelGridAspectRatio\ <\ surfaceAspectRatio)\ \{}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ height\ =\ width\ /\ pixelGridAspectRatio;\ //\ Adjust\ height}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ \}}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00066}00066\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ Adjust\ surface\ dimensions}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}\ (pixelGridAspectRatio\ >\ surfaceAspectRatio)\ \{}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ height\ =\ width\ /\ pixelGridAspectRatio;\ \textcolor{comment}{//\ Adjust\ height}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00070}00070\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (pixelGridAspectRatio\ <\ surfaceAspectRatio)\ \{}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ width\ =\ height\ *\ pixelGridAspectRatio;\ \textcolor{comment}{//\ Adjust\ width}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00073}00073\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00074}00074\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ Create\ a\ new\ surface\ with\ adjusted\ dimensions}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00076}00076\ \ \ \ \ \textcolor{keyword}{auto}\ newSurface\ =\ std::make\_unique<PlanarRectangle<T,\ U>>(planarRect-\/>getPosition(),\ planarRect-\/>getNormal(),\ width,\ height,\ planarRect-\/>getWidthDirection());}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00077}00077\ \ \ \ \ this-\/>surface\ =\ std::move(newSurface);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00078}00078\ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00079}00079\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00080}00080\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00081}\mbox{\hyperlink{class_detector_a917cb605056aedafe72e29842d6eb836}{00081}}\ std::pair<int,\ int>\ \mbox{\hyperlink{class_detector_a917cb605056aedafe72e29842d6eb836}{Detector<T,\ U>::mapToPixelGrid}}(\textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ Get\ required\ vectors\ and\ dimensions}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00083}00083\ \ \ \ \ \textcolor{keyword}{auto}\ planarRect\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_rectangle}{PlanarRectangle<T,\ U>}}*\textcolor{keyword}{>}(this-\/>surface.get());}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (!planarRect)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Surface\ is\ not\ a\ PlanarRectangle."{}});}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00085}00085\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00086}00086\ \ \ \ \ vec3<T>\ D\_height\ =\ planarRect-\/>getHeightDirection();}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00087}00087\ \ \ \ \ vec3<T>\ D\_width\ =\ planarRect-\/>getNormal().cross(D\_height).normalized();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00056}00056\ \ \ \ \ T\ pixelWidth\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(this-\/>pixelWidth);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00057}00057\ \ \ \ \ T\ pixelHeight\ =\ \textcolor{keyword}{static\_cast<}T\textcolor{keyword}{>}(this-\/>pixelHeight);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Calculate\ aspect\ ratios}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00060}00060\ \ \ \ \ T\ surfaceAspectRatio\ =\ width\ /\ height;}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00061}00061\ \ \ \ \ T\ pixelGridAspectRatio\ =\ pixelWidth\ /\ pixelHeight;}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00063}00063\ \ \ \ \ \textcolor{comment}{//\ Adjust\ surface\ dimensions}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (pixelGridAspectRatio\ >\ surfaceAspectRatio)\ \{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ height\ =\ width\ /\ pixelGridAspectRatio;\ \textcolor{comment}{//\ Adjust\ height}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00066}00066\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (pixelGridAspectRatio\ <\ surfaceAspectRatio)\ \{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ width\ =\ height\ *\ pixelGridAspectRatio;\ \textcolor{comment}{//\ Adjust\ width}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00069}00069\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ Create\ a\ new\ surface\ with\ adjusted\ dimensions}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00072}00072\ \ \ \ \ \textcolor{keyword}{auto}\ newSurface\ =\ std::make\_unique<PlanarRectangle<T,\ U>>(planarRect-\/>getPosition(),\ planarRect-\/>getNormal(),\ width,\ height,\ planarRect-\/>getWidthDirection());}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00073}00073\ \ \ \ \ this-\/>surface\ =\ std::move(newSurface);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00076}00076\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00077}\mbox{\hyperlink{class_detector_a917cb605056aedafe72e29842d6eb836}{00077}}\ std::pair<int,\ int>\ \mbox{\hyperlink{class_detector_a917cb605056aedafe72e29842d6eb836}{Detector<T,\ U>::mapToPixelGrid}}(\textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Get\ required\ vectors\ and\ dimensions}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00079}00079\ \ \ \ \ \textcolor{keyword}{auto}\ planarRect\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_planar_rectangle}{PlanarRectangle<T,\ U>}}*\textcolor{keyword}{>}(this-\/>surface.get());}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordflow}{if}\ (!planarRect)\ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Surface\ is\ not\ a\ PlanarRectangle."{}});}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00082}00082\ \ \ \ \ vec3<T>\ D\_height\ =\ planarRect-\/>getHeightDirection();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00083}00083\ \ \ \ \ vec3<T>\ D\_width\ =\ planarRect-\/>getNormal().cross(D\_height).normalized();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00085}00085\ \ \ \ \ vec3<T>\ center\ =\ planarRect-\/>getPosition();\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00086}00086\ \ \ \ \ T\ width\ =\ planarRect-\/>getWidth();}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00087}00087\ \ \ \ \ T\ height\ =\ planarRect-\/>getHeight();}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00088}00088\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00089}00089\ \ \ \ \ vec3<T>\ center\ =\ planarRect-\/>getPosition();\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ width\ =\ planarRect-\/>getWidth();}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ height\ =\ planarRect-\/>getHeight();}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ vec3<T>\ center\ =\ this-\/>surface-\/>getPosition();}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ vec3<T>\ D\_height\ =\ this-\/>surface-\/>getHeightDirection();}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00094}00094\ \ \ \ \ \textcolor{comment}{//\ vec3<T>\ D\_width\ =\ this-\/>surface-\/>getNormal().cross(D\_height).normalized();}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00095}00095\ \ \ \ \ \textcolor{comment}{//\ }}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//\ T\ width\ =\ this-\/>surface-\/>getWidth();}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00097}00097\ \ \ \ \ \textcolor{comment}{//\ T\ height\ =\ this-\/>surface-\/>getHeight();}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00098}00098\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00099}00099\ \ \ \ \ \textcolor{comment}{//\ Compute\ local\ coordinates\ (u,\ v)}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00100}00100\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ u\ =\ (intersectionPoint\ -\/\ center).dot(D\_width);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00101}00101\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ v\ =\ (intersectionPoint\ -\/\ center).dot(D\_height);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00089}00089\ \ \ \ \ T\ u\ =\ (intersectionPoint\ -\/\ center).dot(D\_width);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00090}00090\ \ \ \ \ T\ v\ =\ (intersectionPoint\ -\/\ center).dot(D\_height);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00092}00092\ \ \ \ \ \textcolor{comment}{//\ Normalize\ local\ coordinates\ to\ [0,\ 1]}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00093}00093\ \ \ \ \ T\ u\_norm\ =\ (u\ +\ width\ /\ 2.0)\ /\ width;}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00094}00094\ \ \ \ \ T\ v\_norm\ =\ (v\ +\ height\ /\ 2.0)\ /\ height;}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//\ Map\ to\ pixel\ grid\ coordinates}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00097}00097\ \ \ \ \ \textcolor{keywordtype}{int}\ xPixel\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(u\_norm\ *\ pixelWidth);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{int}\ yPixel\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(v\_norm\ *\ pixelHeight);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00100}00100\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_pair(xPixel,\ yPixel);}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00101}00101\ \}}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00103}00103\ \ \ \ \ \textcolor{comment}{//\ Normalize\ local\ coordinates\ to\ [0,\ 1]}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00104}00104\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ u\_norm\ =\ (u\ +\ width\ /\ 2.0)\ /\ width;}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00105}00105\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ v\_norm\ =\ (v\ +\ height\ /\ 2.0)\ /\ height;}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00103}00103\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00104}\mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{00104}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{Detector<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00105}00105\ \ \ \ \ \textcolor{keyword}{auto}\ [columnIndex,\ rowIndex]\ =\ mapToPixelGrid(intersectionPoint);}
 \DoxyCodeLine{\Hypertarget{detector_8h_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00107}00107\ \ \ \ \ \textcolor{comment}{//\ Map\ to\ pixel\ grid\ coordinates}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00108}00108\ \ \ \ \ \textcolor{keywordtype}{int}\ xPixel\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(u\_norm\ *\ pixelWidth);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00109}00109\ \ \ \ \ \textcolor{keywordtype}{int}\ yPixel\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(v\_norm\ *\ pixelHeight);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00110}00110\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_pair(xPixel,\ yPixel);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00112}00112\ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00113}00113\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00114}00114\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00115}\mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{00115}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{Detector<T,\ U>::handleLight}}(\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray,\ \textcolor{keyword}{const}\ vec3<T>\&\ intersectionPoint)\ \{}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00116}00116\ \ \ \ \ adjustSurfaceToFitPixelGrid();}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00117}00117\ \ \ \ \ \textcolor{keyword}{auto}\ [columnIndex,\ rowIndex]\ =\ mapToPixelGrid(intersectionPoint);}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{if}\ (columnIndex\ >=\ 0\ \&\&\ columnIndex\ <\ pixelWidth\ \&\&\ rowIndex\ >=\ 0\ \&\&\ rowIndex\ <\ pixelHeight)\ \{}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00120}00120\ \ \ \ \ \ \ \ \ this-\/>pixelGrid(rowIndex,\ columnIndex)\ +=\ ray.\mbox{\hyperlink{class_ray_a36ed31561a1522c523926be03f4fc4a7}{getIntensity}}();\ }
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00121}00121\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{detector_8h_source_l00122}00122\ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}\ (columnIndex\ >=\ 0\ \&\&\ columnIndex\ <\ pixelWidth\ \&\&\ rowIndex\ >=\ 0\ \&\&\ rowIndex\ <\ pixelHeight)\ \{}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00108}00108\ \ \ \ \ \ \ \ \ this-\/>pixelGrid(rowIndex,\ columnIndex)\ +=\ ray.\mbox{\hyperlink{class_ray_a36ed31561a1522c523926be03f4fc4a7}{getIntensity}}();\ }
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{detector_8h_source_l00110}00110\ \}}
 
 \end{DoxyCode}

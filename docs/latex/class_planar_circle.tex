@@ -13,61 +13,63 @@ Inheritance diagram for Planar\+Circle\texorpdfstring{$<$}{<} T, U \texorpdfstri
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_planar_circle_a0254ab240b33a65b28067392f047e1b0}{Planar\+Circle}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}, \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} diameter)
+\mbox{\hyperlink{class_planar_circle_a0254ab240b33a65b28067392f047e1b0}{Planar\+Circle}} (const vec3$<$ T $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ T $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}, T diameter)
 \item 
-\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}{get\+Radius}} () const
+T \mbox{\hyperlink{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}{get\+Radius}} () const
 \item 
-std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const override
+std\+::pair$<$ bool, vec3$<$ T $>$ $>$ \mbox{\hyperlink{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray) const override
 \item 
 void \mbox{\hyperlink{class_planar_circle_a2978f48dda03c866457e6effa0449281}{generate\+Points}} (std\+::ofstream \&out\+File) const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_planar_surface}{Planar\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_planar_surface_a45c305870169292b3eef7badd2570283}{Planar\+Surface}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}})
+\mbox{\hyperlink{class_planar_surface_a45c305870169292b3eef7badd2570283}{Planar\+Surface}} (const vec3$<$ T $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ T $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}})
 \item 
 virtual \mbox{\hyperlink{class_planar_surface_a739abfe15b4465a4625249799db524a2}{\texorpdfstring{$\sim$}{\string~}\+Planar\+Surface}} ()=default
 \item 
-vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_planar_surface_a123ed05ed59710fcd97d28bcf454d688}{get\+Intersection\+Point}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const override
+vec3$<$ T $>$ \mbox{\hyperlink{class_planar_surface_a123ed05ed59710fcd97d28bcf454d688}{get\+Intersection\+Point}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray) const override
 \item 
-virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
+virtual std\+::pair$<$ bool, vec3$<$ T $>$ $>$ \mbox{\hyperlink{class_planar_surface_a93e079dffd16b664b968fdc8ccc3dbfd}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray) const =0
 \item 
 virtual void \mbox{\hyperlink{class_planar_surface_aa5bd3803fd87cef5bc41767ff99c417b}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_optical_surface_a11ba19c3e9a4e807b3e8867d963771f1}{Optical\+Surface}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}})
+\mbox{\hyperlink{class_optical_surface_a11ba19c3e9a4e807b3e8867d963771f1}{Optical\+Surface}} (const vec3$<$ T $>$ \&\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}, const vec3$<$ T $>$ \&\mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}})
 \item 
 virtual \mbox{\hyperlink{class_optical_surface_a47632c4d33e480af9a152b765c786150}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Surface}} ()=default
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_surface_ad8a7a6ff67ac779a003316317c29f03e}{get\+Position}} () const
+vec3$<$ T $>$ \mbox{\hyperlink{class_optical_surface_a486a4148687962c22001de40387718cc}{get\+Position}} ()
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_surface_ae64f02dbe7d7b89ee3b550ea4e34bf95}{get\+Normal}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_surface_ae64f02dbe7d7b89ee3b550ea4e34bf95}{get\+Normal}} () const
 \item 
-virtual vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_optical_surface_a47f05eb6935451dd452f521dcdbbd313}{get\+Intersection\+Point}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
+void \mbox{\hyperlink{class_optical_surface_a5ee34a6f38a97e79d507b278eb23bb7e}{set\+Position}} (const vec3$<$ T $>$ \&new\+Position)
 \item 
-virtual std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5fa9}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray) const =0
+virtual vec3$<$ T $>$ \mbox{\hyperlink{class_optical_surface_a47f05eb6935451dd452f521dcdbbd313}{get\+Intersection\+Point}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray) const =0
+\item 
+virtual std\+::pair$<$ bool, vec3$<$ T $>$ $>$ \mbox{\hyperlink{class_optical_surface_a6dcacac007d5361ad4b56166a69d5fa9}{intersects}} (const \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray) const =0
 \item 
 virtual void \mbox{\hyperlink{class_optical_surface_aad367ce67064e4d83566dff86e5ceff6}{generate\+Points}} (std\+::ofstream \&out\+File) const =0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}}
+T \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_surface}{Optical\+Surface$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}
+vec3$<$ T $>$ \mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}}
 \item 
-vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}
+vec3$<$ T $>$ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+\subsubsection*{template$<$typename T, typename U$>$\newline
 class Planar\+Circle$<$ T, U $>$}
 
 
@@ -80,8 +82,8 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00012}{12}} of file
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!PlanarCircle@{PlanarCircle}}
 \index{PlanarCircle@{PlanarCircle}!PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{PlanarCircle()}{PlanarCircle()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_planar_circle}{\+::\+Planar\+Circle}} (\begin{DoxyParamCaption}\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{position,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{normal,  }\item[{\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ T, U $>$\mbox{\hyperlink{class_planar_circle}{\+::\+Planar\+Circle}} (\begin{DoxyParamCaption}\item[{const vec3$<$ T $>$ \&}]{position,  }\item[{const vec3$<$ T $>$ \&}]{normal,  }\item[{T}]{diameter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -94,8 +96,8 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00017}{17}} of file
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!generatePoints@{generatePoints}}
 \index{generatePoints@{generatePoints}!PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{generatePoints()}{generatePoints()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ T, U $>$\+::generate\+Points (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -109,8 +111,8 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00040}{40}} of file
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!getRadius@{getRadius}}
 \index{getRadius@{getRadius}!PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getRadius()}{getRadius()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+T \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ T, U $>$\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -120,8 +122,8 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00020}{20}} of file
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!intersects@{intersects}}
 \index{intersects@{intersects}!PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{intersects()}{intersects()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-std\+::pair$<$ bool, vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ $>$ \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+std\+::pair$<$ bool, vec3$<$ T $>$ $>$ \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ T, U $>$\+::intersects (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&}]{ray }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -138,8 +140,8 @@ Definition at line \mbox{\hyperlink{planar_circle_8h_source_l00030}{30}} of file
 \index{PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}!radius@{radius}}
 \index{radius@{radius}!PlanarCircle$<$ T, U $>$@{PlanarCircle$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{radius}{radius}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::radius\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+T \mbox{\hyperlink{class_planar_circle}{Planar\+Circle}}$<$ T, U $>$\+::radius\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

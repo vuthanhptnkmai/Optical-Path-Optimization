@@ -13,41 +13,45 @@ Inheritance diagram for Lens\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$}{>}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_lens_a7d69c40b20827bb50828861f21afd755}{Lens}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_lens_a7d69c40b20827bb50828861f21afd755}{Lens}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
 \item 
 virtual \mbox{\hyperlink{class_lens_afbfde6699bd267655a2e87fd01b09d51}{\texorpdfstring{$\sim$}{\string~}\+Lens}} ()=default
 \item 
-virtual void \mbox{\hyperlink{class_lens_afb9618c9c1482f60ee95b30dc3982268}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
+virtual void \mbox{\hyperlink{class_lens_afb9618c9c1482f60ee95b30dc3982268}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point)=0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_optical_component_a6cfcc768d6ce53c7ff06c8f3383dd56f}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, \mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a7b00686896eace234b52f9a81c8fc393}{type}})
 \item 
 virtual \mbox{\hyperlink{class_optical_component_a6c259b37610efcccd45a30f58903230e}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Component}} ()=default
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
 \item 
-const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}{get\+Surface\+Ptr}} () const
+\mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a38fbd2d1e5d3109477ff9ebc2b5c4843}{get\+Surface\+Ptr}} ()
 \item 
-virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
+\mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a0b416aa0a4294498aba13b528d02cb56}{get\+Type}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point)=0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+\item 
+\mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a7b00686896eace234b52f9a81c8fc393}{type}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+\subsubsection*{template$<$typename T, typename U$>$\newline
 class Lens$<$ T, U $>$}
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00014}{14}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00015}{15}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 
 
@@ -56,19 +60,19 @@ Definition at line \mbox{\hyperlink{lens_8h_source_l00014}{14}} of file \mbox{\h
 \index{Lens$<$ T, U $>$@{Lens$<$ T, U $>$}!Lens@{Lens}}
 \index{Lens@{Lens}!Lens$<$ T, U $>$@{Lens$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{Lens()}{Lens()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{class_lens}{Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_lens}{\+::\+Lens}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_lens}{Lens}}$<$ T, U $>$\mbox{\hyperlink{class_lens}{\+::\+Lens}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{lens_8h_source_l00016}{16}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
+Definition at line \mbox{\hyperlink{lens_8h_source_l00017}{17}} of file \mbox{\hyperlink{lens_8h_source}{lens.\+h}}.
 
 \Hypertarget{class_lens_afbfde6699bd267655a2e87fd01b09d51}\label{class_lens_afbfde6699bd267655a2e87fd01b09d51} 
 \index{Lens$<$ T, U $>$@{Lens$<$ T, U $>$}!````~Lens@{\texorpdfstring{$\sim$}{\string~}Lens}}
 \index{````~Lens@{\texorpdfstring{$\sim$}{\string~}Lens}!Lens$<$ T, U $>$@{Lens$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Lens()}{\string~Lens()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-virtual \mbox{\hyperlink{class_lens}{Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_lens}{Lens}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+virtual \mbox{\hyperlink{class_lens}{Lens}}$<$ T, U $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_lens}{Lens}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
 
 
 
@@ -77,8 +81,8 @@ virtual \mbox{\hyperlink{class_lens}{Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d0
 \index{Lens$<$ T, U $>$@{Lens$<$ T, U $>$}!handleLight@{handleLight}}
 \index{handleLight@{handleLight}!Lens$<$ T, U $>$@{Lens$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-virtual void \mbox{\hyperlink{class_lens}{Lens}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+virtual void \mbox{\hyperlink{class_lens}{Lens}}$<$ T, U $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&}]{ray,  }\item[{const vec3$<$ T $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 

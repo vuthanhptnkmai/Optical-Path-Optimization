@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filter_2eh_0',['filter.h',['../filter_8h.html',1,'']]]
+  ['detector_2eh_0',['detector.h',['../detector_8h.html',1,'']]]
 ];

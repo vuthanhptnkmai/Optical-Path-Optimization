@@ -13,37 +13,35 @@ Inheritance diagram for Detector\texorpdfstring{$<$}{<} T, U \texorpdfstring{$>$
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_detector_a1d3ff43da3f2b271ed62334e00bb0a05}{Detector}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, int \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixel\+Width}}=512, int \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixel\+Height}}=512)
+\mbox{\hyperlink{class_detector_a1d3ff43da3f2b271ed62334e00bb0a05}{Detector}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, int \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixel\+Width}}=512, int \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixel\+Height}}=512)
 \item 
-const Eigen\+::\+Matrix$<$ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \& \mbox{\hyperlink{class_detector_af89de1425ce90c4734d6f77995427f94}{get\+Pixel\+Grid}} () const
+const Eigen\+::\+Matrix$<$ U, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \& \mbox{\hyperlink{class_detector_af89de1425ce90c4734d6f77995427f94}{get\+Pixel\+Grid}} () const
 \item 
-void \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override
+void \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point) override
 \item 
-\mbox{\hyperlink{class_detector_a22d1020d0b14a0fc8cbcde28b857d4d4}{Detector}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, int \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixel\+Width}}, int \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixel\+Height}})
-\item 
-void \mbox{\hyperlink{class_detector_ab076fba209600c53e77d3ebeb2b132ca}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override
-\item 
-void \mbox{\hyperlink{class_detector_afecfe03c04b8ab251dc61e0bbd624f7d}{output\+Image}} (const std\+::string \&filename)
+void \mbox{\hyperlink{class_detector_a60cb16ad0a2c3b48b04aac61123757c8}{reset\+Pixel\+Grid}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_optical_component_a6cfcc768d6ce53c7ff06c8f3383dd56f}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, \mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a7b00686896eace234b52f9a81c8fc393}{type}})
 \item 
 virtual \mbox{\hyperlink{class_optical_component_a6c259b37610efcccd45a30f58903230e}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Component}} ()=default
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
 \item 
-const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}{get\+Surface\+Ptr}} () const
+\mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a38fbd2d1e5d3109477ff9ebc2b5c4843}{get\+Surface\+Ptr}} ()
 \item 
-virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
+\mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a0b416aa0a4294498aba13b528d02cb56}{get\+Type}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point)=0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_detector_a917cb605056aedafe72e29842d6eb836}{map\+To\+Pixel\+Grid}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) const
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_detector_a917cb605056aedafe72e29842d6eb836}{map\+To\+Pixel\+Grid}} (const vec3$<$ T $>$ \&intersection\+Point) const
 \item 
 void \mbox{\hyperlink{class_detector_a23ad30b0c1d626beb6cd89df51fdfbfe}{adjust\+Surface\+To\+Fit\+Pixel\+Grid}} ()
 \end{DoxyCompactItemize}
@@ -54,20 +52,20 @@ int \mbox{\hyperlink{class_detector_ab80d696979a475afbbe693f78b3c69b8}{pixel\+Wi
 \item 
 int \mbox{\hyperlink{class_detector_a4c12ba156e53fea5700dc7342f523cb6}{pixel\+Height}}
 \item 
-Eigen\+::\+Matrix$<$ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixel\+Grid}}
-\item 
-std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_detector_ae61f3dc1f9de84fcf7ca07cde6264b25}{pixel\+Data}}
+Eigen\+::\+Matrix$<$ U, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \mbox{\hyperlink{class_detector_a06b25bb022a373329da4ad84d6b277f7}{pixel\+Grid}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+\item 
+\mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a7b00686896eace234b52f9a81c8fc393}{type}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+\subsubsection*{template$<$typename T, typename U$>$\newline
 class Detector$<$ T, U $>$}
 
 
@@ -79,20 +77,13 @@ Definition at line \mbox{\hyperlink{detector_8h_source_l00020}{20}} of file \mbo
 \Hypertarget{class_detector_a1d3ff43da3f2b271ed62334e00bb0a05}\label{class_detector_a1d3ff43da3f2b271ed62334e00bb0a05} 
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!Detector@{Detector}}
 \index{Detector@{Detector}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{Detector()}{Detector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_detector}{\+::\+Detector}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface,  }\item[{int}]{pixel\+Width = {\ttfamily 512},  }\item[{int}]{pixel\+Height = {\ttfamily 512} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{Detector()}{Detector()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\mbox{\hyperlink{class_detector}{\+::\+Detector}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ T, U $>$ $>$}]{surface,  }\item[{int}]{pixel\+Width = {\ttfamily 512},  }\item[{int}]{pixel\+Height = {\ttfamily 512} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Definition at line \mbox{\hyperlink{detector_8h_source_l00029}{29}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
-
-\Hypertarget{class_detector_a22d1020d0b14a0fc8cbcde28b857d4d4}\label{class_detector_a22d1020d0b14a0fc8cbcde28b857d4d4} 
-\index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!Detector@{Detector}}
-\index{Detector@{Detector}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{Detector()}{Detector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_detector}{\+::\+Detector}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_planar_surface}{Planar\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface,  }\item[{int}]{pixel\+Width,  }\item[{int}]{pixel\+Height }\end{DoxyParamCaption})}
 
 
 
@@ -101,30 +92,30 @@ Definition at line \mbox{\hyperlink{detector_8h_source_l00029}{29}} of file \mbo
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!adjustSurfaceToFitPixelGrid@{adjustSurfaceToFitPixelGrid}}
 \index{adjustSurfaceToFitPixelGrid@{adjustSurfaceToFitPixelGrid}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{adjustSurfaceToFitPixelGrid()}{adjustSurfaceToFitPixelGrid()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::adjust\+Surface\+To\+Fit\+Pixel\+Grid\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::adjust\+Surface\+To\+Fit\+Pixel\+Grid\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{detector_8h_source_l00045}{45}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
+Definition at line \mbox{\hyperlink{detector_8h_source_l00048}{48}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
 
 \Hypertarget{class_detector_af89de1425ce90c4734d6f77995427f94}\label{class_detector_af89de1425ce90c4734d6f77995427f94} 
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!getPixelGrid@{getPixelGrid}}
 \index{getPixelGrid@{getPixelGrid}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getPixelGrid()}{getPixelGrid()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-const Eigen\+::\+Matrix$<$ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \& \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Pixel\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const Eigen\+::\+Matrix$<$ U, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic $>$ \& \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::get\+Pixel\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{detector_8h_source_l00037}{37}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
+Definition at line \mbox{\hyperlink{detector_8h_source_l00038}{38}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
 
 \Hypertarget{class_detector_ab076fba209600c53e77d3ebeb2b132ca}\label{class_detector_ab076fba209600c53e77d3ebeb2b132ca} 
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!handleLight@{handleLight}}
 \index{handleLight@{handleLight}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+\doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&}]{ray,  }\item[{const vec3$<$ T $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -132,61 +123,39 @@ Implements \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637e
 
 
 
-Definition at line \mbox{\hyperlink{detector_8h_source_l00115}{115}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
-
-\Hypertarget{class_detector_ab076fba209600c53e77d3ebeb2b132ca}\label{class_detector_ab076fba209600c53e77d3ebeb2b132ca} 
-\index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!handleLight@{handleLight}}
-\index{handleLight@{handleLight}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{Optical\+Component$<$ T, U $>$}}.
+Definition at line \mbox{\hyperlink{detector_8h_source_l00104}{104}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
 
 \Hypertarget{class_detector_a917cb605056aedafe72e29842d6eb836}\label{class_detector_a917cb605056aedafe72e29842d6eb836} 
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!mapToPixelGrid@{mapToPixelGrid}}
 \index{mapToPixelGrid@{mapToPixelGrid}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{mapToPixelGrid()}{mapToPixelGrid()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::map\+To\+Pixel\+Grid (\begin{DoxyParamCaption}\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::map\+To\+Pixel\+Grid (\begin{DoxyParamCaption}\item[{const vec3$<$ T $>$ \&}]{intersection\+Point }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{detector_8h_source_l00081}{81}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
+Definition at line \mbox{\hyperlink{detector_8h_source_l00077}{77}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
 
-\Hypertarget{class_detector_afecfe03c04b8ab251dc61e0bbd624f7d}\label{class_detector_afecfe03c04b8ab251dc61e0bbd624f7d} 
-\index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!outputImage@{outputImage}}
-\index{outputImage@{outputImage}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{outputImage()}{outputImage()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::output\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\Hypertarget{class_detector_a60cb16ad0a2c3b48b04aac61123757c8}\label{class_detector_a60cb16ad0a2c3b48b04aac61123757c8} 
+\index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!resetPixelGrid@{resetPixelGrid}}
+\index{resetPixelGrid@{resetPixelGrid}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{resetPixelGrid()}{resetPixelGrid()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::reset\+Pixel\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{detector__to__delete_8h_source_l00030}{30}} of file \mbox{\hyperlink{detector__to__delete_8h_source}{detector\+\_\+to\+\_\+delete.\+h}}.
+Definition at line \mbox{\hyperlink{detector_8h_source_l00042}{42}} of file \mbox{\hyperlink{detector_8h_source}{detector.\+h}}.
 
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_detector_ae61f3dc1f9de84fcf7ca07cde6264b25}\label{class_detector_ae61f3dc1f9de84fcf7ca07cde6264b25} 
-\index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!pixelData@{pixelData}}
-\index{pixelData@{pixelData}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
-\doxysubsubsection{\texorpdfstring{pixelData}{pixelData}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$ $>$ \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::pixel\+Data\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Definition at line \mbox{\hyperlink{detector__to__delete_8h_source_l00023}{23}} of file \mbox{\hyperlink{detector__to__delete_8h_source}{detector\+\_\+to\+\_\+delete.\+h}}.
-
 \Hypertarget{class_detector_a06b25bb022a373329da4ad84d6b277f7}\label{class_detector_a06b25bb022a373329da4ad84d6b277f7} 
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!pixelGrid@{pixelGrid}}
 \index{pixelGrid@{pixelGrid}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{pixelGrid}{pixelGrid}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-Eigen\+::\+Matrix$<$\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic$>$ \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::pixel\+Grid\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+Eigen\+::\+Matrix$<$U, Eigen\+::\+Dynamic, Eigen\+::\+Dynamic$>$ \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::pixel\+Grid\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -196,8 +165,8 @@ Definition at line \mbox{\hyperlink{detector_8h_source_l00023}{23}} of file \mbo
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!pixelHeight@{pixelHeight}}
 \index{pixelHeight@{pixelHeight}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{pixelHeight}{pixelHeight}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-int \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::pixel\+Height\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+int \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::pixel\+Height\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -207,8 +176,8 @@ Definition at line \mbox{\hyperlink{detector_8h_source_l00022}{22}} of file \mbo
 \index{Detector$<$ T, U $>$@{Detector$<$ T, U $>$}!pixelWidth@{pixelWidth}}
 \index{pixelWidth@{pixelWidth}!Detector$<$ T, U $>$@{Detector$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{pixelWidth}{pixelWidth}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-int \mbox{\hyperlink{class_detector}{Detector}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::pixel\+Width\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+int \mbox{\hyperlink{class_detector}{Detector}}$<$ T, U $>$\+::pixel\+Width\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
@@ -216,7 +185,6 @@ Definition at line \mbox{\hyperlink{detector_8h_source_l00022}{22}} of file \mbo
 
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-simulator/optical\+Components/\mbox{\hyperlink{detector_8h}{detector.\+h}}\item 
-simulator/optical\+Components/\mbox{\hyperlink{detector__to__delete_8h}{detector\+\_\+to\+\_\+delete.\+h}}\end{DoxyCompactItemize}
+simulator/optical\+Components/\mbox{\hyperlink{detector_8h}{detector.\+h}}\end{DoxyCompactItemize}

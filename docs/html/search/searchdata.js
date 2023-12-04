@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "acdfghilmnoprstuw~",
+  0: "acdfghilmnoprstw~",
   1: "cdflmoprst",
-  2: "dflmopr",
+  2: "adflmoprs",
   3: "acdfghilmoprst~",
-  4: "dfhimnprsw",
-  5: "tu",
-  6: "s"
+  4: "dfhimnprstw",
+  5: "o",
+  6: "dflm"
 };
 
 var indexSectionNames =
@@ -16,8 +16,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "variables",
-  5: "typedefs",
-  6: "defines"
+  5: "enums",
+  6: "enumvalues"
 };
 
 var indexSectionLabels =
@@ -27,7 +27,7 @@ var indexSectionLabels =
   2: "Files",
   3: "Functions",
   4: "Variables",
-  5: "Typedefs",
-  6: "Macros"
+  5: "Enumerations",
+  6: "Enumerator"
 };
 

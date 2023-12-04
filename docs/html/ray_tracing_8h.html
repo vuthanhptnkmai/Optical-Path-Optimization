@@ -73,11 +73,102 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">rayTracing.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="simulator_8h_source.html">simulator.h</a>&quot;</code><br />
+<code>#include &lt;omp.h&gt;</code><br />
+</div>
 <p><a href="ray_tracing_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8e50a356a23769dc8e491ed33a764011"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a8e50a356a23769dc8e491ed33a764011"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="ray_tracing_8h.html#a8e50a356a23769dc8e491ed33a764011">rayTracing</a> (std::unique_ptr&lt; std::vector&lt; <a class="el" href="class_ray.html">Ray</a>&lt; double, float &gt; &gt; &gt; &amp;rays, std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_optical_component.html">OpticalComponent</a>&lt; T, U &gt; &gt; &gt; &amp;components)</td></tr>
+<tr class="separator:a8e50a356a23769dc8e491ed33a764011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0eaaa1c5dd3e8e2e90dcc8af51cddc4b"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a0eaaa1c5dd3e8e2e90dcc8af51cddc4b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="ray_tracing_8h.html#a0eaaa1c5dd3e8e2e90dcc8af51cddc4b">rayTracingWithLogging</a> (std::unique_ptr&lt; std::vector&lt; <a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &gt; &gt; &amp;rays, std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_optical_component.html">OpticalComponent</a>&lt; T, U &gt; &gt; &gt; &amp;components, const std::string &amp;raysFileName, const std::string &amp;componentsFileName)</td></tr>
+<tr class="separator:a0eaaa1c5dd3e8e2e90dcc8af51cddc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a8e50a356a23769dc8e491ed33a764011" name="a8e50a356a23769dc8e491ed33a764011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e50a356a23769dc8e491ed33a764011">&#9670;&#160;</a></span>rayTracing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void rayTracing </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; std::vector&lt; <a class="el" href="class_ray.html">Ray</a>&lt; double, float &gt; &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rays</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_optical_component.html">OpticalComponent</a>&lt; T, U &gt; &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>components</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ray_tracing_8h_source.html#l00007">7</a> of file <a class="el" href="ray_tracing_8h_source.html">rayTracing.h</a>.</p>
+
+</div>
+</div>
+<a id="a0eaaa1c5dd3e8e2e90dcc8af51cddc4b" name="a0eaaa1c5dd3e8e2e90dcc8af51cddc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eaaa1c5dd3e8e2e90dcc8af51cddc4b">&#9670;&#160;</a></span>rayTracingWithLogging()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , typename U &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void rayTracingWithLogging </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; std::vector&lt; <a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rays</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; std::unique_ptr&lt; <a class="el" href="class_optical_component.html">OpticalComponent</a>&lt; T, U &gt; &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>components</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>raysFileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>componentsFileName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="ray_tracing_8h_source.html#l00027">27</a> of file <a class="el" href="ray_tracing_8h_source.html">rayTracing.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

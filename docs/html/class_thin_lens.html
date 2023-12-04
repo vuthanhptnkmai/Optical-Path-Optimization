@@ -71,8 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_thin_lens-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">ThinLens&lt; T, U &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -92,51 +91,52 @@ Inheritance diagram for ThinLens&lt; T, U &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a51620de573d5cba0e81542ecd23178fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a51620de573d5cba0e81542ecd23178fd">ThinLens</a> (std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> <a class="el" href="class_thin_lens.html#a93c5204c52151e08d948db31bc75cf6e">focalLength</a>)</td></tr>
+<tr class="memitem:a9a56b7017ef8e19a60ad3bb838dbddb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a9a56b7017ef8e19a60ad3bb838dbddb9">refract_approx</a> (<a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;ray, const vec3&lt; T &gt; &amp;intersectionPoint)</td></tr>
+<tr class="separator:a9a56b7017ef8e19a60ad3bb838dbddb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51620de573d5cba0e81542ecd23178fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a51620de573d5cba0e81542ecd23178fd">ThinLens</a> (std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; T, U &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>, U <a class="el" href="class_thin_lens.html#a93c5204c52151e08d948db31bc75cf6e">focalLength</a>)</td></tr>
 <tr class="separator:a51620de573d5cba0e81542ecd23178fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94e3749292f43783d92448a8ce53f330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a94e3749292f43783d92448a8ce53f330">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint) override</td></tr>
+<tr class="memitem:a94e3749292f43783d92448a8ce53f330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a94e3749292f43783d92448a8ce53f330">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;ray, const vec3&lt; T &gt; &amp;intersectionPoint) override</td></tr>
 <tr class="separator:a94e3749292f43783d92448a8ce53f330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_lens"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_lens')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_lens.html">Lens&lt; T, U &gt;</a></td></tr>
-<tr class="memitem:a7d69c40b20827bb50828861f21afd755 inherit pub_methods_class_lens"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lens.html#a7d69c40b20827bb50828861f21afd755">Lens</a> (std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>)</td></tr>
+<tr class="memitem:a7d69c40b20827bb50828861f21afd755 inherit pub_methods_class_lens"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lens.html#a7d69c40b20827bb50828861f21afd755">Lens</a> (std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>)</td></tr>
 <tr class="separator:a7d69c40b20827bb50828861f21afd755 inherit pub_methods_class_lens"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afbfde6699bd267655a2e87fd01b09d51 inherit pub_methods_class_lens"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lens.html#afbfde6699bd267655a2e87fd01b09d51">~Lens</a> ()=default</td></tr>
 <tr class="separator:afbfde6699bd267655a2e87fd01b09d51 inherit pub_methods_class_lens"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb9618c9c1482f60ee95b30dc3982268 inherit pub_methods_class_lens"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lens.html#afb9618c9c1482f60ee95b30dc3982268">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint)=0</td></tr>
+<tr class="memitem:afb9618c9c1482f60ee95b30dc3982268 inherit pub_methods_class_lens"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lens.html#afb9618c9c1482f60ee95b30dc3982268">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;ray, const vec3&lt; T &gt; &amp;intersectionPoint)=0</td></tr>
 <tr class="separator:afb9618c9c1482f60ee95b30dc3982268 inherit pub_methods_class_lens"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_optical_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_optical_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_optical_component.html">OpticalComponent&lt; T, U &gt;</a></td></tr>
-<tr class="memitem:ac19e994d82b0c0ceb4879d1f0dfd9d25 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#ac19e994d82b0c0ceb4879d1f0dfd9d25">OpticalComponent</a> (std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>)</td></tr>
-<tr class="separator:ac19e994d82b0c0ceb4879d1f0dfd9d25 inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cfcc768d6ce53c7ff06c8f3383dd56f inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a6cfcc768d6ce53c7ff06c8f3383dd56f">OpticalComponent</a> (std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt; &gt; <a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a>, <a class="el" href="optical_component_8h.html#a631e837a8591853eca73cc1f7daf6ce8">OpticalComponentType</a> <a class="el" href="class_optical_component.html#a7b00686896eace234b52f9a81c8fc393">type</a>)</td></tr>
+<tr class="separator:a6cfcc768d6ce53c7ff06c8f3383dd56f inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c259b37610efcccd45a30f58903230e inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a6c259b37610efcccd45a30f58903230e">~OpticalComponent</a> ()=default</td></tr>
 <tr class="separator:a6c259b37610efcccd45a30f58903230e inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78b108ae76a50467ae04f1a99d39f91f inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a78b108ae76a50467ae04f1a99d39f91f">getPosition</a> () const</td></tr>
+<tr class="memitem:a78b108ae76a50467ae04f1a99d39f91f inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">const vec3&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a78b108ae76a50467ae04f1a99d39f91f">getPosition</a> () const</td></tr>
 <tr class="separator:a78b108ae76a50467ae04f1a99d39f91f inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127f9cae300b02b257506466a9515230 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a127f9cae300b02b257506466a9515230">getNormal</a> () const</td></tr>
+<tr class="memitem:a127f9cae300b02b257506466a9515230 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">const vec3&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a127f9cae300b02b257506466a9515230">getNormal</a> () const</td></tr>
 <tr class="separator:a127f9cae300b02b257506466a9515230 inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e2b7bdb71a6f1e100642753b102350 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a23e2b7bdb71a6f1e100642753b102350">getSurfacePtr</a> () const</td></tr>
-<tr class="separator:a23e2b7bdb71a6f1e100642753b102350 inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a89ebe3f433a227415c84ec3637eb59ab inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a89ebe3f433a227415c84ec3637eb59ab">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint)=0</td></tr>
+<tr class="memitem:a38fbd2d1e5d3109477ff9ebc2b5c4843 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a38fbd2d1e5d3109477ff9ebc2b5c4843">getSurfacePtr</a> ()</td></tr>
+<tr class="separator:a38fbd2d1e5d3109477ff9ebc2b5c4843 inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b416aa0a4294498aba13b528d02cb56 inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="optical_component_8h.html#a631e837a8591853eca73cc1f7daf6ce8">OpticalComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a0b416aa0a4294498aba13b528d02cb56">getType</a> () const</td></tr>
+<tr class="separator:a0b416aa0a4294498aba13b528d02cb56 inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ebe3f433a227415c84ec3637eb59ab inherit pub_methods_class_optical_component"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a89ebe3f433a227415c84ec3637eb59ab">handleLight</a> (<a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;ray, const vec3&lt; T &gt; &amp;intersectionPoint)=0</td></tr>
 <tr class="separator:a89ebe3f433a227415c84ec3637eb59ab inherit pub_methods_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a9a56b7017ef8e19a60ad3bb838dbddb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a9a56b7017ef8e19a60ad3bb838dbddb9">refract_approx</a> (<a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;ray, const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;intersectionPoint)</td></tr>
-<tr class="separator:a9a56b7017ef8e19a60ad3bb838dbddb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a93c5204c52151e08d948db31bc75cf6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a93c5204c52151e08d948db31bc75cf6e">focalLength</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a93c5204c52151e08d948db31bc75cf6e"><td class="memItemLeft" align="right" valign="top">U&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_thin_lens.html#a93c5204c52151e08d948db31bc75cf6e">focalLength</a></td></tr>
 <tr class="separator:a93c5204c52151e08d948db31bc75cf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_optical_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_optical_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_optical_component.html">OpticalComponent&lt; T, U &gt;</a></td></tr>
-<tr class="memitem:ac4b5741885388be0e7d0f7e12f9d92b9 inherit pro_attribs_class_optical_component"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a></td></tr>
+<tr class="memitem:ac4b5741885388be0e7d0f7e12f9d92b9 inherit pro_attribs_class_optical_component"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="class_optical_surface.html">OpticalSurface</a>&lt; T, U &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">surface</a></td></tr>
 <tr class="separator:ac4b5741885388be0e7d0f7e12f9d92b9 inherit pro_attribs_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b00686896eace234b52f9a81c8fc393 inherit pro_attribs_class_optical_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="optical_component_8h.html#a631e837a8591853eca73cc1f7daf6ce8">OpticalComponentType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_optical_component.html#a7b00686896eace234b52f9a81c8fc393">type</a></td></tr>
+<tr class="separator:a7b00686896eace234b52f9a81c8fc393 inherit pro_attribs_class_optical_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><div class="compoundTemplParams">template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>&gt;<br />
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename T, typename U&gt;<br />
 class ThinLens&lt; T, U &gt;</div>
-<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00024">24</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00025">25</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51620de573d5cba0e81542ecd23178fd" name="a51620de573d5cba0e81542ecd23178fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51620de573d5cba0e81542ecd23178fd">&#9670;&#160;</a></span>ThinLens()</h2>
@@ -144,18 +144,18 @@ class ThinLens&lt; T, U &gt;</div>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_thin_lens.html">ThinLens</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;<a class="el" href="class_thin_lens.html">::ThinLens</a> </td>
+          <td class="memname"><a class="el" href="class_thin_lens.html">ThinLens</a>&lt; T, U &gt;<a class="el" href="class_thin_lens.html">::ThinLens</a> </td>
           <td>(</td>
-          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &gt;&#160;</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="class_planar_surface.html">PlanarSurface</a>&lt; T, U &gt; &gt;&#160;</td>
           <td class="paramname"><em>surface</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a>&#160;</td>
+          <td class="paramtype">U&#160;</td>
           <td class="paramname"><em>focalLength</em>&#160;</td>
         </tr>
         <tr>
@@ -166,7 +166,7 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00038">38</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00040">40</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
 
 </div>
 </div>
@@ -177,21 +177,21 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
+template&lt;typename T , typename U &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_thin_lens.html">ThinLens</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::handleLight </td>
+          <td class="memname">void <a class="el" href="class_thin_lens.html">ThinLens</a>&lt; T, U &gt;::handleLight </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;&#160;</td>
           <td class="paramname"><em>ray</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const vec3&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>intersectionPoint</em>&#160;</td>
         </tr>
         <tr>
@@ -209,7 +209,7 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 
 <p>Implements <a class="el" href="class_lens.html#afb9618c9c1482f60ee95b30dc3982268">Lens&lt; T, U &gt;</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00068">68</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00070">70</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
 
 </div>
 </div>
@@ -219,21 +219,18 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_thin_lens.html">ThinLens</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::refract_approx </td>
+          <td class="memname">void <a class="el" href="class_thin_lens.html">ThinLens</a>&lt; T, U &gt;::refract_approx </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&lt; T, U &gt; &amp;&#160;</td>
           <td class="paramname"><em>ray</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const vec3&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">const vec3&lt; T &gt; &amp;&#160;</td>
           <td class="paramname"><em>intersectionPoint</em>&#160;</td>
         </tr>
         <tr>
@@ -242,14 +239,9 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00046">46</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00048">48</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
 
 </div>
 </div>
@@ -260,23 +252,15 @@ template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a> , typename <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
+template&lt;typename T , typename U &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> <a class="el" href="class_thin_lens.html">ThinLens</a>&lt; <a class="el" href="main_8cpp.html#a6b2d038ea9c8d2651eecffe0e28b7ebb">T</a>, <a class="el" href="main_8cpp.html#a6593bc6eff52fb072817ee0fa2217255">U</a> &gt;::focalLength</td>
+          <td class="memname">U <a class="el" href="class_thin_lens.html">ThinLens</a>&lt; T, U &gt;::focalLength</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00026">26</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="lens_8h_source.html#l00028">28</a> of file <a class="el" href="lens_8h_source.html">lens.h</a>.</p>
 
 </div>
 </div>

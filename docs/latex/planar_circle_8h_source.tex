@@ -15,13 +15,13 @@
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00011}00011\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00012}\mbox{\hyperlink{class_planar_circle}{00012}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_planar_circle}{PlanarCircle}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_planar_surface}{PlanarSurface}}<T,\ U>\ \{}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00013}00013\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00014}\mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{00014}}\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}};}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00014}\mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{00014}}\ \ \ \ \ T\ \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}};}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00015}00015\ }
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00016}00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00017}\mbox{\hyperlink{class_planar_circle_a0254ab240b33a65b28067392f047e1b0}{00017}}\ \ \ \ \ \mbox{\hyperlink{class_planar_circle_a0254ab240b33a65b28067392f047e1b0}{PlanarCircle}}(\textcolor{keyword}{const}\ vec3<T>\&\ \mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}},\ \textcolor{keyword}{const}\ vec3<T>\&\ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}},\ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ diameter)}
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_planar_surface}{PlanarSurface}}<\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}},\ \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}>(\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}},\ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}),\ \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}}(diameter\ /\ 2.0)\ \{\}}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00017}\mbox{\hyperlink{class_planar_circle_a0254ab240b33a65b28067392f047e1b0}{00017}}\ \ \ \ \ \mbox{\hyperlink{class_planar_circle_a0254ab240b33a65b28067392f047e1b0}{PlanarCircle}}(\textcolor{keyword}{const}\ vec3<T>\&\ \mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}},\ \textcolor{keyword}{const}\ vec3<T>\&\ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}},\ T\ diameter)}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_planar_surface}{PlanarSurface}}<T,\ U>(\mbox{\hyperlink{class_optical_surface_a6985c911e7deef13c9b45f353124ddf9}{position}},\ \mbox{\hyperlink{class_optical_surface_a8f05cb1afd8798183cc764f84d49f622}{normal}}),\ \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}}(diameter\ /\ 2.0)\ \{\}}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00019}00019\ \ \ \ \ }
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00020}\mbox{\hyperlink{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}{00020}}\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ \mbox{\hyperlink{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}{getRadius}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}};\ \}}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00020}\mbox{\hyperlink{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}{00020}}\ \ \ \ \ T\ \mbox{\hyperlink{class_planar_circle_a0f9777a123903f2b4f38166ad57acf9e}{getRadius}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_planar_circle_a327786ccb43fc7fa0fe251f75ff4e72f}{radius}};\ \}}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00021}00021\ }
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00022}00022\ \ \ \ \ std::pair<bool,\ vec3<T>>\ \mbox{\hyperlink{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}{intersects}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray)\ \textcolor{keyword}{const\ override};}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ void\ generatePoints(const\ std::string\&\ filename)\ const;}}
@@ -34,7 +34,7 @@
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00030}\mbox{\hyperlink{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}{00030}}\ std::pair<bool,\ vec3<T>>\ \mbox{\hyperlink{class_planar_circle_aee4cc9ac2158fc253e358cacf1eda3f3}{PlanarCircle<T,\ U>::intersects}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray<T,\ U>}}\&\ ray)\textcolor{keyword}{\ const\ }\{}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00031}00031\ \ \ \ \ vec3<T>\ intersectionPoint\ =\ this-\/>getIntersectionPoint(ray);}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ distanceToCenter\ =\ (intersectionPoint\ -\/\ this-\/>position).norm();}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00033}00033\ \ \ \ \ T\ distanceToCenter\ =\ (intersectionPoint\ -\/\ this-\/>position).norm();}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00034}00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ doesIntersect\ =\ distanceToCenter\ <=\ radius;}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00035}00035\ }
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{return}\ \{doesIntersect,\ intersectionPoint\};}
@@ -54,18 +54,18 @@
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00050}00050\ \ \ \ \ vec3<T>\ defaultNormal(0,\ 1,\ 0);}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00051}00051\ \ \ \ \ vec3<T>\ rotationAxis\ =\ defaultNormal.cross(normal).normalized();}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ cosTheta\ =\ defaultNormal.dot(normal);}
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00054}00054\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ theta\ =\ std::acos(cosTheta);}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00053}00053\ \ \ \ \ T\ cosTheta\ =\ defaultNormal.dot(normal);}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00054}00054\ \ \ \ \ T\ theta\ =\ std::acos(cosTheta);}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00055}00055\ }
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ numPoints;\ ++i)\ \{}
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}\ t\ =\ i\ *\ 2\ *\ M\_PI\ /\ numPoints;}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00057}00057\ \ \ \ \ \ \ \ \ T\ t\ =\ i\ *\ 2\ *\ M\_PI\ /\ numPoints;}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00058}00058\ \ \ \ \ \ \ \ \ vec3<T>\ point(radius\ *\ std::cos(t),\ 0,\ radius\ *\ std::sin(t));}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00059}00059\ }
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00060}00060\ \ \ \ \ \ \ \ \ vec3<T>\ rotatedPoint\ =\ point\ *\ cosTheta}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ rotationAxis.cross(point)\ *\ std::sin(theta)}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ rotationAxis\ *\ rotationAxis.dot(point)\ *\ (1\ -\/\ cosTheta);}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00063}00063\ \ \ \ \ \ \ \ \ vec3<T>\ finalPoint\ =\ rotatedPoint\ +\ center;}
-\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ outFile\ <<\ finalPoint(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ finalPoint(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ finalPoint(2)\ <<std::endl;}
+\DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00064}00064\ \ \ \ \ \ \ \ \ outFile\ <<\ finalPoint(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ finalPoint(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ finalPoint(2)\ <<\ std::endl;}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00065}00065\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00066}00066\ }
 \DoxyCodeLine{\Hypertarget{planar_circle_8h_source_l00067}00067\ \ \ \ \ outFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}}\ <<\ std::endl;}

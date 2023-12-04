@@ -1,2 +1,36 @@
 \doxysection{simulator/ray\+Tracing.h File Reference}
 \hypertarget{ray_tracing_8h}{}\label{ray_tracing_8h}\index{simulator/rayTracing.h@{simulator/rayTracing.h}}
+{\ttfamily \#include \"{}simulator.\+h\"{}}\newline
+{\ttfamily \#include $<$omp.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{ray_tracing_8h_a8e50a356a23769dc8e491ed33a764011}{ray\+Tracing}} (std\+::unique\+\_\+ptr$<$ std\+::vector$<$ \mbox{\hyperlink{class_ray}{Ray}}$<$ double, float $>$ $>$ $>$ \&rays, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$ $>$ $>$ \&components)
+\item 
+{\footnotesize template$<$typename T , typename U $>$ }\\void \mbox{\hyperlink{ray_tracing_8h_a0eaaa1c5dd3e8e2e90dcc8af51cddc4b}{ray\+Tracing\+With\+Logging}} (std\+::unique\+\_\+ptr$<$ std\+::vector$<$ \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ $>$ $>$ \&rays, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$ $>$ $>$ \&components, const std\+::string \&rays\+File\+Name, const std\+::string \&components\+File\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ray_tracing_8h_a8e50a356a23769dc8e491ed33a764011}\label{ray_tracing_8h_a8e50a356a23769dc8e491ed33a764011} 
+\index{rayTracing.h@{rayTracing.h}!rayTracing@{rayTracing}}
+\index{rayTracing@{rayTracing}!rayTracing.h@{rayTracing.h}}
+\doxysubsubsection{\texorpdfstring{rayTracing()}{rayTracing()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void ray\+Tracing (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ std\+::vector$<$ \mbox{\hyperlink{class_ray}{Ray}}$<$ double, float $>$ $>$ $>$ \&}]{rays,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$ $>$ $>$ \&}]{components }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ray_tracing_8h_source_l00007}{7}} of file \mbox{\hyperlink{ray_tracing_8h_source}{ray\+Tracing.\+h}}.
+
+\Hypertarget{ray_tracing_8h_a0eaaa1c5dd3e8e2e90dcc8af51cddc4b}\label{ray_tracing_8h_a0eaaa1c5dd3e8e2e90dcc8af51cddc4b} 
+\index{rayTracing.h@{rayTracing.h}!rayTracingWithLogging@{rayTracingWithLogging}}
+\index{rayTracingWithLogging@{rayTracingWithLogging}!rayTracing.h@{rayTracing.h}}
+\doxysubsubsection{\texorpdfstring{rayTracingWithLogging()}{rayTracingWithLogging()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void ray\+Tracing\+With\+Logging (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ std\+::vector$<$ \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ $>$ $>$ \&}]{rays,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_component}{Optical\+Component}}$<$ T, U $>$ $>$ $>$ \&}]{components,  }\item[{const std\+::string \&}]{rays\+File\+Name,  }\item[{const std\+::string \&}]{components\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{ray_tracing_8h_source_l00027}{27}} of file \mbox{\hyperlink{ray_tracing_8h_source}{ray\+Tracing.\+h}}.
+

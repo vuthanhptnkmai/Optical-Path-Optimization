@@ -103,9 +103,10 @@ $(function() {
 <li>getIntersectionPoint()&#160;:&#160;<a class="el" href="class_optical_surface.html#a47f05eb6935451dd452f521dcdbbd313">OpticalSurface&lt; T, U &gt;</a>, <a class="el" href="class_planar_surface.html#a123ed05ed59710fcd97d28bcf454d688">PlanarSurface&lt; T, U &gt;</a>, <a class="el" href="class_spherical_surface.html#a6467d681ee00791a253b37264de96d56">SphericalSurface&lt; T, U &gt;</a></li>
 <li>getNormal()&#160;:&#160;<a class="el" href="class_optical_component.html#a127f9cae300b02b257506466a9515230">OpticalComponent&lt; T, U &gt;</a>, <a class="el" href="class_optical_surface.html#ae64f02dbe7d7b89ee3b550ea4e34bf95">OpticalSurface&lt; T, U &gt;</a></li>
 <li>getPixelGrid()&#160;:&#160;<a class="el" href="class_detector.html#af89de1425ce90c4734d6f77995427f94">Detector&lt; T, U &gt;</a></li>
-<li>getPosition()&#160;:&#160;<a class="el" href="class_optical_component.html#a78b108ae76a50467ae04f1a99d39f91f">OpticalComponent&lt; T, U &gt;</a>, <a class="el" href="class_optical_surface.html#ad8a7a6ff67ac779a003316317c29f03e">OpticalSurface&lt; T, U &gt;</a>, <a class="el" href="class_ray.html#a8ab61bec46cf81cd16b7903caa96cacd">Ray&lt; T, U &gt;</a></li>
+<li>getPosition()&#160;:&#160;<a class="el" href="class_optical_component.html#a78b108ae76a50467ae04f1a99d39f91f">OpticalComponent&lt; T, U &gt;</a>, <a class="el" href="class_optical_surface.html#a486a4148687962c22001de40387718cc">OpticalSurface&lt; T, U &gt;</a>, <a class="el" href="class_ray.html#a8ab61bec46cf81cd16b7903caa96cacd">Ray&lt; T, U &gt;</a></li>
 <li>getRadius()&#160;:&#160;<a class="el" href="class_planar_circle.html#a0f9777a123903f2b4f38166ad57acf9e">PlanarCircle&lt; T, U &gt;</a></li>
-<li>getSurfacePtr()&#160;:&#160;<a class="el" href="class_optical_component.html#a23e2b7bdb71a6f1e100642753b102350">OpticalComponent&lt; T, U &gt;</a></li>
+<li>getSurfacePtr()&#160;:&#160;<a class="el" href="class_optical_component.html#a38fbd2d1e5d3109477ff9ebc2b5c4843">OpticalComponent&lt; T, U &gt;</a></li>
+<li>getType()&#160;:&#160;<a class="el" href="class_optical_component.html#a0b416aa0a4294498aba13b528d02cb56">OpticalComponent&lt; T, U &gt;</a></li>
 <li>getWavelength()&#160;:&#160;<a class="el" href="class_ray.html#aed5a699adc9cf95fea6148b5afbb06ff">Ray&lt; T, U &gt;</a></li>
 <li>getWidth()&#160;:&#160;<a class="el" href="class_planar_rectangle.html#a6dd6800e699d1df42f25ca2924f887ee">PlanarRectangle&lt; T, U &gt;</a></li>
 <li>getWidthDirection()&#160;:&#160;<a class="el" href="class_planar_rectangle.html#a508a831dfc7a0cf8163cdcab110aa5fd">PlanarRectangle&lt; T, U &gt;</a></li>
@@ -144,14 +145,12 @@ $(function() {
 
 
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>OpticalComponent()&#160;:&#160;<a class="el" href="class_optical_component.html#ac19e994d82b0c0ceb4879d1f0dfd9d25">OpticalComponent&lt; T, U &gt;</a></li>
+<li>OpticalComponent()&#160;:&#160;<a class="el" href="class_optical_component.html#a6cfcc768d6ce53c7ff06c8f3383dd56f">OpticalComponent&lt; T, U &gt;</a></li>
 <li>OpticalSurface()&#160;:&#160;<a class="el" href="class_optical_surface.html#a11ba19c3e9a4e807b3e8867d963771f1">OpticalSurface&lt; T, U &gt;</a></li>
-<li>outputImage()&#160;:&#160;<a class="el" href="class_detector.html#afecfe03c04b8ab251dc61e0bbd624f7d">Detector&lt; T, U &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>pixelData&#160;:&#160;<a class="el" href="class_detector.html#ae61f3dc1f9de84fcf7ca07cde6264b25">Detector&lt; T, U &gt;</a></li>
 <li>pixelGrid&#160;:&#160;<a class="el" href="class_detector.html#a06b25bb022a373329da4ad84d6b277f7">Detector&lt; T, U &gt;</a></li>
 <li>pixelHeight&#160;:&#160;<a class="el" href="class_detector.html#a4c12ba156e53fea5700dc7342f523cb6">Detector&lt; T, U &gt;</a></li>
 <li>pixelWidth&#160;:&#160;<a class="el" href="class_detector.html#ab80d696979a475afbbe693f78b3c69b8">Detector&lt; T, U &gt;</a></li>
@@ -168,13 +167,14 @@ $(function() {
 <li>Ray()&#160;:&#160;<a class="el" href="class_ray.html#a06035984df2644793ba7eba9a8e3d6f9">Ray&lt; T, U &gt;</a></li>
 <li>reflect()&#160;:&#160;<a class="el" href="class_mirror.html#a5425cc9ab5766fef1957c15d8670b318">Mirror&lt; T, U &gt;</a></li>
 <li>refract_approx()&#160;:&#160;<a class="el" href="class_thin_lens.html#a9a56b7017ef8e19a60ad3bb838dbddb9">ThinLens&lt; T, U &gt;</a></li>
+<li>resetPixelGrid()&#160;:&#160;<a class="el" href="class_detector.html#a60cb16ad0a2c3b48b04aac61123757c8">Detector&lt; T, U &gt;</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>setDirection()&#160;:&#160;<a class="el" href="class_ray.html#a9da83491d3e1c9795d71c34b441e522b">Ray&lt; T, U &gt;</a></li>
 <li>setIntensity()&#160;:&#160;<a class="el" href="class_ray.html#a4128344193001a8eb675d65c1e63ec78">Ray&lt; T, U &gt;</a></li>
-<li>setPosition()&#160;:&#160;<a class="el" href="class_ray.html#aa47f6945b4cace3b5f44ebf5f7a129b6">Ray&lt; T, U &gt;</a></li>
+<li>setPosition()&#160;:&#160;<a class="el" href="class_optical_surface.html#a5ee34a6f38a97e79d507b278eb23bb7e">OpticalSurface&lt; T, U &gt;</a>, <a class="el" href="class_ray.html#aa47f6945b4cace3b5f44ebf5f7a129b6">Ray&lt; T, U &gt;</a></li>
 <li>setWavelength()&#160;:&#160;<a class="el" href="class_ray.html#a73e5114f2d31d477e4e211d86b5ab6b9">Ray&lt; T, U &gt;</a></li>
 <li>SphericalSurface()&#160;:&#160;<a class="el" href="class_spherical_surface.html#a33d3f009c7375a4ab929b51203cc200d">SphericalSurface&lt; T, U &gt;</a></li>
 <li>surface&#160;:&#160;<a class="el" href="class_optical_component.html#ac4b5741885388be0e7d0f7e12f9d92b9">OpticalComponent&lt; T, U &gt;</a></li>
@@ -184,6 +184,7 @@ $(function() {
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
 <li>ThickLens()&#160;:&#160;<a class="el" href="class_thick_lens.html#ad0f787e685e9919ebbb5ab7eb2ef245e">ThickLens&lt; T, U &gt;</a></li>
 <li>ThinLens()&#160;:&#160;<a class="el" href="class_thin_lens.html#a51620de573d5cba0e81542ecd23178fd">ThinLens&lt; T, U &gt;</a></li>
+<li>type&#160;:&#160;<a class="el" href="class_optical_component.html#a7b00686896eace234b52f9a81c8fc393">OpticalComponent&lt; T, U &gt;</a></li>
 </ul>
 
 

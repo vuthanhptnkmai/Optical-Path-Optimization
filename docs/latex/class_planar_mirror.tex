@@ -13,49 +13,53 @@ Inheritance diagram for Planar\+Mirror\texorpdfstring{$<$}{<} T, U \texorpdfstri
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_planar_mirror_a0cf2e43bc972042724b8ff2c76d7cdac}{Planar\+Mirror}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_planar_mirror_a0cf2e43bc972042724b8ff2c76d7cdac}{Planar\+Mirror}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
 \item 
-void \mbox{\hyperlink{class_planar_mirror_a05684354087c586612029585191dd4f9}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override
+void \mbox{\hyperlink{class_planar_mirror_a05684354087c586612029585191dd4f9}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point) override
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mirror}{Mirror$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_mirror_af02feab3af2457cb66719a2ba2776a46}{Mirror}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_mirror_af02feab3af2457cb66719a2ba2776a46}{Mirror}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
 \item 
 virtual \mbox{\hyperlink{class_mirror_a9cdd442b31331a6688125fa628196b8a}{\texorpdfstring{$\sim$}{\string~}\+Mirror}} ()=default
 \item 
-virtual void \mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point) override=0
+virtual void \mbox{\hyperlink{class_mirror_af5fbdcd0660fb96ee9f1f25bb621330c}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point) override=0
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_optical_component_ac19e994d82b0c0ceb4879d1f0dfd9d25}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}})
+\mbox{\hyperlink{class_optical_component_a6cfcc768d6ce53c7ff06c8f3383dd56f}{Optical\+Component}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}, \mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a7b00686896eace234b52f9a81c8fc393}{type}})
 \item 
 virtual \mbox{\hyperlink{class_optical_component_a6c259b37610efcccd45a30f58903230e}{\texorpdfstring{$\sim$}{\string~}\+Optical\+Component}} ()=default
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_component_a78b108ae76a50467ae04f1a99d39f91f}{get\+Position}} () const
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_optical_component_a127f9cae300b02b257506466a9515230}{get\+Normal}} () const
 \item 
-const \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a23e2b7bdb71a6f1e100642753b102350}{get\+Surface\+Ptr}} () const
+\mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optical_component_a38fbd2d1e5d3109477ff9ebc2b5c4843}{get\+Surface\+Ptr}} ()
 \item 
-virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)=0
+\mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a0b416aa0a4294498aba13b528d02cb56}{get\+Type}} () const
+\item 
+virtual void \mbox{\hyperlink{class_optical_component_a89ebe3f433a227415c84ec3637eb59ab}{handle\+Light}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&ray, const vec3$<$ T $>$ \&intersection\+Point)=0
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_mirror}{Mirror$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{reflect}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&incident\+Ray, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&normal, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&intersection\+Point)
+void \mbox{\hyperlink{class_mirror_a5425cc9ab5766fef1957c15d8670b318}{reflect}} (\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&incident\+Ray, const vec3$<$ T $>$ \&normal, const vec3$<$ T $>$ \&intersection\+Point)
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optical_component}{Optical\+Component$<$ T, U $>$}}}
 \begin{DoxyCompactItemize}
 \item 
-std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$ \mbox{\hyperlink{class_optical_component_ac4b5741885388be0e7d0f7e12f9d92b9}{surface}}
+\item 
+\mbox{\hyperlink{optical_component_8h_a631e837a8591853eca73cc1f7daf6ce8}{Optical\+Component\+Type}} \mbox{\hyperlink{class_optical_component_a7b00686896eace234b52f9a81c8fc393}{type}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+\subsubsection*{template$<$typename T, typename U$>$\newline
 class Planar\+Mirror$<$ T, U $>$}
 
 
@@ -68,12 +72,12 @@ Definition at line \mbox{\hyperlink{mirror_8h_source_l00025}{25}} of file \mbox{
 \index{PlanarMirror$<$ T, U $>$@{PlanarMirror$<$ T, U $>$}!PlanarMirror@{PlanarMirror}}
 \index{PlanarMirror@{PlanarMirror}!PlanarMirror$<$ T, U $>$@{PlanarMirror$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{PlanarMirror()}{PlanarMirror()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{class_planar_mirror}{Planar\+Mirror}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_planar_mirror}{\+::\+Planar\+Mirror}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ $>$}]{surface }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_planar_mirror}{Planar\+Mirror}}$<$ T, U $>$\mbox{\hyperlink{class_planar_mirror}{\+::\+Planar\+Mirror}} (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_optical_surface}{Optical\+Surface}}$<$ T, U $>$ $>$}]{surface }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{mirror_8h_source_l00043}{43}} of file \mbox{\hyperlink{mirror_8h_source}{mirror.\+h}}.
+Definition at line \mbox{\hyperlink{mirror_8h_source_l00035}{35}} of file \mbox{\hyperlink{mirror_8h_source}{mirror.\+h}}.
 
 
 
@@ -82,8 +86,8 @@ Definition at line \mbox{\hyperlink{mirror_8h_source_l00043}{43}} of file \mbox{
 \index{PlanarMirror$<$ T, U $>$@{PlanarMirror$<$ T, U $>$}!handleLight@{handleLight}}
 \index{handleLight@{handleLight}!PlanarMirror$<$ T, U $>$@{PlanarMirror$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{handleLight()}{handleLight()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_planar_mirror}{Planar\+Mirror}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \&}]{ray,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_planar_mirror}{Planar\+Mirror}}$<$ T, U $>$\+::handle\+Light (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$ \&}]{ray,  }\item[{const vec3$<$ T $>$ \&}]{intersection\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 

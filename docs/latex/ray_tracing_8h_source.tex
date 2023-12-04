@@ -2,5 +2,80 @@
 \hypertarget{ray_tracing_8h_source}{}\label{ray_tracing_8h_source}\index{simulator/rayTracing.h@{simulator/rayTracing.h}}
 \mbox{\hyperlink{ray_tracing_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ once\ }}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{simulator_8h}{simulator.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <omp.h>}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00006}00006\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00007}\mbox{\hyperlink{ray_tracing_8h_a8e50a356a23769dc8e491ed33a764011}{00007}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ray_tracing_8h_a8e50a356a23769dc8e491ed33a764011}{rayTracing}}(std::unique\_ptr<std::vector<\mbox{\hyperlink{class_ray}{Ray<double,\ float>}}>>\&\ rays,\ std::vector<std::unique\_ptr<\mbox{\hyperlink{class_optical_component}{OpticalComponent<T,\ U>}}>>\&\ components)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00008}00008\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{class_thin_lens}{ThinLens<T,\ U>}}*\ lensPtr\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_thin_lens}{ThinLens<T,\ U>}}*\textcolor{keyword}{>}(components[1].get());}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00010}00010\ \ \ \ \ \mbox{\hyperlink{class_detector}{Detector<T,\ U>}}*\ detectorPtr\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_detector}{Detector<T,\ U>}}*\textcolor{keyword}{>}(components.back().get());}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00012}00012\ \textcolor{preprocessor}{\ \ \ \ \#pragma\ omp\ parallel\ for}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ ray\ :\ *rays)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ component\ :\ components)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ (auto\&\ component\ :\ components)\ \{}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [doesIntersect,\ intersectionPoint]\ =\ component-\/>\mbox{\hyperlink{class_optical_component_a38fbd2d1e5d3109477ff9ebc2b5c4843}{getSurfacePtr}}()-\/>intersects(ray);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doesIntersect)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component-\/>handleLight(ray,\ intersectionPoint);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ Skip\ remaining\ components\ if\ no\ intersection}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00026}00026\ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T,\ \textcolor{keyword}{typename}\ U>}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00027}\mbox{\hyperlink{ray_tracing_8h_a0eaaa1c5dd3e8e2e90dcc8af51cddc4b}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ray_tracing_8h_a0eaaa1c5dd3e8e2e90dcc8af51cddc4b}{rayTracingWithLogging}}(std::unique\_ptr<std::vector<\mbox{\hyperlink{class_ray}{Ray<T,\ U>}}>>\&\ rays,\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<std::unique\_ptr<\mbox{\hyperlink{class_optical_component}{OpticalComponent<T,\ U>}}>>\&\ components,}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ raysFileName,\ \textcolor{keyword}{const}\ std::string\&\ componentsFileName)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00030}00030\ \ \ \ \ std::ofstream\ raysFile(raysFileName);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (!raysFile)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Failed\ to\ open\ rays.dat\ for\ writing."{}});}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00035}00035\ \ \ \ \ \textcolor{comment}{//\ Core\ ray\ tracing\ logic\ with\ logging...}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ ray\ :\ *rays)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Log\ ray's\ initial\ position}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00038}00038\ \ \ \ \ \ \ \ \ raysFile\ <<\ ray.position(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.position(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ ray.position(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ component\ :\ components)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//raysFile\ <<\ ray.position(0)\ <<\ "{}\ "{}\ <<\ ray.position(1)\ <<\ "{}\ "{}\ <<\ ray.position(2)\ <<\ std::endl;}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ [doesIntersect,\ intersectionPoint]\ =\ component-\/>getSurfacePtr()-\/>intersects(ray);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ raysFile\ <<\ intersectionPoint(0)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ intersectionPoint(1)\ <<\ \textcolor{stringliteral}{"{}\ "{}}\ <<\ intersectionPoint(2)\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (doesIntersect)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ component-\/>handleLight(ray,\ intersectionPoint);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};\ \textcolor{comment}{//\ Skip\ remaining\ components\ if\ no\ intersection}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Log\ a\ separator\ between\ rays}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00053}00053\ \ \ \ \ \ \ \ \ raysFile\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00056}00056\ \ \ \ \ raysFile.close();}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00057}00057\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Ray\ data\ generation\ completed\ successfully."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Open\ a\ file\ to\ write\ component\ data}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00060}00060\ \ \ \ \ std::ofstream\ componentsFile(componentsFileName,\ std::ios::out);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{if}\ (!componentsFile)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::runtime\_error(\textcolor{stringliteral}{"{}Failed\ to\ open\ "{}}\ +\ componentsFileName\ +\ \textcolor{stringliteral}{"{}\ for\ writing."{}});}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00065}00065\ \ \ \ \ \textcolor{comment}{//\ Loop\ through\ the\ vector\ and\ generate\ points\ for\ each\ component's\ surface}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ component\ :\ components)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ surface\ =\ component-\/>getSurfacePtr();}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (surface)\ \{}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ surface-\/>generatePoints(componentsFile);}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00070}00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00073}00073\ \ \ \ \ componentsFile.close();}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00074}00074\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Component\ data\ generation\ completed\ successfully."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{ray_tracing_8h_source_l00075}00075\ \}}
 
 \end{DoxyCode}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['planarcircle_2eh_0',['planarCircle.h',['../planar_circle_8h.html',1,'']]],
-  ['planarrectangle_2eh_1',['planarRectangle.h',['../planar_rectangle_8h.html',1,'']]]
+  ['opticalcomponent_2eh_0',['opticalComponent.h',['../optical_component_8h.html',1,'']]],
+  ['opticalsurface_2eh_1',['opticalSurface.h',['../optical_surface_8h.html',1,'']]]
 ];

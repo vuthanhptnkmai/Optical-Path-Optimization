@@ -2,51 +2,64 @@
 \hypertarget{class_ray}{}\label{class_ray}\index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 
 
+Represents a ray in an optical system.  
+
+
+
+
 {\ttfamily \#include $<$ray.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_ray_a06035984df2644793ba7eba9a8e3d6f9}{Ray}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}, const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray_a465ac77c763f586faab2490250ae9ad8}{wavelength}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray_a7b9adeaeea8b4f02e66738e845278c98}{intensity}})
+\mbox{\hyperlink{class_ray_a06035984df2644793ba7eba9a8e3d6f9}{Ray}} (const vec3$<$ T $>$ \&\mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}, const vec3$<$ T $>$ \&\mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}, U \mbox{\hyperlink{class_ray_a465ac77c763f586faab2490250ae9ad8}{wavelength}}, U \mbox{\hyperlink{class_ray_a7b9adeaeea8b4f02e66738e845278c98}{intensity}})
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_ray}{Ray} class. \end{DoxyCompactList}\item 
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_ray_a8ab61bec46cf81cd16b7903caa96cacd}{get\+Position}} () const
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_ray_a8ab61bec46cf81cd16b7903caa96cacd}{get\+Position}} () const
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_ray_aa9e21aa377e4dc0f862881cfe48cbba1}{get\+Direction}} () const
 \item 
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_ray_aa9e21aa377e4dc0f862881cfe48cbba1}{get\+Direction}} () const
+U \mbox{\hyperlink{class_ray_aed5a699adc9cf95fea6148b5afbb06ff}{get\+Wavelength}} () const
 \item 
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray_aed5a699adc9cf95fea6148b5afbb06ff}{get\+Wavelength}} () const
+U \mbox{\hyperlink{class_ray_a36ed31561a1522c523926be03f4fc4a7}{get\+Intensity}} () const
 \item 
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray_a36ed31561a1522c523926be03f4fc4a7}{get\+Intensity}} () const
+void \mbox{\hyperlink{class_ray_aa47f6945b4cace3b5f44ebf5f7a129b6}{set\+Position}} (const vec3$<$ T $>$ \&new\+Position)
 \item 
-void \mbox{\hyperlink{class_ray_aa47f6945b4cace3b5f44ebf5f7a129b6}{set\+Position}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&new\+Position)
+void \mbox{\hyperlink{class_ray_a9da83491d3e1c9795d71c34b441e522b}{set\+Direction}} (const vec3$<$ T $>$ \&new\+Direction)
 \item 
-void \mbox{\hyperlink{class_ray_a9da83491d3e1c9795d71c34b441e522b}{set\+Direction}} (const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&new\+Direction)
+void \mbox{\hyperlink{class_ray_a73e5114f2d31d477e4e211d86b5ab6b9}{set\+Wavelength}} (U new\+Wavelength)
 \item 
-void \mbox{\hyperlink{class_ray_a73e5114f2d31d477e4e211d86b5ab6b9}{set\+Wavelength}} (\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} new\+Wavelength)
-\item 
-void \mbox{\hyperlink{class_ray_a4128344193001a8eb675d65c1e63ec78}{set\+Intensity}} (\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} new\+Intensity)
+void \mbox{\hyperlink{class_ray_a4128344193001a8eb675d65c1e63ec78}{set\+Intensity}} (U new\+Intensity)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}
+vec3$<$ T $>$ \mbox{\hyperlink{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}{position}}
 \item 
-vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}
+vec3$<$ T $>$ \mbox{\hyperlink{class_ray_ac0075ed78436d9867ae3b03bce2d4370}{direction}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray_a465ac77c763f586faab2490250ae9ad8}{wavelength}}
+U \mbox{\hyperlink{class_ray_a465ac77c763f586faab2490250ae9ad8}{wavelength}}
 \item 
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray_a7b9adeaeea8b4f02e66738e845278c98}{intensity}}
+U \mbox{\hyperlink{class_ray_a7b9adeaeea8b4f02e66738e845278c98}{intensity}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-\subsubsection*{template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}$>$\newline
+\subsubsection*{template$<$typename T, typename U$>$\newline
 class Ray$<$ T, U $>$}
+Represents a ray in an optical system. 
 
+The \doxylink{class_ray}{Ray} class encapsulates the properties of a ray of light, including its position, direction, wavelength, and intensity. The direction vector is maintained as a normalized vector to ensure accurate representation of the ray\textquotesingle{}s path.
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00007}{7}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Template Parameters\+:
+\begin{DoxyItemize}
+\item T\+: Type for position and direction vector components (e.\+g., float, double).
+\item U\+: Type for wavelength and intensity (e.\+g., int, float). 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{ray_8h_source_l00017}{17}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 
 
@@ -55,12 +68,27 @@ Definition at line \mbox{\hyperlink{ray_8h_source_l00007}{7}} of file \mbox{\hyp
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!Ray@{Ray}}
 \index{Ray@{Ray}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{Ray()}{Ray()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\mbox{\hyperlink{class_ray}{\+::\+Ray}} (\begin{DoxyParamCaption}\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{position,  }\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{direction,  }\item[{\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}}]{wavelength,  }\item[{\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}}]{intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\mbox{\hyperlink{class_ray}{\+::\+Ray}} (\begin{DoxyParamCaption}\item[{const vec3$<$ T $>$ \&}]{position,  }\item[{const vec3$<$ T $>$ \&}]{direction,  }\item[{U}]{wavelength,  }\item[{U}]{intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00018}{18}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Constructor for the \doxylink{class_ray}{Ray} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The starting position of the ray in 3D space. \\
+\hline
+{\em direction} & The initial direction of the ray, which will be normalized. \\
+\hline
+{\em wavelength} & The wavelength of the ray, typically in nanometers (nm). \\
+\hline
+{\em intensity} & The intensity of the ray. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ray_8h_source_l00034}{34}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 
 
@@ -69,89 +97,89 @@ Definition at line \mbox{\hyperlink{ray_8h_source_l00018}{18}} of file \mbox{\hy
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!getDirection@{getDirection}}
 \index{getDirection@{getDirection}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00022}{22}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00039}{39}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a36ed31561a1522c523926be03f4fc4a7}\label{class_ray_a36ed31561a1522c523926be03f4fc4a7} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!getIntensity@{getIntensity}}
 \index{getIntensity@{getIntensity}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getIntensity()}{getIntensity()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Intensity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+U \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::get\+Intensity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00024}{24}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00041}{41}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a8ab61bec46cf81cd16b7903caa96cacd}\label{class_ray_a8ab61bec46cf81cd16b7903caa96cacd} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!getPosition@{getPosition}}
 \index{getPosition@{getPosition}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \& \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const vec3$<$ T $>$ \& \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00021}{21}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00038}{38}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_aed5a699adc9cf95fea6148b5afbb06ff}\label{class_ray_aed5a699adc9cf95fea6148b5afbb06ff} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!getWavelength@{getWavelength}}
 \index{getWavelength@{getWavelength}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{getWavelength()}{getWavelength()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::get\+Wavelength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+U \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::get\+Wavelength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00023}{23}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00040}{40}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a9da83491d3e1c9795d71c34b441e522b}\label{class_ray_a9da83491d3e1c9795d71c34b441e522b} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!setDirection@{setDirection}}
 \index{setDirection@{setDirection}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::set\+Direction (\begin{DoxyParamCaption}\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{new\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::set\+Direction (\begin{DoxyParamCaption}\item[{const vec3$<$ T $>$ \&}]{new\+Direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00027}{27}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00045}{45}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a4128344193001a8eb675d65c1e63ec78}\label{class_ray_a4128344193001a8eb675d65c1e63ec78} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!setIntensity@{setIntensity}}
 \index{setIntensity@{setIntensity}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{setIntensity()}{setIntensity()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::set\+Intensity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}}]{new\+Intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::set\+Intensity (\begin{DoxyParamCaption}\item[{U}]{new\+Intensity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00029}{29}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00047}{47}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_aa47f6945b4cace3b5f44ebf5f7a129b6}\label{class_ray_aa47f6945b4cace3b5f44ebf5f7a129b6} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!setPosition@{setPosition}}
 \index{setPosition@{setPosition}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::set\+Position (\begin{DoxyParamCaption}\item[{const vec3$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} $>$ \&}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::set\+Position (\begin{DoxyParamCaption}\item[{const vec3$<$ T $>$ \&}]{new\+Position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00026}{26}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00044}{44}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a73e5114f2d31d477e4e211d86b5ab6b9}\label{class_ray_a73e5114f2d31d477e4e211d86b5ab6b9} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!setWavelength@{setWavelength}}
 \index{setWavelength@{setWavelength}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{setWavelength()}{setWavelength()}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-void \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::set\+Wavelength (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}}}]{new\+Wavelength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::set\+Wavelength (\begin{DoxyParamCaption}\item[{U}]{new\+Wavelength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00028}{28}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00046}{46}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 
 
@@ -160,45 +188,45 @@ Definition at line \mbox{\hyperlink{ray_8h_source_l00028}{28}} of file \mbox{\hy
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!direction@{direction}}
 \index{direction@{direction}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{direction}{direction}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-vec3$<$\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}$>$ \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::direction}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+vec3$<$T$>$ \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::direction}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00016}{16}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00024}{24}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a7b9adeaeea8b4f02e66738e845278c98}\label{class_ray_a7b9adeaeea8b4f02e66738e845278c98} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!intensity@{intensity}}
 \index{intensity@{intensity}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{intensity}{intensity}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::intensity\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+U \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::intensity\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00010}{10}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00020}{20}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb}\label{class_ray_a89b8e166bcaf884e8ccd185a6e5252bb} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!position@{position}}
 \index{position@{position}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{position}{position}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-vec3$<$\mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}$>$ \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::position}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+vec3$<$T$>$ \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::position}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00015}{15}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00023}{23}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 \Hypertarget{class_ray_a465ac77c763f586faab2490250ae9ad8}\label{class_ray_a465ac77c763f586faab2490250ae9ad8} 
 \index{Ray$<$ T, U $>$@{Ray$<$ T, U $>$}!wavelength@{wavelength}}
 \index{wavelength@{wavelength}!Ray$<$ T, U $>$@{Ray$<$ T, U $>$}}
 \doxysubsubsection{\texorpdfstring{wavelength}{wavelength}}
-{\footnotesize\ttfamily template$<$typename \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}} , typename \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$ \\
-\mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} \mbox{\hyperlink{class_ray}{Ray}}$<$ \mbox{\hyperlink{main_8cpp_a6b2d038ea9c8d2651eecffe0e28b7ebb}{T}}, \mbox{\hyperlink{main_8cpp_a6593bc6eff52fb072817ee0fa2217255}{U}} $>$\+::wavelength\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+U \mbox{\hyperlink{class_ray}{Ray}}$<$ T, U $>$\+::wavelength\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definition at line \mbox{\hyperlink{ray_8h_source_l00009}{9}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
+Definition at line \mbox{\hyperlink{ray_8h_source_l00019}{19}} of file \mbox{\hyperlink{ray_8h_source}{ray.\+h}}.
 
 
 
