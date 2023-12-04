@@ -1,13 +1,9 @@
 #pragma once
 
-//#include <memory>
-//#include <stdexcept>
-// #include <utility>
 #include "../../thirdParty/eigen-3.4.0/Eigen/Dense"
 
-// used to be calculateVariance
 template<typename U>
-U sharpness(const Eigen::Matrix<U, Eigen::Dynamic, Eigen::Dynamic>& pixelGrid) {
+U sharpnessVariance(const Eigen::Matrix<U, Eigen::Dynamic, Eigen::Dynamic>& pixelGrid) {
     // Calculate the mean intensity of the image
     U mean = pixelGrid.mean();
 

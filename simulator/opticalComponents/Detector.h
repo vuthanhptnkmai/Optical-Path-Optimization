@@ -28,7 +28,7 @@ private:
 public:
     Detector(std::unique_ptr<PlanarSurface<T, U>> surface, int pixelWidth = 512, int pixelHeight = 512)
         : OpticalComponent<T, U>(std::move(surface), OpticalComponentType::Detector), pixelWidth(pixelWidth), pixelHeight(pixelHeight),
-          pixelGrid(Eigen::MatrixXf::Zero(pixelHeight, pixelWidth)) {
+          pixelGrid(Eigen::Matrix<U, Eigen::Dynamic, Eigen::Dynamic>::Zero(pixelHeight, pixelWidth)) {
         if (dynamic_cast<PlanarSurface<T, U>*>(this->surface.get()) == nullptr) {
             throw std::runtime_error("Detector expects a PlanarSurface type. Provided surface type is invalid.");
         }
@@ -38,7 +38,8 @@ public:
     const Eigen::Matrix<U, Eigen::Dynamic, Eigen::Dynamic>& getPixelGrid() const { return pixelGrid; }
 
     void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override;
-    void resetPixelGrid() { pixelGrid = Eigen::MatrixXf::Zero(pixelHeight, pixelWidth); }
+    // void resetPixelGrid() { pixelGrid = Eigen::Matrix<U, Eigen::Dynamic, Eigen::Dynamic>::Zero(pixelHeight, pixelWidth); }
+    void resetPixelGrid() { pixelGrid.setZero(pixelHeight, pixelWidth); }
 };
 
 // Definitions
@@ -106,65 +107,4 @@ void Detector<T, U>::handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoin
     if (columnIndex >= 0 && columnIndex < pixelWidth && rowIndex >= 0 && rowIndex < pixelHeight) {
         this->pixelGrid(rowIndex, columnIndex) += ray.getIntensity(); 
     }
-}
-
-// used to be calculateVariance
-template<typename U>
-U calculateSharpness(const Eigen::Matrix<U, Eigen::Dynamic, Eigen::Dynamic>& pixelGrid) {
-    // Calculate the mean intensity of the image
-    U mean = pixelGrid.mean();
-
-    // Calculate the sum of the squared differences from the mean
-    U sumSquaredDiffs = 0;
-    for (int i = 0; i < pixelGrid.rows(); ++i) {
-        for (int j = 0; j < pixelGrid.cols(); ++j) {
-            U diff = pixelGrid(i, j) - mean;
-            sumSquaredDiffs += diff * diff;
-        }
-    }
-
-    // Calculate the variance
-    U variance = sumSquaredDiffs / (pixelGrid.size() - 1);
-    return variance;
-}
-
-template<typename T, typename U>
-T autoFocus(std::unique_ptr<std::vector<Ray<double, float>>>& rays, std::vector<std::unique_ptr<OpticalComponent<T, U>>>& components, T startZ, T endZ, T stepZ) {
-
-    T bestZ = startZ;
-    U bestSharpness = -std::numeric_limits<U>::max();
-    
-    auto& lens = components[1]; // Assuming the lens is at index 1
-    for (T z = startZ; z <= endZ; z += stepZ) {
-        // Get a non-const pointer to the lens's surface
-        auto lensSurface = lens->getSurfacePtr();
-        if (lensSurface) {
-            vec3<T> newPos = lensSurface->getPosition();
-            newPos(2) = z; // Update the z-coordinate
-            std::cout << "Lens Position - X: " << newPos(0) << ", Y: " << newPos(1) << ", Z: " << newPos(2) << std::endl;
-            lensSurface->setPosition(newPos); // Call setPosition on the non-const pointer
-        }
-
-        // Capture the image with the current lens position
-        captureImage(rays, components);
-
-        // Calculate the sharpness of the current image
-        Detector<T, U>* detectorPtr = dynamic_cast<Detector<T, U>*>(components.back().get());
-        U currentSharpness = calculateSharpness(detectorPtr->getPixelGrid());
-
-        std::cout << currentSharpness << std::endl;
-        // If the current sharpness is the best so far, update bestZ and bestSharpness
-        if (currentSharpness > bestSharpness) {
-            bestSharpness = currentSharpness;
-            bestZ = z;
-        }
-        detectorPtr->resetPixelGrid();
-    }
-
-    // Move the lens to the best focus position
-    vec3<T> bestPos = lens->getSurfacePtr()->getPosition();
-    bestPos(2) = bestZ;
-    lens->getSurfacePtr()->setPosition(bestPos);
-
-    return bestZ;
 }
