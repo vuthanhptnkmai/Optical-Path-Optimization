@@ -15,7 +15,7 @@ protected:
 
 public:
     Mirror(std::unique_ptr<OpticalSurface<T, U>> surface)
-        : OpticalComponent<T, U>(std::move(surface)) {}
+        : OpticalComponent<T, U>(std::move(surface), OpticalComponentType::Mirror) {}
     virtual ~Mirror() = default;
 
     virtual void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) override = 0;
@@ -32,20 +32,20 @@ public:
 // Definitions
 
 template<typename T, typename U>
-void Mirror<T, U>::reflect(Ray<T, U>& incidentRay, const vec3<T>& normal, const vec3<T>& intersectionPoint) {
-    vec3<T> reflectedDirection = incidentRay.getDirection() - 2 * incidentRay.getDirection().dot(normal) * normal;
-    
-    incidentRay.position = intersectionPoint;
-    incidentRay.direction = reflectedDirection.normalized();
-}
-
-template<typename T, typename U>
 PlanarMirror<T, U>::PlanarMirror(std::unique_ptr<OpticalSurface<T, U>> surface)
     : Mirror<T, U>(std::move(surface)) {
         if(dynamic_cast<PlanarSurface<T, U>*>(this->surface.get()) == nullptr) {
             throw std::runtime_error("PlanarMirror expected a PlanarSurface. Provided surface type is invalid.");
         }
     }
+
+template<typename T, typename U>
+void Mirror<T, U>::reflect(Ray<T, U>& incidentRay, const vec3<T>& normal, const vec3<T>& intersectionPoint) {
+    vec3<T> reflectedDirection = incidentRay.getDirection() - 2 * incidentRay.getDirection().dot(normal) * normal;
+    
+    incidentRay.position = intersectionPoint;
+    incidentRay.direction = reflectedDirection.normalized();
+}
 
 template<typename T, typename U>
 void PlanarMirror<T, U>::handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) {

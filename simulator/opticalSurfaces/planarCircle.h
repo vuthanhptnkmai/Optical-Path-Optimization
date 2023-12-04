@@ -61,7 +61,7 @@ void PlanarCircle<T, U>::generatePoints(std::ofstream& outFile) const {
                             + rotationAxis.cross(point) * std::sin(theta)
                             + rotationAxis * rotationAxis.dot(point) * (1 - cosTheta);
         vec3<T> finalPoint = rotatedPoint + center;
-        outFile << finalPoint(0) << " " << finalPoint(1) << " " << finalPoint(2) <<std::endl;
+        outFile << finalPoint(0) << " " << finalPoint(1) << " " << finalPoint(2) << std::endl;
     }
 
     outFile << "\n\n" << std::endl;

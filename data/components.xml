@@ -1,32 +1,28 @@
-<?xml version = "1.0" encoding = "UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Optical component details with their surface, position, normal, and type-specific properties -->
 <OpticalComponents>
     <Component name="Mirror">
-        <Surface type="Rectangle" width="10" height="10" />
-        <Position x="3" y="4" z="5" />
-        <Normal dx="0" dy="1" dz="0" />
-    </Component>
-    <Component name="Filter">
-        <FilterType type="BandPass" wavelengthRange="400-700nm"/>
-        <Surface type="Circle" diameter="50" />
-        <Position x="3" y="4" z="7" />
-        <Normal dx="0" dy="1" dz="0" />
-    </Component>
-    <Component name="Filter">
-        <FilterType type="LowPass" cutoffWavelength="700nm" />
-        <Surface type="Circle" diameter="50" />
-        <Position x="3" y="4" z="7" />
-        <Normal dx="0" dy="1" dz="0" />
+        <Surface type="Circle" diameter="4.0" />
+        <Position x="0.0" y="0.0" z="0.0" />
+        <Normal dx="0.0" dy="1.0" dz="1.0" />
     </Component>
     <Component name="Lens">
-        <Surface type="Circle" diameter="4" />
-        <Position x="3" y="4" z="10" />
-        <Normal dx="0" dy="1" dz="0" />
+        <Surface type="Circle" diameter="5.0" />
+        <Position x="0.0" y="0.0" z="3.02" />
+        <Normal dx="0.0" dy="0.0" dz="1.0" />
+        <FocalLength value="2.0" />
     </Component>
-    <Component name="Detector">
-        <Surface type="Rectangle" width="10" height="10" />
-        <Position x="3" y="4" z="12" />
-        <Normal dx="0" dy="1" dz="0" />
+    <Component name="Filter">
+        <Surface type="Circle" diameter="2.0" />
+        <Position x="0.0" y="0.0" z="5.0" />
+        <Normal dx="0.0" dy="0.0" dz="1.0" />
+        <WavelengthRange min="450.0" max="700.0" />
+    </Component>
+        <Component name="Detector">
+        <Surface type="Rectangle" width="1.5" height="1.5" />
+        <Position x="0.0" y="0.0" z="6.0" />
+        <Normal dx="0.0" dy="0.0" dz="1.0" />
+        <HeightDirection hx="0.0" hy="1.0" hz="0.0" />
         <Pixels width="512" height="512" />
     </Component>
 </OpticalComponents>

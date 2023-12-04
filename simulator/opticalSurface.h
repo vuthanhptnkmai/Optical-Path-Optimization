@@ -17,8 +17,10 @@ public:
     OpticalSurface(const vec3<T>& position, const vec3<T>& normal) : position(position), normal(normal.normalized()) {}
     virtual ~OpticalSurface() = default;
 
-    const vec3<T>& getPosition() const { return position; }
+    // const vec3<T>& getPosition() const { return position; }
+    vec3<T> getPosition() { return position; }
     const vec3<T>& getNormal() const { return normal; }
+    void setPosition(const vec3<T>& newPosition) { position = newPosition; }
 
     virtual vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const = 0; 
     virtual std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const = 0;

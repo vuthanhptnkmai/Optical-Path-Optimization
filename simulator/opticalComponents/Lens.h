@@ -15,7 +15,7 @@ template<typename T, typename U>
 class Lens : public OpticalComponent<T, U> {
 public:
     Lens(std::unique_ptr<OpticalSurface<T, U>> surface)
-		: OpticalComponent<T, U>(std::move(surface)) {}
+		: OpticalComponent<T, U>(std::move(surface), OpticalComponentType::Lens) {}
     virtual ~Lens() = default;
 
     virtual void handleLight(Ray<T, U>& ray, const vec3<T>& intersectionPoint) = 0;
@@ -23,7 +23,8 @@ public:
 
 template<typename T, typename U>
 class ThinLens : public Lens<T, U> {
-private:
+// private:
+public:
     U focalLength; // focal length of the lens for thin lens approximation
     void refract_approx(Ray<T, U>& ray, const vec3<T>& intersectionPoint);
 

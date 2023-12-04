@@ -2,11 +2,13 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "simulator.h"
-#include "../data/parsers/parsers.h"
+#include <vector>
+#include <memory>
 
-#include "ray.h"
-#include "../utils/vec3.h"
+#include "simulator/simulator.h"
+
+#include "utils/vec3.h"
+#include "../data/parsers/parsers.h"
 
 #include "../thirdParty/eigen-3.4.0/Eigen/Geometry"
 #include "../thirdParty/eigen-3.4.0/Eigen/Dense"
@@ -55,7 +57,7 @@ int main() {
         Detector<T, U>* detectorPtr = dynamic_cast<Detector<T, U>*>(components.back().get());
         
         // Open a file to write component data
-        std::string componentsFileName = "../visualization/components.dat";
+        std::string componentsFileName = "components.dat";
         std::ofstream componentsFile(componentsFileName, std::ios::out);
         if (!componentsFile) {
             throw std::runtime_error("Failed to open " + componentsFileName + " for writing.");
@@ -118,7 +120,7 @@ int main() {
         }
 
         // Open a file to write ray data
-        std::string raysFileName = "../visualization/rays.dat";
+        std::string raysFileName = "rays.dat";
         std::ofstream raysFile(raysFileName, std::ios::out);
         if (!raysFile) {
             throw std::runtime_error("Failed to open " + raysFileName + " for writing.");
@@ -146,8 +148,6 @@ int main() {
             raysFile << "\n\n" << std::endl; 
         }
 
-        // rayTracing(rays, components);
-
         // captureImage(rays, components);
 
         componentsFile.close();
@@ -157,7 +157,7 @@ int main() {
         std::cout << "Ray data generation completed successfully." << std::endl;
 
         // Save detector's pixel grid as a PNG image
-        std::string filename = "../visualization/detector_output.png";
+        std::string filename = "detector_output.png";
         // auto detectorPtr = dynamic_cast<Detector<T, U>*>(components.back().get());
         if (detectorPtr) {
             // Retrieve the pixel grid from the detector

@@ -22,7 +22,7 @@ public:
 
 template<typename T, typename U>
 Filter<T, U>::Filter(std::unique_ptr<PlanarSurface<T, U>> surface, U minWavelength, U maxWavelength)
-    : OpticalComponent<T, U>(std::move(surface)), minWavelength(minWavelength), maxWavelength(maxWavelength) {
+    : OpticalComponent<T, U>(std::move(surface), OpticalComponentType::Filter), minWavelength(minWavelength), maxWavelength(maxWavelength) {
         if(dynamic_cast<PlanarSurface<T, U>*>(this->surface.get()) == nullptr) {
             throw std::runtime_error("Filter expects a PlanarSurface type. Provided surface type is invalid.");
         }
