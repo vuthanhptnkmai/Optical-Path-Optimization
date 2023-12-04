@@ -37,7 +37,7 @@ void saveImageAsPNG(const std::string& filename, const Eigen::Matrix<U, Eigen::D
 int main() {
     try {
         // Read rays and components from files
-        auto rays = parseRaysDat<double, float>("data/rays100.dat");
+        auto rays = parseRaysDat<double, float>("data/rays10.dat");
         auto components = parseComponentsXML<double, float>("data/components.xml");
 
         ThinLens<T, U>* lensPtr = dynamic_cast<ThinLens<T, U>*>(components[1].get());
