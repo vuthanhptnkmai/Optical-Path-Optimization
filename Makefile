@@ -1,6 +1,7 @@
 # Compiler settings - Can be customized.
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++17 -fopenmp
+#CXXFLAGS = -Wall -Wextra -std=c++17 -fopenmp
+CXXFLAGS = -w -std=c++17 -fopenmp
 LDFLAGS = -fopenmp
 
 # App binary name
@@ -25,6 +26,10 @@ $(APPNAME): $(OBJECTS)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
-# Clean up objects and the executable
 clean:
-	rm -f $(OBJECTS) $(APPNAME)
+	del /Q "main.o" "$(APPNAME).exe"
+
+
+# Run the application
+run: $(APPNAME)
+	./$(APPNAME)
