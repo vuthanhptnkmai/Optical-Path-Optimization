@@ -39,7 +39,8 @@ private:
     QLineEdit *folderNameLineEdit;
 
     QHBoxLayout* createXmlButton(const QString &label);
-    QHBoxLayout* createOutputDirectoryButton();
+    QHBoxLayout* createDatFileButton(); // Declaration for .dat file selection button
+    QHBoxLayout* createOutputDirectoryButton(); // Declaration for output directory selection button
     void resetImageToBlack();
     void copyFilesFor3DPlot(const QString &destination);
 };

@@ -19,8 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     imageLabel(new QLabel(this)),
     compileProcess(new QProcess(this)),
     gnuplotProcess(new QProcess(this)),
-    checkbox2D(new QCheckBox("2D Image", this)),
-    checkbox3D(new QCheckBox("3D Plot", this)),
+    checkbox2D(new QCheckBox("Result Image on the Detector (2D)", this)),
+    checkbox3D(new QCheckBox("Ray Tracing Plot (3D)", this)),
     outputDirectoryLineEdit(new QLineEdit(this)),
     folderNameLineEdit(new QLineEdit(this))
 {
@@ -28,7 +28,8 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setFixedSize(1000, 500);
 
     QVBoxLayout *leftLayout = new QVBoxLayout();
-    leftLayout->addLayout(createXmlButton("Select XML File"));
+    leftLayout->addLayout(createXmlButton("Select XML File (XML)"));
+    leftLayout->addLayout(createDatFileButton());
     leftLayout->addLayout(createOutputDirectoryButton());
     leftLayout->addSpacing(50);
 
@@ -123,7 +124,7 @@ QHBoxLayout* MainWindow::createXmlButton(const QString &label) {
     layout->addWidget(button);
     layout->addWidget(lineEdit);
     connect(button, &QPushButton::clicked, this, [this, lineEdit]() {
-        QString fileName = QFileDialog::getOpenFileName(this, "Select XML File", "", "XML Files (*.xml)");
+        QString fileName = QFileDialog::getOpenFileName(this, "Select XML File (XML)", "", "XML Files (*.xml)");
         lineEdit->setText(fileName);
         if (!fileName.isEmpty()) {
             QString destination = "../../data/components.xml";
@@ -138,13 +139,28 @@ QHBoxLayout* MainWindow::createXmlButton(const QString &label) {
     return layout;
 }
 
+QHBoxLayout* MainWindow::createDatFileButton() {
+    QPushButton *button = new QPushButton("Select Ray File (DAT)", this);
+    QLineEdit *lineEdit = new QLineEdit(this);
+    QHBoxLayout *layout = new QHBoxLayout();
+    layout->addWidget(button);
+    layout->addWidget(lineEdit);
+    connect(button, &QPushButton::clicked, this, [this, lineEdit]() {
+        QString fileName = QFileDialog::getOpenFileName(this, "Select Ray File (DAT)", "", "DAT Files (*.dat)");
+        lineEdit->setText(fileName);
+    });
+    return layout;
+}
+
 QHBoxLayout* MainWindow::createOutputDirectoryButton() {
-    QPushButton *button = new QPushButton("Select Output Directory", this);
+    //QPushButton *button = new QPushButton("Select Output Directory", this);
+    QPushButton *button = new QPushButton("Select Output Folder", this);
+
     QHBoxLayout *layout = new QHBoxLayout();
     layout->addWidget(button);
     layout->addWidget(outputDirectoryLineEdit);
     connect(button, &QPushButton::clicked, this, [this]() {
-        QString dir = QFileDialog::getExistingDirectory(this, "Select Directory", "");
+        QString dir = QFileDialog::getExistingDirectory(this, "Select Ray Output Folder", "");
         outputDirectoryLineEdit->setText(dir);
     });
     return layout;
