@@ -1,3 +1,3 @@
 # Optical-Path-Simulation
 
-The project is still unter construction. More will come, stay tuned ^^
+The project is still finally done!! Read our report for more information. Happy coding though ^^ 
