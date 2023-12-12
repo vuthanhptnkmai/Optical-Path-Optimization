@@ -1,0 +1,11 @@
+<map id="PlanarCircle&lt; T, U &gt;" name="PlanarCircle&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,940,279,1201"/>
+<area shape="rect" id="Node000002" href="$class_planar_surface.html" title=" " alt="" coords="5,577,229,876"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,890,166,940,160,941,150,891"/>
+<area shape="rect" id="Node000003" href="$class_optical_surface.html" title=" " alt="" coords="5,155,229,528"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,543,120,578,115,578,115,543"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="83,5,152,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="120,74,120,138,115,138,115,74"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="254,692,274,761"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="263,762,244,877,233,924,228,923,239,875,257,761"/>
+</map>

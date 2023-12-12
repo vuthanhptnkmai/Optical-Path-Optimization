@@ -1,0 +1,11 @@
+<map id="Mirror&lt; T, U &gt;" name="Mirror&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="228,448,427,709"/>
+<area shape="rect" id="Node000003" href="$class_concave_mirror.html" title=" " alt="" coords="5,757,204,928"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,710,178,759,174,756,216,706"/>
+<area shape="rect" id="Node000004" href="$class_convex_mirror.html" title=" " alt="" coords="228,757,427,928"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="330,724,330,758,325,758,325,724"/>
+<area shape="rect" id="Node000005" href="$class_planar_mirror.html" title=" " alt="" coords="451,757,649,928"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="439,706,481,756,477,759,434,710"/>
+<area shape="rect" id="Node000002" href="$class_optical_component.html" title=" " alt="" coords="205,5,449,400"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="330,415,330,448,325,448,325,415"/>
+</map>

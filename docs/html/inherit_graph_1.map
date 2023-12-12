@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_optical_surface.html" title=" " alt="" coords="5,56,160,83"/>
+<area shape="rect" id="Node000001" href="$class_planar_surface.html" title=" " alt="" coords="216,31,367,57"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="175,55,215,51,216,56,175,61"/>
+<area shape="rect" id="Node000004" href="$class_spherical_surface.html" title=" " alt="" coords="208,81,375,108"/>
+<area shape="poly" id="edge13_Node000000_Node000004" title=" " alt="" coords="175,78,208,82,207,87,175,83"/>
+<area shape="rect" id="Node000002" href="$class_planar_circle.html" title=" " alt="" coords="436,5,575,32"/>
+<area shape="poly" id="edge11_Node000001_Node000002" title=" " alt="" coords="382,31,435,24,435,30,382,36"/>
+<area shape="rect" id="Node000003" href="$class_planar_rectangle.html" title=" " alt="" coords="423,56,587,83"/>
+<area shape="poly" id="edge12_Node000001_Node000003" title=" " alt="" coords="382,52,423,57,422,62,382,57"/>
+</map>

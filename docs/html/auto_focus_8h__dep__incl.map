@@ -1,0 +1,9 @@
+<map id="simulator/optimizer/autoFocus.h" name="simulator/optimizer/autoFocus.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="14,5,146,48"/>
+<area shape="rect" id="Node000002" href="$simulator_8h.html" title=" " alt="" coords="9,96,151,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,64,76,95,71,96,68,64"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="86,81,85,49,91,49,91,80"/>
+<area shape="rect" id="Node000003" href="$ray_tracing_8h.html" title=" " alt="" coords="5,171,155,197"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="74,138,76,170,70,170,69,138"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="86,155,84,123,90,123,91,155"/>
+</map>

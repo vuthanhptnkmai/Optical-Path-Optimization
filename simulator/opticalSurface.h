@@ -24,7 +24,6 @@ public:
 
     virtual vec3<T> getIntersectionPoint(const Ray<T, U>& ray) const = 0; 
     virtual std::pair<bool, vec3<T>> intersects(const Ray<T, U>& ray) const = 0;
-    // virtual void generatePoints(const std::string& filename) const = 0;
     virtual void generatePoints(std::ofstream& outFile) const = 0;
 };
 

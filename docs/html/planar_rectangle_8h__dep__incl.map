@@ -1,0 +1,14 @@
+<map id="simulator/opticalSurfaces/planarRectangle.h" name="simulator/opticalSurfaces/planarRectangle.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="82,5,249,48"/>
+<area shape="rect" id="Node000002" href="$detector_8h.html" title=" " alt="" coords="5,96,195,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,62,117,97,113,94,139,59"/>
+<area shape="rect" id="Node000003" href="$simulator_8h.html" title=" " alt="" coords="94,187,237,213"/>
+<area shape="poly" id="edge7_Node000001_Node000003" title=" " alt="" coords="193,60,209,95,213,117,209,140,196,166,180,188,175,184,191,164,204,138,208,117,204,97,188,62"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,149,157,184,153,188,124,153"/>
+<area shape="rect" id="Node000004" href="$auto_focus_8h.html" title=" " alt="" coords="18,261,150,304"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="136,226,98,263,95,259,132,222"/>
+<area shape="rect" id="Node000005" href="$ray_tracing_8h.html" title=" " alt="" coords="173,269,323,296"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="183,223,231,267,227,271,180,227"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="122,249,157,212,161,216,126,252"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="230,260,183,216,187,212,234,256"/>
+</map>

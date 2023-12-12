@@ -1,0 +1,12 @@
+<map id="PlanarRectangle&lt; T, U &gt;" name="PlanarRectangle&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="74,987,262,1360"/>
+<area shape="rect" id="Node000002" href="$class_planar_surface.html" title=" " alt="" coords="56,608,280,907"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,921,171,987,165,987,165,921"/>
+<area shape="rect" id="Node000003" href="$class_optical_surface.html" title=" " alt="" coords="56,155,280,528"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="171,543,171,608,165,608,165,543"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,5,75,75"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="38,75,23,209,10,415,8,535,13,659,25,784,47,906,70,982,65,983,42,907,20,785,8,659,3,535,4,415,17,209,33,74"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="57,73,85,138,80,140,52,75"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="305,723,325,792"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="315,792,308,847,295,907,271,973,266,972,290,906,303,846,310,791"/>
+</map>

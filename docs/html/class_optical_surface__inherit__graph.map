@@ -1,0 +1,11 @@
+<map id="OpticalSurface&lt; T, U &gt;" name="OpticalSurface&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="196,5,420,400"/>
+<area shape="rect" id="Node000002" href="$class_planar_surface.html" title=" " alt="" coords="84,464,308,763"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,415,239,465,234,463,248,414"/>
+<area shape="rect" id="Node000005" href="$class_spherical_surface.html" title=" " alt="" coords="332,448,508,779"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="368,414,378,448,373,449,363,415"/>
+<area shape="rect" id="Node000003" href="$class_planar_circle.html" title=" " alt="" coords="5,915,181,1176"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="160,778,127,916,122,914,155,776"/>
+<area shape="rect" id="Node000004" href="$class_planar_rectangle.html" title=" " alt="" coords="206,827,394,1264"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="238,777,250,826,245,828,233,778"/>
+</map>

@@ -1,0 +1,19 @@
+<map id="simulator/opticalComponent.h" name="simulator/opticalComponent.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,5,218,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="27,155,95,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,34,74,141,69,139,113,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="84,229,182,256"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,34,68,61,32,97,19,118,10,139,9,159,16,180,40,205,71,222,68,227,37,209,12,183,4,160,5,137,14,115,28,94,65,57,100,30"/>
+<area shape="rect" id="Node000004" href="$optical_surface_8h.html" title=" " alt="" coords="138,80,253,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="136,31,174,67,170,71,132,34"/>
+<area shape="rect" id="Node000007" href="$ray_8h.html" title=" " alt="" coords="349,155,399,181"/>
+<area shape="poly" id="edge10_Node000001_Node000007" title=" " alt="" coords="160,30,211,50,266,78,313,110,351,142,348,146,309,114,263,82,209,55,158,35"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="173,110,99,149,97,144,171,105"/>
+<area shape="poly" id="edge9_Node000004_Node000003" title=" " alt="" coords="189,108,161,156,141,215,136,214,156,154,184,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="170,155,248,181"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="200,107,206,139,201,140,195,108"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="272,155,324,181"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="215,105,269,143,266,147,212,109"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="228,105,336,148,334,153,226,110"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="349,180,338,184,192,227,190,222,336,179,348,175"/>
+</map>

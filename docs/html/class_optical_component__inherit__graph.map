@@ -1,0 +1,21 @@
+<map id="OpticalComponent&lt; T, U &gt;" name="OpticalComponent&lt; T, U &gt;">
+<area shape="rect" id="Node000001" title=" " alt="" coords="386,5,630,400"/>
+<area shape="rect" id="Node000002" href="$class_detector.html" title=" " alt="" coords="5,448,245,891"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="377,323,316,384,259,450,247,466,243,462,255,446,313,380,374,319"/>
+<area shape="rect" id="Node000003" href="$class_filter.html" title=" " alt="" coords="269,565,501,773"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="455,415,415,567,410,565,450,414"/>
+<area shape="rect" id="Node000004" href="$class_lens.html" title=" " alt="" coords="525,581,739,757"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="567,414,611,581,606,582,562,415"/>
+<area shape="rect" id="Node000007" href="$class_mirror.html" title=" " alt="" coords="874,539,1073,800"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="642,334,876,567,872,571,639,338"/>
+<area shape="rect" id="Node000005" href="$class_thick_lens.html" title=" " alt="" coords="303,965,502,1136"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="584,772,516,892,466,967,461,964,511,889,579,769"/>
+<area shape="rect" id="Node000006" href="$class_thin_lens.html" title=" " alt="" coords="526,939,738,1163"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="635,772,635,939,629,939,629,772"/>
+<area shape="rect" id="Node000008" href="$class_concave_mirror.html" title=" " alt="" coords="762,965,961,1136"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="933,815,889,967,883,965,928,813"/>
+<area shape="rect" id="Node000009" href="$class_convex_mirror.html" title=" " alt="" coords="985,965,1183,1136"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="1018,813,1062,965,1057,967,1013,815"/>
+<area shape="rect" id="Node000010" href="$class_planar_mirror.html" title=" " alt="" coords="1207,965,1406,1136"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="1085,793,1235,964,1231,967,1081,796"/>
+</map>

@@ -1,0 +1,27 @@
+<map id="simulator/opticalComponents/mirror.h" name="simulator/opticalComponents/mirror.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="181,5,370,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,245,84,272"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,51,182,98,115,170,64,234,60,231,111,167,179,94,241,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="108,245,176,272"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,50,203,102,178,136,158,172,149,201,145,230,140,230,143,200,153,170,174,133,199,99,249,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="480,96,590,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="343,46,480,88,479,93,341,51"/>
+<area shape="rect" id="Node000005" href="$optical_component_8h.html" title=" " alt="" coords="257,96,405,123"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="292,47,316,82,312,85,287,50"/>
+<area shape="rect" id="Node000007" href="$optical_surface_8h.html" title=" " alt="" coords="190,171,304,197"/>
+<area shape="poly" id="edge15_Node000001_Node000007" title=" " alt="" coords="265,50,255,72,247,97,244,126,246,155,240,155,239,126,242,95,250,70,261,48"/>
+<area shape="rect" id="Node000009" href="$ray_8h.html" title=" " alt="" coords="379,245,430,272"/>
+<area shape="poly" id="edge16_Node000001_Node000009" title=" " alt="" coords="358,46,393,66,420,95,433,129,434,166,428,202,418,232,413,230,423,200,429,166,428,130,416,97,389,70,355,51"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="269,126,222,144,199,157,180,172,161,201,150,231,145,229,156,198,176,169,196,152,219,139,267,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="293,320,391,347"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="334,123,343,305,338,305,329,123"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="318,125,275,162,271,158,315,121"/>
+<area shape="poly" id="edge14_Node000005_Node000009" title=" " alt="" coords="340,122,394,230,389,233,335,124"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="213,200,95,242,93,237,211,195"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="230,200,174,238,171,234,227,196"/>
+<area shape="poly" id="edge13_Node000007_Node000006" title=" " alt="" coords="244,198,236,233,236,252,241,271,262,294,289,311,286,316,259,298,237,273,230,253,230,232,239,197"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="252,245,304,272"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="255,197,269,230,264,232,250,199"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="276,195,366,237,364,242,273,200"/>
+<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="396,274,365,310,361,306,392,271"/>
+</map>

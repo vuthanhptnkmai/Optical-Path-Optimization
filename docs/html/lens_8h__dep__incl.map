@@ -1,0 +1,11 @@
+<map id="simulator/opticalComponents/lens.h" name="simulator/opticalComponents/lens.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="58,5,247,48"/>
+<area shape="rect" id="Node000002" href="$simulator_8h.html" title=" " alt="" coords="81,96,224,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,64,155,95,150,95,150,64"/>
+<area shape="rect" id="Node000003" href="$auto_focus_8h.html" title=" " alt="" coords="5,171,137,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,135,85,172,82,169,119,131"/>
+<area shape="rect" id="Node000004" href="$ray_tracing_8h.html" title=" " alt="" coords="160,179,310,205"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="170,132,218,177,214,180,167,136"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="109,158,144,121,148,125,113,162"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="217,169,170,125,174,121,221,165"/>
+</map>

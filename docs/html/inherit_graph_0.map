@@ -1,0 +1,21 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_optical_component.html" title=" " alt="" coords="5,81,182,108"/>
+<area shape="rect" id="Node000001" href="$class_detector.html" title=" " alt="" coords="230,5,348,32"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="143,73,251,30,253,35,145,78"/>
+<area shape="rect" id="Node000002" href="$class_filter.html" title=" " alt="" coords="240,56,338,83"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="197,79,239,73,240,78,197,84"/>
+<area shape="rect" id="Node000003" href="$class_lens.html" title=" " alt="" coords="240,107,338,133"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="197,105,240,111,240,116,197,111"/>
+<area shape="rect" id="Node000006" href="$class_mirror.html" title=" " alt="" coords="238,183,340,209"/>
+<area shape="poly" id="edge6_Node000000_Node000006" title=" " alt="" coords="136,113,263,180,260,185,133,118"/>
+<area shape="rect" id="Node000004" href="$class_thick_lens.html" title=" " alt="" coords="408,56,536,83"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="352,100,420,81,422,86,353,105"/>
+<area shape="rect" id="Node000005" href="$class_thin_lens.html" title=" " alt="" coords="411,107,532,133"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="353,117,411,117,411,123,353,123"/>
+<area shape="rect" id="Node000007" href="$class_concave_mirror.html" title=" " alt="" coords="396,157,547,184"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="355,184,395,179,396,184,356,189"/>
+<area shape="rect" id="Node000008" href="$class_convex_mirror.html" title=" " alt="" coords="400,208,544,235"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="356,203,399,209,399,214,355,208"/>
+<area shape="rect" id="Node000009" href="$class_planar_mirror.html" title=" " alt="" coords="402,259,541,285"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="331,214,397,244,428,256,426,261,395,249,329,219"/>
+</map>
