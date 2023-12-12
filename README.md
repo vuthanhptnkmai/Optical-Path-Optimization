@@ -1,7 +1,3 @@
-The report on the "Optical-Path-Simulation" project provides a detailed overview of the simulation of optical paths in a software developed at RWTH Aachen University. It primarily focuses on simulating the optical path of photons through various components and optimizing the image quality on the detector. The software, written in C++, uses Qt for the GUI. Key components include mirrors, filters, lenses, and a pixel-based detector. The report covers use cases, technical background, system requirements, design aspects like GUI and software architecture, and project management insights. 
-
-Based on this report, I will now update the README file.
-
 # Optical-Path-Simulation
 
 ## Introduction
