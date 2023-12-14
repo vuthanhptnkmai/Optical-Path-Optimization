@@ -47,7 +47,7 @@ int main() {
         T startZ = 2.5;  // Start position of z-axis movement
         T endZ = 3.5;     // End position of z-axis movement
         T stepZ = 0.01;    // Step size for each movement along the z-axis
-        //autoFocus(rays, components, lensPtr, detectorPtr, startZ, endZ, stepZ, false);
+        // autoFocus(rays, components, lensPtr, detectorPtr, startZ, endZ, stepZ, false);
     
         rayTracingWithLogging(rays, components, "visualization/rays.dat", "visualization/components.dat");
 

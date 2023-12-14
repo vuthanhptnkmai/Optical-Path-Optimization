@@ -1,2 +1,0 @@
-thirdParty/eigen-3.4.0/**/*.h filter=lfs diff=lfs merge=lfs -text
-thirdParty/eigen-3.4.0/**/*.cpp filter=lfs diff=lfs merge=lfs -text
